@@ -4,6 +4,7 @@ Documenta el ciclo de vida del lote y la implementacion del patron State GoF en 
 
 ## Diagrama de estados (PlantUML)
 
+![estadosLote](../images/lote-estados.png)
 ```
 @startuml
 

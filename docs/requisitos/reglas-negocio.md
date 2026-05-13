@@ -1,7 +1,6 @@
+# Reglas de negocio del backend
 
-## 4. Reglas de Negocio del Backend
-
-### 4.1 Generación del código de lote
+## Generación del código de lote
 
 ```
 codigoLote = "L" + diaDeLaAnno(3 dígitos) + ultimosDosDigitosAnno + batchDelDia
@@ -18,7 +17,7 @@ batch 1 → "1"
 resultado → "L132261"
 ```
 
-### 4.2 Validación de transiciones de estado
+## Validación de transiciones de estado
 
 El backend rechaza con `400` cualquier intento de registrar una etapa si el lote no está en el estado previo esperado.
 
@@ -34,7 +33,7 @@ El backend rechaza con `400` cualquier intento de registrar una etapa si el lote
 | `SALADO` | Registrar prensado |
 | `PRENSADO` | Registrar cierre |
 
-### 4.3 Validación de parámetros fisicoquímicos
+## Validación de parámetros fisicoquímicos
 
 | Parámetro | Mín | Máx |
 | --- | --- | --- |
@@ -53,11 +52,10 @@ Clasificación resultante:
 - **CONDICIONAL:** uno o más parámetros fuera de rango pero dentro de tolerancia (definir con el cliente).
 - **NO_APTA:** uno o más parámetros fuera de rango sin tolerancia.
 
-### 4.4 Cálculo de rendimientos *(pendiente de confirmar fórmulas con el ingeniero)*
+## Cálculo de rendimientos *(pendiente de confirmar fórmulas con el ingeniero)*
 
 ```
 Rendimiento General  = pesoTotalKg / litrosLeche * 100
 Rendimiento Teórico  = [fórmula por confirmar con el ingeniero]
 ```
 
----

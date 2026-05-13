@@ -1,11 +1,8 @@
-
----
-
-## 1. Usuarios y Flujos
+# Usuarios y flujos
 
 El prototipo considera dos perfiles de usuario. No se implementa autenticación en esta fase; los perfiles se mencionan para delimitar responsabilidades y orientar el diseño de pantallas en el frontend.
 
-### 1.1 Operario de Producción
+## Operario de Producción
 
 Es quien ejecuta físicamente el proceso en planta y registra los datos en el sistema.
 
@@ -31,9 +28,7 @@ Es quien ejecuta físicamente el proceso en planta y registra los datos en el si
 5. El registro queda guardado y visible para el ingeniero
 ```
 
----
-
-### 1.2 Ingeniero de Producción y Calidad
+## Ingeniero de Producción y Calidad
 
 Supervisa los procesos, analiza la información registrada y genera reportes.
 
@@ -55,4 +50,3 @@ Supervisa los procesos, analiza la información registrada y genera reportes.
 3. Exporta el historial de recepciones a Google Sheets
 ```
 
----
