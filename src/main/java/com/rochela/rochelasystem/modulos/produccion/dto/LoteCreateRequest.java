@@ -1,5 +1,6 @@
 package com.rochela.rochelasystem.modulos.produccion.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -12,10 +13,16 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(name = "LoteCreateRequest", description = "Datos para crear un lote de produccion")
 public class LoteCreateRequest {
 
+    @Schema(description = "Codigo del producto", example = "QUESO-001")
     private String productoCodigo;
+
+    @Schema(description = "Fecha y hora de inicio", example = "2026-05-13T08:30:00")
     private LocalDateTime fechaHoraInicio;
+
+    @Schema(description = "Id de la recepcion de leche", example = "25")
     private Long recepcionLecheId;
 }
 

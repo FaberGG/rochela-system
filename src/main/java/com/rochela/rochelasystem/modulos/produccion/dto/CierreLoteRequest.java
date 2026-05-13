@@ -1,5 +1,6 @@
 package com.rochela.rochelasystem.modulos.produccion.dto;
 
+import io.swagger.v3.oas.annotations.media.Schema;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
 import lombok.Getter;
@@ -11,10 +12,16 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
+@Schema(name = "CierreLoteRequest", description = "Datos para cerrar un lote")
 public class CierreLoteRequest {
 
+    @Schema(description = "Unidades producidas", example = "250")
     private Integer unidadesProducidas;
+
+    @Schema(description = "Peso total en kg", example = "120.5")
     private Double pesoTotalKg;
+
+    @Schema(description = "Observaciones del cierre", example = "Proceso estable")
     private String observaciones;
 }
 

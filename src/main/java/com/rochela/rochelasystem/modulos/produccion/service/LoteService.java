@@ -577,4 +577,3 @@ public class LoteService {
         return String.format("L%03d%02d%d", diaDelAno, anno, batchDelDia);
     }
 }
-
