@@ -74,21 +74,27 @@
 
 ```json
 {
+  "fecha": "2026-05-12",
   "proveedorId": 3,
-  "loteTanque": "T001",
+  "jornada": "AM",
   "ubicacion": "TANQUE_1",
   "cantidadLitros": 450.5,
-  "grasa": 4.2,
-  "solidos": 12.8,
-  "proteina": 3.6,
-  "puntoCongelacion": -0.54,
+  "realizadoPor": "Yesica",
+  "analisisOrganoléptico": "CUMPLE",
+  "colorCumple": true,
+  "olorCumple": true,
+  "alcohol": "NEGATIVO",
   "temperatura": 6.0,
   "densidad": 1.030,
-  "lactosa": 4.5,
-  "solidosTotales": 13.2,
-  "aguaAnadida": 0.5,
   "ph": 6.7,
-  "observaciones": "Leche llegó en buen estado"
+  "proteina": 3.6,
+  "grasa": 4.2,
+  "solidosTotales": 13.2,
+  "acidezTitulable": 0.17,
+  "aguaAnadida": 0.5,
+  "puntoCrioscopico": -0.54,
+  "horaInicioReductasa": "06:30:00",
+  "observaciones": "Sin novedades"
 }
 ```
 
@@ -98,24 +104,56 @@
 {
   "id": 12,
   "codigoLote": "T001",
+  "estadoRecepcion": "PENDIENTE_REDUCTASA",
   "resultadoValidacion": "APTA",
   "validacionDetalle": {
-    "grasa":           { "valor": 4.2,   "rangoMin": 4.0,  "rangoMax": null, "apto": true  },
-    "ph":              { "valor": 6.7,   "rangoMin": 6.6,  "rangoMax": 6.8,  "apto": true  },
-    "aguaAnadida":     { "valor": 0.5,   "rangoMin": null, "rangoMax": 1.0,  "apto": true  },
-    "solidosTotales":  { "valor": 13.2,  "rangoMin": 13.0, "rangoMax": null, "apto": true  }
+    "ph":             { "valor": 6.7,  "apto": true  },
+    "grasa":          { "valor": 4.2,  "apto": true  },
+    "aguaAnadida":    { "valor": 0.5,  "apto": true  },
+    "solidosTotales": { "valor": 13.2, "apto": true  }
   }
 }
 ```
-
-Y el endpoint adicional
 
 | Método | Endpoint | Descripción |
 | --- | --- | --- |
 | `PATCH` | `/recepciones/{id}/reductasa` | Registra la hora final y calcula el tiempo |
 
 json `{ "horaFinReductasa": "14:30:00" }`
+```
+RESPONSE 200 OK
+{
+  "id": 12,
+  "horaInicioReductasa": "06:30:00",
+  "horaFinReductasa": "09:45:00",
+  "tiempoReductasaMinutos": 195,
+  "cumpleReductasa": true,
+  "estadoRecepcion": "COMPLETA",
+  "resultadoValidacion": "APTA"
+}
+```
 
+GET /api/v1/recepciones/pendientes
+Shortcut que devuelve solo las recepciones con 
+estadoRecepcion = PENDIENTE_REDUCTASA. 
+Es el endpoint que usaría la interfaz para mostrarle al funcionario 
+qué recepciones le falta cerrar, 
+sin que tenga que aplicar el filtro manualmente.
+
+```
+// Response 200 OK
+[
+  {
+    "id": 12,
+    "fecha": "2026-05-12",
+    "jornada": "AM",
+    "proveedor": "ANDRÉS RUTA 1",
+    "horaInicioReductasa": "06:30:00",
+    "minutosTranscurridos": 195
+  }
+]
+```
+> minutosTranscurridos se calcula en tiempo real (now() − horaInicioReductasa) para que el funcionario sepa cuánto lleva corriendo la prueba.
 ---
 
 ### 3.4 Lotes — Gestión General
