@@ -1,0 +1,58 @@
+
+---
+
+## 1. Usuarios y Flujos
+
+El prototipo considera dos perfiles de usuario. No se implementa autenticación en esta fase; los perfiles se mencionan para delimitar responsabilidades y orientar el diseño de pantallas en el frontend.
+
+### 1.1 Operario de Producción
+
+Es quien ejecuta físicamente el proceso en planta y registra los datos en el sistema.
+
+**Flujo principal — Seguimiento de lote:**
+
+```
+1. Ve la lista de lotes activos con su estado actual
+2. Selecciona un lote
+3. Ve el detalle del lote: datos generales, historial de etapas registradas
+4. Registra los datos de la etapa en curso
+5. El sistema avanza el lote al siguiente estado
+6. Puede agregar cortes adicionales mientras el lote está en estado CORTES
+7. Al finalizar, registra unidades producidas y peso total
+```
+
+**Flujo secundario — Recepción de leche:**
+
+```
+1. Crea un nuevo registro de recepción
+2. Selecciona el proveedor y la ubicación del tanque
+3. Ingresa los parámetros fisicoquímicos medidos
+4. El sistema valida cada parámetro contra los rangos aceptables
+5. El registro queda guardado y visible para el ingeniero
+```
+
+---
+
+### 1.2 Ingeniero de Producción y Calidad
+
+Supervisa los procesos, analiza la información registrada y genera reportes.
+
+**Flujo principal — Consulta de lotes:**
+
+```
+1. Ve todos los lotes: activos, finalizados y cancelados
+2. Puede filtrar por fecha, producto o estado
+3. Selecciona un lote y ve el detalle completo con todas las etapas
+4. Consulta los índices de rendimiento del lote finalizado
+5. Exporta los datos a Google Sheets
+```
+
+**Flujo secundario — Revisión de recepciones de leche:**
+
+```
+1. Ve la lista de recepciones registradas
+2. Selecciona una recepción y ve los parámetros con indicadores de rango
+3. Exporta el historial de recepciones a Google Sheets
+```
+
+---
