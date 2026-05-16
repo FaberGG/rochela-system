@@ -1,0 +1,24 @@
+$kind: http-request
+name: Registrar pasteurizacion
+url: "{{baseUrl}}/api/v1/lotes/{{loteId}}/pasteurizacion"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+    language: text/javascript
+body:
+  type: json
+  content: |-
+    {
+      "hora": "08:45:00",
+      "temperatura": 72.5
+    }
+order: 4000
+
+

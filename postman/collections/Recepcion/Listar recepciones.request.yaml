@@ -1,0 +1,20 @@
+$kind: http-request
+name: Listar recepciones
+url: "{{baseUrl}}/api/v1/recepciones"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: proveedorId
+    value: "{{proveedorId}}"
+    disabled: true
+  - key: desde
+    value: "{{recepcionesDesde}}"
+    disabled: true
+  - key: hasta
+    value: "{{recepcionesHasta}}"
+    disabled: true
+  - key: resultado
+    value: "{{recepcionesResultado}}"
+    disabled: true
+order: 1000

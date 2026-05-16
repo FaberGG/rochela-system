@@ -1,0 +1,23 @@
+$kind: http-request
+name: Registrar desuerado
+url: "{{baseUrl}}/api/v1/lotes/{{loteId}}/desuerado"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+    language: text/javascript
+body:
+  type: json
+  content: |-
+    {
+      "hora": "10:30:00",
+      "litros": 120.0
+    }
+order: 10000
+

@@ -21,8 +21,12 @@ public class EstadoCancelado implements LoteState {
     }
 
     @Override
+    public LoteState siguiente(LoteStateContext context) {
+        return null;
+    }
+
+    @Override
     public LoteState cancelar(LoteStateContext context) {
         throw new IllegalStateException("El lote ya esta CANCELADO.");
     }
 }
-

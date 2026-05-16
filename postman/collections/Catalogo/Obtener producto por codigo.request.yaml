@@ -1,0 +1,8 @@
+$kind: http-request
+name: Obtener producto por codigo
+url: "{{baseUrl}}/api/v1/productos/{{productoCodigo}}"
+method: GET
+headers:
+  Accept: application/json
+order: 2000
+

@@ -14,6 +14,7 @@ public class StateResolver {
         states.put(EstadoLote.CLORURO, new EstadoCloruro(this));
         states.put(EstadoLote.CUAJO, new EstadoCuajo(this));
         states.put(EstadoLote.CORTES, new EstadoCortes(this));
+        states.put(EstadoLote.CORTES_CERRADOS, new EstadoCortesCerrados(this));
         states.put(EstadoLote.LAVADO_DESUERADO, new EstadoLavadoDesuerado(this));
         states.put(EstadoLote.DESUERADO, new EstadoDesuerado(this));
         states.put(EstadoLote.SALADO, new EstadoSalado(this));
@@ -30,4 +31,3 @@ public class StateResolver {
         return state;
     }
 }
-

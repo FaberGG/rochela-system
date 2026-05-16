@@ -1,0 +1,27 @@
+$kind: http-request
+name: Registrar salado
+url: "{{baseUrl}}/api/v1/lotes/{{loteId}}/salado"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+    language: text/javascript
+body:
+  type: json
+  content: |-
+    {
+      "hora": "11:00:00",
+      "temperatura": 12.0,
+      "cantidadKg": 20.0,
+      "sodioInicial": 1.2,
+      "sodioFinal": 1.8,
+      "loteSal": "SAL-2026-05"
+    }
+order: 11000
+

@@ -1,0 +1,46 @@
+$kind: http-request
+name: Crear recepcion
+url: "{{baseUrl}}/api/v1/recepciones"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "fecha": "2026-05-13",
+      "proveedorId": 10,
+      "jornada": "AM",
+      "ubicacion": "TANQUE_1",
+      "cantidadLitros": 150.0,
+      "realizadoPor": "Operario 1",
+      "analisisOrganoleptico": "CUMPLE",
+      "colorCumple": true,
+      "olorCumple": true,
+      "alcohol": "NEGATIVO",
+      "temperatura": 8.5,
+      "densidad": 1.03,
+      "ph": 6.6,
+      "proteina": 3.2,
+      "grasa": 3.5,
+      "solidosTotales": 12.3,
+      "acidezTitulable": 0.13,
+      "aguaAnadida": 0.0,
+      "puntoCrioscopico": -0.52,
+      "horaInicioReductasa": "09:00:00",
+      "observaciones": "Sin novedades"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+      var data = pm.response.json();
+      if (data && data.id) {
+        pm.environment.set('recepcionId', data.id);
+      }
+    language: text/javascript
+order: 2000
+

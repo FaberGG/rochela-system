@@ -78,6 +78,8 @@ state CORTES <<activo>> {
   RegistrandoCortes --> [*] : cerrar etapa
 }
 
+state CORTES_CERRADOS <<activo>>
+
 INICIADO --> PASTEURIZACION  : [requiere pasteurizacion]
 INICIADO --> CLORURO         : [no requiere pasteurizacion\ny requiere cloruro]
 INICIADO --> CUAJO           : [no requiere pasteurizacion\nni cloruro]
@@ -89,8 +91,10 @@ CLORURO --> CUAJO
 
 CUAJO --> CORTES
 
-CORTES --> LAVADO_DESUERADO  : [requiere lavado/desuerado]
-CORTES --> DESUERADO         : [no requiere lavado/desuerado]
+CORTES --> CORTES_CERRADOS
+
+CORTES_CERRADOS --> LAVADO_DESUERADO  : [requiere lavado/desuerado]
+CORTES_CERRADOS --> DESUERADO         : [no requiere lavado/desuerado]
 
 LAVADO_DESUERADO --> DESUERADO
 
@@ -136,7 +140,8 @@ Ubicacion: `src/main/java/com/rochela/rochelasystem/modulos/produccion/state`
 
 - `INICIADO` decide entre `PASTEURIZACION`, `CLORURO` o `CUAJO` segun las banderas del producto.
 - `PASTEURIZACION` decide entre `CLORURO` o `CUAJO`.
-- `CORTES` decide entre `LAVADO_DESUERADO` o `DESUERADO`.
+- `CORTES` decide `CORTES_CERRADOS`.
+- `CORTES_CERRADOS` decide entre `LAVADO_DESUERADO` o `DESUERADO`.
 - `FINALIZADO` y `CANCELADO` son terminales y no aceptan transiciones.
 
 ### Como encaja en el proyecto
@@ -161,4 +166,3 @@ LoteState siguiente = estadoActual.avanzar(context);
 
 lote.setEstadoActual(siguiente.getEstado());
 ```
-

@@ -1,0 +1,28 @@
+$kind: http-request
+name: Crear lote
+url: "{{baseUrl}}/api/v1/lotes"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "productoCodigo": "{{productoCodigo}}",
+      "fechaHoraInicio": "2026-05-13T08:30:00",
+      "recepcionLecheId": {{recepcionId}}
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+      var data = pm.response.json();
+      if (data && data.id) {
+        pm.environment.set('loteId', data.id);
+      }
+    language: text/javascript
+order: 2000
+

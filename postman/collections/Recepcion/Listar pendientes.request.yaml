@@ -1,0 +1,8 @@
+$kind: http-request
+name: Listar pendientes
+url: "{{baseUrl}}/api/v1/recepciones/pendientes"
+method: GET
+headers:
+  Accept: application/json
+order: 5000
+

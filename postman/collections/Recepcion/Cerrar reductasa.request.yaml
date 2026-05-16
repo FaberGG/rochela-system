@@ -1,0 +1,15 @@
+$kind: http-request
+name: Cerrar reductasa
+url: "{{baseUrl}}/api/v1/recepciones/{{recepcionId}}/reductasa"
+method: PATCH
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "horaFinReductasa": "11:30:00"
+    }
+order: 4000
+

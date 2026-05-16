@@ -6,6 +6,7 @@ public enum EstadoLote {
     CLORURO,
     CUAJO,
     CORTES,
+    CORTES_CERRADOS,
     LAVADO_DESUERADO,
     DESUERADO,
     SALADO,
@@ -13,4 +14,3 @@ public enum EstadoLote {
     FINALIZADO,
     CANCELADO
 }
-

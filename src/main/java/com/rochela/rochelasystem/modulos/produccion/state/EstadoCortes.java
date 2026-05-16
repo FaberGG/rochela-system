@@ -17,10 +17,7 @@ public class EstadoCortes implements LoteState {
 
 	@Override
 	public LoteState avanzar(LoteStateContext context) {
-		if (context.requiereLavadoDesuerado()) {
-			return resolver.resolve(EstadoLote.LAVADO_DESUERADO);
-		}
-		return resolver.resolve(EstadoLote.DESUERADO);
+		return resolver.resolve(EstadoLote.CORTES_CERRADOS);
 	}
 
 	@Override
@@ -28,4 +25,3 @@ public class EstadoCortes implements LoteState {
 		return resolver.resolve(EstadoLote.CANCELADO);
 	}
 }
-

@@ -1,0 +1,8 @@
+$kind: http-request
+name: Obtener recepcion por id
+url: "{{baseUrl}}/api/v1/recepciones/{{recepcionId}}"
+method: GET
+headers:
+  Accept: application/json
+order: 3000
+

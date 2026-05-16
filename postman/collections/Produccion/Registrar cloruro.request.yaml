@@ -1,0 +1,25 @@
+$kind: http-request
+name: Registrar cloruro
+url: "{{baseUrl}}/api/v1/lotes/{{loteId}}/cloruro"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+    language: text/javascript
+body:
+  type: json
+  content: |-
+    {
+      "hora": "09:00:00",
+      "temperatura": 35.0,
+      "cantidadGramos": 12.0,
+      "loteCloruro": "CL-2026-05"
+    }
+order: 5000
+

@@ -1,0 +1,30 @@
+$kind: http-request
+name: Listar lotes
+url: "{{baseUrl}}/api/v1/lotes"
+method: GET
+headers:
+  Accept: application/json
+queryParams:
+  - key: estado
+    value: "{{lotesEstado}}"
+    disabled: true
+  - key: productoCodigo
+    value: "{{productoCodigo}}"
+    disabled: true
+  - key: desde
+    value: "{{lotesDesde}}"
+    disabled: true
+  - key: hasta
+    value: "{{lotesHasta}}"
+    disabled: true
+  - key: soloActivos
+    value: "{{lotesSoloActivos}}"
+    disabled: true
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 200', function () {
+        pm.response.to.have.status(200);
+      });
+    language: text/javascript
+order: 1000

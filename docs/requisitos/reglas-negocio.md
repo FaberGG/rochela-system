@@ -27,7 +27,8 @@ El backend rechaza con `400` cualquier intento de registrar una etapa si el lote
 | `PASTEURIZACION` | Registrar cloruro (si aplica) o cuajo (si no aplica cloruro) |
 | `CLORURO` | Registrar cuajo |
 | `CUAJO` | Avanza automáticamente a `CORTES` |
-| `CORTES` | Agregar cortes · Cerrar etapa de cortes |
+| `CORTES` | Agregar cortes |
+| `CORTES_CERRADOS` | Cerrar etapa de cortes · Registrar lavado/desuerado o desuerado |
 | `LAVADO_DESUERADO` | Registrar desuerado |
 | `DESUERADO` | Registrar salado |
 | `SALADO` | Registrar prensado |
@@ -58,4 +59,3 @@ Clasificación resultante:
 Rendimiento General  = pesoTotalKg / litrosLeche * 100
 Rendimiento Teórico  = [fórmula por confirmar con el ingeniero]
 ```
-

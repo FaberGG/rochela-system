@@ -24,17 +24,26 @@ class LoteStateTest {
         assertEquals(EstadoLote.CUAJO, iniciado.avanzar(sinPasteurizacionSinCloruro).getEstado());
     }
 
-    @DisplayName("El estado CORTES avanza a LAVADO_DESUERADO si hay lavado, o a DESUERADO si no lo hay")
+    @DisplayName("El estado CORTES avanza a CORTES_CERRADOS")
     @Test
-    void cortes_avanza_a_lavado_o_desuerado() {
+    void cortes_avanza_a_cortes_cerrados() {
+        StateResolver resolver = new StateResolver();
+        LoteState cortes = resolver.resolve(EstadoLote.CORTES);
+
+        assertEquals(EstadoLote.CORTES_CERRADOS, cortes.avanzar(new LoteStateContext(false, false, false, resolver)).getEstado());
+    }
+
+    @DisplayName("El estado CORTES_CERRADOS avanza a LAVADO_DESUERADO o DESUERADO")
+    @Test
+    void cortes_cerrados_avanza_segun_lavado() {
         StateResolver resolver = new StateResolver();
         LoteStateContext conLavado = new LoteStateContext(false, false, true, resolver);
         LoteStateContext sinLavado = new LoteStateContext(false, false, false, resolver);
 
-        LoteState cortes = resolver.resolve(EstadoLote.CORTES);
+        LoteState cortesCerrados = resolver.resolve(EstadoLote.CORTES_CERRADOS);
 
-        assertEquals(EstadoLote.LAVADO_DESUERADO, cortes.avanzar(conLavado).getEstado());
-        assertEquals(EstadoLote.DESUERADO, cortes.avanzar(sinLavado).getEstado());
+        assertEquals(EstadoLote.LAVADO_DESUERADO, cortesCerrados.avanzar(conLavado).getEstado());
+        assertEquals(EstadoLote.DESUERADO, cortesCerrados.avanzar(sinLavado).getEstado());
     }
 
     @DisplayName("Los estados terminales FINALIZADO y CANCELADO no permiten avanzar")
@@ -51,4 +60,3 @@ class LoteStateTest {
     }
     
 }
-

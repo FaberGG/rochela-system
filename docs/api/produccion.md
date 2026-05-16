@@ -436,7 +436,7 @@ Finaliza la etapa de cortes.
   },
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
-  "estadoActual": "CORTES",
+  "estadoActual": "CORTES_CERRADOS",
   "siguienteEtapa": "LAVADO_DESUERADO"
 }
 ```
@@ -831,4 +831,3 @@ Registra el cierre del lote y calcula rendimientos.
 - `etapas` (array de EtapaDetalle)
 - `cortes` (array de CorteDetalle)
 - `cierre` (CierreLoteResponse)
-
