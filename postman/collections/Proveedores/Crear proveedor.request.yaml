@@ -1,0 +1,31 @@
+$kind: http-request
+name: Crear proveedor
+url: "{{baseUrl}}/api/v1/proveedores"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "nombreEmpresa": "Lacteos del Norte",
+      "nombrePropietario": "Juan Perez",
+      "nombreMayordomo": "Carlos Gomez",
+      "telefono": "+57 3001234567",
+      "correo": "contacto@lacteos.com",
+      "direccion": "Km 5 via principal, Vereda La Isla",
+      "activo": true
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+      var data = pm.response.json();
+      if (data && data.id) {
+        pm.environment.set('proveedorId', data.id);
+      }
+    language: text/javascript
+order: 2000

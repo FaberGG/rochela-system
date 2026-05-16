@@ -1,0 +1,26 @@
+name: local
+values:
+  - key: baseUrl
+    value: 'http://localhost:8080'
+  - key: proveedorId
+    value: '10'
+  - key: recepcionId
+    value: '1'
+  - key: productoCodigo
+    value: QUESO-001
+  - key: loteId
+    value: '1'
+  - key: recepcionesDesde
+    value: '2026-05-01'
+  - key: recepcionesHasta
+    value: '2026-05-31'
+  - key: recepcionesResultado
+    value: APTA
+  - key: lotesEstado
+    value: INICIADO
+  - key: lotesDesde
+    value: '2026-05-01'
+  - key: lotesHasta
+    value: '2026-05-31'
+  - key: lotesSoloActivos
+    value: 'true'

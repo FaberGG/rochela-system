@@ -1,0 +1,6 @@
+$kind: http-request
+url: "{{baseUrl}}/api/v1/proveedores/{{proveedorId}}"
+method: DELETE
+headers:
+  Accept: application/json
+order: 5000
