@@ -18,11 +18,9 @@ public class DataInicializadorCatalogo implements ApplicationRunner {
     @Override
     @Transactional
     public void run(ApplicationArguments args) {
-        upsertProducto("QF01",   "Queso Fresco 01",    false, false, false);
-        upsertProducto("QF01bs", "Queso Fresco 01 BS", false, false, false);
-        upsertProducto("SP004",  "SP 004",              true,  true,  false);
-        upsertProducto("QF03",   "Queso Fresco 03",     true,  true,  false);
-        upsertProducto("QM001",  "Queso Maduro 001",    true,  true,  false);
+        upsertProducto("QF001",   "Tipo: campesino prensado",    false, false, false);
+        upsertProducto("QF001bs", "Tipo: campesino bajo en sodio", false, false, false);
+        upsertProducto("QF003",   "Tipo: Cuajada",     true,  true,  false);
     }
 
     private void upsertProducto(String codigo, String nombre,

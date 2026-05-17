@@ -8,4 +8,5 @@ import java.util.List;
 public interface ProveedorRepository extends JpaRepository<Proveedor, Long> {
 
     List<Proveedor> findByActivoTrue();
+    Boolean existsByNombreEmpresa(String nombreEmpresa);
 }
