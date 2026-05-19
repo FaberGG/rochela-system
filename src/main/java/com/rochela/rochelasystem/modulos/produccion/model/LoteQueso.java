@@ -1,15 +1,8 @@
 package com.rochela.rochelasystem.modulos.produccion.model;
 
 import com.rochela.rochelasystem.shared.enums.EstadoLote;
-import jakarta.persistence.Column;
-import jakarta.persistence.Entity;
-import jakarta.persistence.EnumType;
-import jakarta.persistence.Enumerated;
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
-import jakarta.persistence.Lob;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
+
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import lombok.AllArgsConstructor;
@@ -23,7 +16,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class Lote {
+public class LoteQueso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -35,8 +28,9 @@ public class Lote {
     @Column(name = "producto_id", nullable = false)
     private Long productoId;
 
-    @Column(name = "recepcion_leche_id")
-    private Long recepcionLecheId;
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "lote_leche_id", nullable = false)
+    private LoteLeche loteLeche;
 
     @Column(name = "fecha_hora_inicio", nullable = false)
     private LocalDateTime fechaHoraInicio;

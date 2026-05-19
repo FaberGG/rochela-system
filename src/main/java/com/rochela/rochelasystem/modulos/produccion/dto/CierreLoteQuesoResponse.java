@@ -8,8 +8,8 @@ import lombok.Getter;
 
 @Getter
 @Builder
-@Schema(name = "CierreLoteResponse", description = "Resultado del cierre del lote")
-public class CierreLoteResponse {
+@Schema(name = "CierreLoteQuesoResponse", description = "Resultado del cierre del lote")
+public class CierreLoteQuesoResponse {
 
     @Schema(description = "Codigo del lote", example = "L-132261-01")
     private String codigoLote;

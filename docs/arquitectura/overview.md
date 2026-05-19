@@ -12,7 +12,7 @@
 - `catalogo`: catalogo de productos.
 - `proveedores`: gestion de proveedores.
 - `recepcion`: recepcion de leche y validaciones.
-- `produccion`: lotes, etapas y cierres.
+- `produccion`: loteQuesos, etapas y cierres.
 - `exportacion`: exportacion a Google Sheets.
 - `shared`: enums, excepciones, configuracion comun.
 

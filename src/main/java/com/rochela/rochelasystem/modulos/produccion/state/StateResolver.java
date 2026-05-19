@@ -18,6 +18,7 @@ public class StateResolver {
         states.put(EstadoLote.LAVADO_DESUERADO, new EstadoLavadoDesuerado(this));
         states.put(EstadoLote.DESUERADO, new EstadoDesuerado(this));
         states.put(EstadoLote.SALADO, new EstadoSalado(this));
+        states.put(EstadoLote.PRENSADO_INICIADO, new EstadoPrensadoIniciado(this));
         states.put(EstadoLote.PRENSADO, new EstadoPrensado(this));
         states.put(EstadoLote.FINALIZADO, new EstadoFinalizado(this));
         states.put(EstadoLote.CANCELADO, new EstadoCancelado(this));

@@ -41,6 +41,6 @@ public class LoteDetalleResponse {
     private List<CorteDetalleDto> cortes;
 
     @Schema(description = "Cierre del lote")
-    private CierreLoteResponse cierre;
+    private CierreLoteQuesoResponse cierre;
 }
 

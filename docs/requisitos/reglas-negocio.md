@@ -1,14 +1,14 @@
 # Reglas de negocio del backend
 
-## Generación del código de lote
+## Generación del código de loteQueso
 
 ```
 codigoLote = "L" + diaDeLaAnno(3 dígitos) + ultimosDosDigitosAnno + batchDelDia
 
-batchDelDia = COUNT(lotes donde fecha = hoy) + 1
+batchDelDia = COUNT(loteQuesos donde fecha = hoy) + 1
 ```
 
-Ejemplo para el primer lote del 12 de mayo de 2026:
+Ejemplo para el primer loteQueso del 12 de mayo de 2026:
 
 ```
 día 132 del año → "132"
@@ -19,7 +19,7 @@ resultado → "L132261"
 
 ## Validación de transiciones de estado
 
-El backend rechaza con `400` cualquier intento de registrar una etapa si el lote no está en el estado previo esperado.
+El backend rechaza con `400` cualquier intento de registrar una etapa si el loteQueso no está en el estado previo esperado.
 
 | Estado actual | Acción permitida |
 | --- | --- |

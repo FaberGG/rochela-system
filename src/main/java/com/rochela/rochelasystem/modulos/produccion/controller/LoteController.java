@@ -1,19 +1,7 @@
 package com.rochela.rochelasystem.modulos.produccion.controller;
 
-import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.CloruroRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteCreateResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.CuajoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.DesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LavadoDesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteDetalleResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteResumenResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.PasteurizacionRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.PrensadoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.SaladoRequest;
+import com.rochela.rochelasystem.modulos.produccion.dto.*;
+import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteQuesoRequest;
 import com.rochela.rochelasystem.modulos.produccion.service.LoteService;
 import com.rochela.rochelasystem.shared.enums.EstadoLote;
 import com.rochela.rochelasystem.shared.exception.ErrorResponseDto;
@@ -75,7 +63,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Detalle del lote",
                     content = @Content(schema = @Schema(implementation = LoteDetalleResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
     })
     public LoteDetalleResponse obtenerDetalle(
@@ -88,7 +76,7 @@ public class LoteController {
     @ResponseStatus(HttpStatus.CREATED)
     @Operation(summary = "Crear lote", description = "Crea un nuevo lote de produccion")
     @ApiResponses({
-            @ApiResponse(responseCode = "201", description = "Lote creado",
+            @ApiResponse(responseCode = "201", description = "LoteQueso creado",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
             @ApiResponse(responseCode = "400", description = "Solicitud invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -105,9 +93,9 @@ public class LoteController {
     @PatchMapping("/{id}/cancelar")
     @Operation(summary = "Cancelar lote", description = "Cancela un lote en proceso")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "Lote cancelado",
+            @ApiResponse(responseCode = "200", description = "LoteQueso cancelado",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -124,7 +112,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -147,7 +135,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -170,7 +158,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -193,7 +181,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Corte registrado",
                     content = @Content(schema = @Schema(implementation = CorteCreateResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -215,7 +203,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "200", description = "Cortes cerrados",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -232,7 +220,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -255,7 +243,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -278,7 +266,7 @@ public class LoteController {
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -297,17 +285,17 @@ public class LoteController {
 
     @PostMapping("/{id}/prensado")
     @ResponseStatus(HttpStatus.CREATED)
-    @Operation(summary = "Registrar prensado", description = "Registra la etapa de prensado")
+    @Operation(summary = "Iniciar prensado", description = "Registra el inicio del prensado")
     @ApiResponses({
             @ApiResponse(responseCode = "201", description = "Etapa registrada",
                     content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
     })
     @io.swagger.v3.oas.annotations.parameters.RequestBody(
-            description = "Datos de prensado",
+            description = "Datos de inicio de prensado",
             required = true,
             content = @Content(schema = @Schema(implementation = PrensadoRequest.class))
     )
@@ -318,12 +306,34 @@ public class LoteController {
         return loteService.registrarPrensado(id, request);
     }
 
+    @PostMapping("/{id}/prensado/cierre")
+    @Operation(summary = "Cerrar prensado", description = "Registra el cierre del prensado")
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Prensado cerrado",
+                    content = @Content(schema = @Schema(implementation = LoteResumenResponse.class))),
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
+                    content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
+            @ApiResponse(responseCode = "409", description = "Transicion invalida",
+                    content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
+    })
+    @io.swagger.v3.oas.annotations.parameters.RequestBody(
+            description = "Datos de cierre de prensado",
+            required = true,
+            content = @Content(schema = @Schema(implementation = PrensadoCierreRequest.class))
+    )
+    public LoteResumenResponse cerrarPrensado(
+            @Parameter(description = "Id del lote", example = "1")
+            @PathVariable Long id,
+            @RequestBody PrensadoCierreRequest request) {
+        return loteService.cerrarPrensado(id, request);
+    }
+
     @PostMapping("/{id}/cierre")
     @Operation(summary = "Cerrar lote", description = "Registra el cierre del lote y calcula rendimientos")
     @ApiResponses({
-            @ApiResponse(responseCode = "200", description = "Lote cerrado",
-                    content = @Content(schema = @Schema(implementation = CierreLoteResponse.class))),
-            @ApiResponse(responseCode = "404", description = "Lote no encontrado",
+            @ApiResponse(responseCode = "200", description = "LoteQueso cerrado",
+                    content = @Content(schema = @Schema(implementation = CierreLoteQuesoResponse.class))),
+            @ApiResponse(responseCode = "404", description = "LoteQueso no encontrado",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class))),
             @ApiResponse(responseCode = "409", description = "Transicion invalida",
                     content = @Content(schema = @Schema(implementation = ErrorResponseDto.class)))
@@ -331,12 +341,12 @@ public class LoteController {
     @io.swagger.v3.oas.annotations.parameters.RequestBody(
             description = "Datos de cierre del lote",
             required = true,
-            content = @Content(schema = @Schema(implementation = CierreLoteRequest.class))
+            content = @Content(schema = @Schema(implementation = CierreLoteQuesoRequest.class))
     )
-    public CierreLoteResponse cerrarLote(
+    public CierreLoteQuesoResponse cerrarLote(
             @Parameter(description = "Id del lote", example = "1")
             @PathVariable Long id,
-            @RequestBody CierreLoteRequest request) {
+            @RequestBody CierreLoteQuesoRequest request) {
         return loteService.cerrarLote(id, request);
     }
 }

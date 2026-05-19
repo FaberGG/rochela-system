@@ -2,26 +2,12 @@ package com.rochela.rochelasystem.modulos.produccion.service;
 
 import com.rochela.rochelasystem.modulos.catalogo.model.Producto;
 import com.rochela.rochelasystem.modulos.catalogo.repository.ProductoRepository;
-import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.CloruroRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteCreateResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteDetalleDto;
-import com.rochela.rochelasystem.modulos.produccion.dto.CuajoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.DesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.EtapaDetalleDto;
-import com.rochela.rochelasystem.modulos.produccion.dto.LavadoDesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteDetalleResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteResumenResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.PasteurizacionRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.PrensadoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.ProductoResumenDto;
-import com.rochela.rochelasystem.modulos.produccion.dto.SaladoRequest;
-import com.rochela.rochelasystem.modulos.produccion.model.CierreLote;
+import com.rochela.rochelasystem.modulos.produccion.dto.*;
+import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteQuesoResponse;
+import com.rochela.rochelasystem.modulos.produccion.model.CierreLoteQueso;
 import com.rochela.rochelasystem.modulos.produccion.model.Corte;
-import com.rochela.rochelasystem.modulos.produccion.model.Lote;
+import com.rochela.rochelasystem.modulos.produccion.model.LoteQueso;
+import com.rochela.rochelasystem.modulos.produccion.model.LoteLeche;
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaCloruro;
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaCuajo;
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaDesuerado;
@@ -30,21 +16,20 @@ import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaPasteurizac
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaPrensado;
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaRegistro;
 import com.rochela.rochelasystem.modulos.produccion.model.etapa.EtapaSalado;
-import com.rochela.rochelasystem.modulos.produccion.repository.CierreLoteRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.CierreLoteQuesoRepository;
 import com.rochela.rochelasystem.modulos.produccion.repository.CorteRepository;
 import com.rochela.rochelasystem.modulos.produccion.repository.EtapaRegistroRepository;
-import com.rochela.rochelasystem.modulos.produccion.repository.LoteRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.EtapaPrensadoRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.LoteQuesoRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.LoteLecheRepository;
 import com.rochela.rochelasystem.modulos.produccion.state.LoteState;
 import com.rochela.rochelasystem.modulos.produccion.state.LoteStateContext;
 import com.rochela.rochelasystem.modulos.produccion.state.StateResolver;
-import com.rochela.rochelasystem.modulos.recepcion.model.RecepcionLeche;
-import com.rochela.rochelasystem.modulos.recepcion.repository.RecepcionLecheRepository;
 import com.rochela.rochelasystem.shared.enums.EstadoLote;
 import com.rochela.rochelasystem.shared.enums.TipoEtapa;
 import com.rochela.rochelasystem.shared.exception.EstadoInvalidoException;
 import com.rochela.rochelasystem.shared.exception.EtapaNoAplicaException;
 import com.rochela.rochelasystem.shared.exception.LoteNotFoundException;
-import com.rochela.rochelasystem.shared.exception.RecepcionNotFoundException;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -63,26 +48,29 @@ import org.springframework.web.server.ResponseStatusException;
 @Service
 public class LoteService {
 
-    private final LoteRepository loteRepository;
+    private final LoteQuesoRepository loteQuesoRepository;
     private final ProductoRepository productoRepository;
-    private final RecepcionLecheRepository recepcionLecheRepository;
+    private final LoteLecheRepository loteLecheRepository;
     private final EtapaRegistroRepository etapaRegistroRepository;
+    private final EtapaPrensadoRepository etapaPrensadoRepository;
     private final CorteRepository corteRepository;
-    private final CierreLoteRepository cierreLoteRepository;
+    private final CierreLoteQuesoRepository cierreLoteQuesoRepository;
     private final StateResolver stateResolver = new StateResolver();
 
-    public LoteService(LoteRepository loteRepository,
+    public LoteService(LoteQuesoRepository loteQuesoRepository,
                        ProductoRepository productoRepository,
-                       RecepcionLecheRepository recepcionLecheRepository,
+                       LoteLecheRepository loteLecheRepository,
                        EtapaRegistroRepository etapaRegistroRepository,
+                       EtapaPrensadoRepository etapaPrensadoRepository,
                        CorteRepository corteRepository,
-                       CierreLoteRepository cierreLoteRepository) {
-        this.loteRepository = loteRepository;
+                       CierreLoteQuesoRepository cierreLoteQuesoRepository) {
+        this.loteQuesoRepository = loteQuesoRepository;
         this.productoRepository = productoRepository;
-        this.recepcionLecheRepository = recepcionLecheRepository;
+        this.loteLecheRepository = loteLecheRepository;
         this.etapaRegistroRepository = etapaRegistroRepository;
+        this.etapaPrensadoRepository = etapaPrensadoRepository;
         this.corteRepository = corteRepository;
-        this.cierreLoteRepository = cierreLoteRepository;
+        this.cierreLoteQuesoRepository = cierreLoteQuesoRepository;
     }
 
     // ─── Consultas ────────────────────────────────────────────────────────────
@@ -93,7 +81,7 @@ public class LoteService {
                                                  LocalDate desde,
                                                  LocalDate hasta,
                                                  Boolean soloActivos) {
-        Specification<Lote> spec = (root, query, cb) -> cb.conjunction();
+        Specification<LoteQueso> spec = (root, query, cb) -> cb.conjunction();
         if (estado != null) {
             spec = spec.and((root, query, cb) -> cb.equal(root.get("estadoActual"), estado));
         }
@@ -116,21 +104,21 @@ public class LoteService {
                     .in(EstadoLote.FINALIZADO, EstadoLote.CANCELADO)));
         }
 
-        List<Lote> lotes = loteRepository.findAll(spec);
+        List<LoteQueso> loteQuesos = loteQuesoRepository.findAll(spec);
         Map<Long, Producto> productos = productoRepository.findAllById(
-                        lotes.stream().map(Lote::getProductoId).distinct().toList())
+                        loteQuesos.stream().map(LoteQueso::getProductoId).distinct().toList())
                 .stream()
                 .collect(Collectors.toMap(Producto::getId, Function.identity()));
 
-        return lotes.stream()
-                .map(lote -> mapResumen(lote, getProducto(productos, lote.getProductoId())))
+        return loteQuesos.stream()
+                .map(loteQueso -> mapResumen(loteQueso, getProducto(productos, loteQueso.getProductoId())))
                 .toList();
     }
 
     @Transactional(readOnly = true)
     public LoteDetalleResponse obtenerDetalle(Long id) {
-        Lote lote = obtenerLote(id);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(id);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
 
         List<EtapaDetalleDto> etapas = etapaRegistroRepository.findByLoteIdOrderByFechaHoraRegistroAsc(id)
                 .stream()
@@ -146,19 +134,19 @@ public class LoteService {
                         .build())
                 .toList();
 
-        Optional<CierreLote> cierre = cierreLoteRepository.findByLoteId(id);
+        Optional<CierreLoteQueso> cierre = cierreLoteQuesoRepository.findByLoteId(id);
 
         return LoteDetalleResponse.builder()
-                .id(lote.getId())
-                .codigoLote(lote.getCodigoLote())
+                .id(loteQueso.getId())
+                .codigoLote(loteQueso.getCodigoLote())
                 .producto(mapProducto(producto))
-                .fechaHoraInicio(lote.getFechaHoraInicio())
-                .fechaVencimiento(lote.getFechaVencimiento())
-                .estadoActual(lote.getEstadoActual())
-                .siguienteEtapa(calcularSiguienteEtapa(lote, producto))
+                .fechaHoraInicio(loteQueso.getFechaHoraInicio())
+                .fechaVencimiento(loteQueso.getFechaVencimiento())
+                .estadoActual(loteQueso.getEstadoActual())
+                .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
                 .etapas(etapas)
                 .cortes(cortes)
-                .cierre(cierre.map(item -> mapCierre(lote, item)).orElse(null))
+                .cierre(cierre.map(item -> mapCierre(loteQueso, item)).orElse(null))
                 .build();
     }
 
@@ -170,10 +158,14 @@ public class LoteService {
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "Producto no encontrado: " + request.getProductoCodigo()));
 
-        if (request.getRecepcionLecheId() != null
-                && !recepcionLecheRepository.existsById(request.getRecepcionLecheId())) {
-            throw new RecepcionNotFoundException(request.getRecepcionLecheId());
+        if (request.getLoteLecheId() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Debe indicar el lote de leche para crear el lote de queso.");
         }
+
+        LoteLeche loteLeche = loteLecheRepository.findById(request.getLoteLecheId())
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "LoteLeche no encontrado: " + request.getLoteLecheId()));
 
         LocalDateTime fechaHoraInicio = request.getFechaHoraInicio() != null
                 ? request.getFechaHoraInicio()
@@ -181,35 +173,35 @@ public class LoteService {
         LocalDate fechaInicio = fechaHoraInicio.toLocalDate();
         LocalDateTime inicio = fechaInicio.atStartOfDay();
         LocalDateTime fin = fechaInicio.plusDays(1).atStartOfDay();
-        int batchDelDia = (int) loteRepository.countByFechaHoraInicioBetween(inicio, fin) + 1;
+        int batchDelDia = (int) loteQuesoRepository.countByFechaHoraInicioBetween(inicio, fin) + 1;
 
-        Lote lote = new Lote();
-        lote.setCodigoLote(generarCodigoLote(fechaHoraInicio, batchDelDia));
-        lote.setProductoId(producto.getId());
-        lote.setRecepcionLecheId(request.getRecepcionLecheId());
-        lote.setFechaHoraInicio(fechaHoraInicio);
-        lote.setFechaVencimiento(fechaInicio.plusDays(30));
-        lote.setEstadoActual(EstadoLote.INICIADO);
-        lote.setBatchDelDia(batchDelDia);
+        LoteQueso loteQueso = new LoteQueso();
+        loteQueso.setCodigoLote(generarCodigoLote(fechaHoraInicio, batchDelDia));
+        loteQueso.setProductoId(producto.getId());
+        loteQueso.setLoteLeche(loteLeche);
+        loteQueso.setFechaHoraInicio(fechaHoraInicio);
+        loteQueso.setFechaVencimiento(fechaInicio.plusDays(30));
+        loteQueso.setEstadoActual(EstadoLote.INICIADO);
+        loteQueso.setBatchDelDia(batchDelDia);
 
-        Lote guardado = loteRepository.save(lote);
+        LoteQueso guardado = loteQuesoRepository.save(loteQueso);
         return mapResumen(guardado, producto);
     }
 
     @Transactional
     public LoteResumenResponse cancelarLote(Long id) {
-        Lote lote = obtenerLote(id);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(id);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
         LoteStateContext context = buildContext(producto);
 
         try {
-            LoteState actual = stateResolver.resolve(lote.getEstadoActual());
-            lote.setEstadoActual(actual.cancelar(context).getEstado());
+            LoteState actual = stateResolver.resolve(loteQueso.getEstadoActual());
+            loteQueso.setEstadoActual(actual.cancelar(context).getEstado());
         } catch (IllegalStateException ex) {
             throw new EstadoInvalidoException(ex.getMessage());
         }
 
-        Lote guardado = loteRepository.save(lote);
+        LoteQueso guardado = loteQuesoRepository.save(loteQueso);
         return mapResumen(guardado, producto);
     }
 
@@ -217,26 +209,26 @@ public class LoteService {
 
     @Transactional
     public LoteResumenResponse registrarPasteurizacion(Long loteId, PasteurizacionRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
         if (!Boolean.TRUE.equals(producto.getRequierePasteurizacion())) {
             throw new EtapaNoAplicaException("El producto " + producto.getCodigo() + " no requiere pasteurizacion.");
         }
-        validarEstado(lote, Set.of(EstadoLote.INICIADO), "registrar etapa PASTEURIZACION");
+        validarEstado(loteQueso, Set.of(EstadoLote.INICIADO), "registrar etapa PASTEURIZACION");
 
         EtapaPasteurizacion etapa = new EtapaPasteurizacion();
         etapa.setTemperatura(request.getTemperatura());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.PASTEURIZACION, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.PASTEURIZACION, request.getHora());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstado(lote, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstado(loteQueso, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarCloruro(Long loteId, CloruroRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
         if (!Boolean.TRUE.equals(producto.getRequiereCloruro())) {
             throw new EtapaNoAplicaException("El producto " + producto.getCodigo() + " no requiere cloruro.");
         }
@@ -244,50 +236,50 @@ public class LoteService {
         Set<EstadoLote> permitidos = producto.getRequierePasteurizacion()
                 ? Set.of(EstadoLote.PASTEURIZACION)
                 : Set.of(EstadoLote.INICIADO);
-        validarEstado(lote, permitidos, "registrar etapa CLORURO");
+        validarEstado(loteQueso, permitidos, "registrar etapa CLORURO");
 
         EtapaCloruro etapa = new EtapaCloruro();
         etapa.setTemperatura(request.getTemperatura());
         etapa.setCantidadGramos(request.getCantidadGramos());
         etapa.setLoteCloruro(request.getLoteCloruro());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.CLORURO, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.CLORURO, request.getHora());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstado(lote, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstado(loteQueso, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarCuajo(Long loteId, CuajoRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
 
         Set<EstadoLote> permitidos = resolverEstadosParaCuajo(producto);
-        validarEstado(lote, permitidos, "registrar etapa CUAJO");
+        validarEstado(loteQueso, permitidos, "registrar etapa CUAJO");
 
         EtapaCuajo etapa = new EtapaCuajo();
         etapa.setTemperatura(request.getTemperatura());
         etapa.setCantidadGramos(request.getCantidadGramos());
         etapa.setLoteCuajo(request.getLoteCuajo());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.CUAJO, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.CUAJO, request.getHora());
         etapaRegistroRepository.save(etapa);
 
         // Corregido: usa avanzarEstado igual que todos los demás métodos.
-        // El estado actual del lote (INICIADO, PASTEURIZACION o CLORURO) determina
+        // El estado actual del loteQueso (INICIADO, PASTEURIZACION o CLORURO) determina
         // el avance correcto a través del patrón State.
-        avanzarEstado(lote, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstado(loteQueso, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public CorteCreateResponse agregarCorte(Long loteId, CorteCreateRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
 
-        validarEstado(lote, Set.of(EstadoLote.CORTES, EstadoLote.CUAJO), "agregar corte");
-        if (EstadoLote.CUAJO.equals(lote.getEstadoActual())) {
-            avanzarEstado(lote, producto);
-            loteRepository.save(lote);
+        validarEstado(loteQueso, Set.of(EstadoLote.CORTES, EstadoLote.CUAJO), "agregar corte");
+        if (EstadoLote.CUAJO.equals(loteQueso.getEstadoActual())) {
+            avanzarEstado(loteQueso, producto);
+            loteQuesoRepository.save(loteQueso);
         }
 
         int siguienteNumero = corteRepository.findTopByLoteIdOrderByNumeroCorteDesc(loteId)
@@ -313,54 +305,54 @@ public class LoteService {
 
     @Transactional
     public LoteResumenResponse cerrarCortes(Long loteId) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
-        validarEstado(lote, Set.of(EstadoLote.CORTES), "cerrar etapa de cortes");
-        avanzarEstadoDesde(lote, EstadoLote.CORTES, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
+        validarEstado(loteQueso, Set.of(EstadoLote.CORTES), "cerrar etapa de cortes");
+        avanzarEstadoDesde(loteQueso, EstadoLote.CORTES, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarLavadoDesuerado(Long loteId, LavadoDesueradoRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
         if (!Boolean.TRUE.equals(producto.getRequiereLavadoDesuerado())) {
             throw new EtapaNoAplicaException("El producto " + producto.getCodigo() + " no requiere lavado/desuerado.");
         }
-        validarEstado(lote, Set.of(EstadoLote.CORTES_CERRADOS), "registrar etapa LAVADO_DESUERADO");
+        validarEstado(loteQueso, Set.of(EstadoLote.CORTES_CERRADOS), "registrar etapa LAVADO_DESUERADO");
 
         EtapaLavadoDesuerado etapa = new EtapaLavadoDesuerado();
         etapa.setLitros(request.getLitros());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.LAVADO_DESUERADO, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.LAVADO_DESUERADO, request.getHora());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstadoDesde(lote, EstadoLote.CORTES_CERRADOS, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstadoDesde(loteQueso, EstadoLote.CORTES_CERRADOS, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarDesuerado(Long loteId, DesueradoRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
         Set<EstadoLote> permitidos = Boolean.TRUE.equals(producto.getRequiereLavadoDesuerado())
                 ? Set.of(EstadoLote.LAVADO_DESUERADO)
                 : Set.of(EstadoLote.CORTES_CERRADOS);
-        validarEstado(lote, permitidos, "registrar etapa DESUERADO");
+        validarEstado(loteQueso, permitidos, "registrar etapa DESUERADO");
 
         EtapaDesuerado etapa = new EtapaDesuerado();
         etapa.setLitros(request.getLitros());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.DESUERADO, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.DESUERADO, request.getHora());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstadoDesde(lote, lote.getEstadoActual(), producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstadoDesde(loteQueso, loteQueso.getEstadoActual(), producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarSalado(Long loteId, SaladoRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
-        validarEstado(lote, Set.of(EstadoLote.DESUERADO), "registrar etapa SALADO");
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
+        validarEstado(loteQueso, Set.of(EstadoLote.DESUERADO), "registrar etapa SALADO");
 
         EtapaSalado etapa = new EtapaSalado();
         etapa.setTemperatura(request.getTemperatura());
@@ -368,59 +360,75 @@ public class LoteService {
         etapa.setSodioInicial(request.getSodioInicial());
         etapa.setSodioFinal(request.getSodioFinal());
         etapa.setLoteSal(request.getLoteSal());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.SALADO, request.getHora());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.SALADO, request.getHora());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstadoDesde(lote, EstadoLote.DESUERADO, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstadoDesde(loteQueso, EstadoLote.DESUERADO, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     @Transactional
     public LoteResumenResponse registrarPrensado(Long loteId, PrensadoRequest request) {
-        Lote lote = obtenerLote(loteId);
-        Producto producto = obtenerProducto(lote.getProductoId());
-        validarEstado(lote, Set.of(EstadoLote.SALADO), "registrar etapa PRENSADO");
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
+        validarEstado(loteQueso, Set.of(EstadoLote.SALADO), "registrar etapa PRENSADO");
 
         EtapaPrensado etapa = new EtapaPrensado();
-        etapa.setHoraFin(request.getHoraFin());
-        etapa.setDuracionMinutos(calcularDuracionMinutos(request.getHoraInicio(), request.getHoraFin()));
         etapa.setPresionPsi(request.getPresionPsi());
-        etapa.setResponsable(request.getResponsable());
-        inicializarEtapa(etapa, lote.getId(), TipoEtapa.PRENSADO, request.getHoraInicio());
+        inicializarEtapa(etapa, loteQueso.getId(), TipoEtapa.PRENSADO, request.getHoraInicio());
         etapaRegistroRepository.save(etapa);
 
-        avanzarEstadoDesde(lote, EstadoLote.SALADO, producto);
-        return mapResumen(loteRepository.save(lote), producto);
+        avanzarEstadoDesde(loteQueso, EstadoLote.SALADO, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
+    }
+
+    @Transactional
+    public LoteResumenResponse cerrarPrensado(Long loteId, PrensadoCierreRequest request) {
+        LoteQueso loteQueso = obtenerLote(loteId);
+        Producto producto = obtenerProducto(loteQueso.getProductoId());
+        validarEstado(loteQueso, Set.of(EstadoLote.PRENSADO_INICIADO), "cerrar etapa PRENSADO");
+
+        EtapaPrensado etapa = etapaPrensadoRepository.findTopByLoteIdOrderByFechaHoraRegistroDesc(loteId)
+                .orElseThrow(() -> new ResponseStatusException(
+                        HttpStatus.NOT_FOUND, "No hay prensado iniciado para el lote: " + loteId));
+
+        etapa.setHoraFin(request.getHoraFin());
+        etapa.setDuracionMinutos(calcularDuracionMinutos(etapa.getHora(), request.getHoraFin()));
+        etapa.setResponsable(request.getResponsable());
+        etapaRegistroRepository.save(etapa);
+
+        avanzarEstadoDesde(loteQueso, EstadoLote.PRENSADO_INICIADO, producto);
+        return mapResumen(loteQuesoRepository.save(loteQueso), producto);
     }
 
     // ─── Cierre del lote ──────────────────────────────────────────────────────
 
     @Transactional
-    public CierreLoteResponse cerrarLote(Long loteId, CierreLoteRequest request) {
-        Lote lote = obtenerLote(loteId);
-        validarEstado(lote, Set.of(EstadoLote.PRENSADO), "cerrar lote");
-        if (cierreLoteRepository.findByLoteId(loteId).isPresent()) {
-            throw new EstadoInvalidoException("El lote " + lote.getCodigoLote() + " ya tiene cierre registrado.");
+    public CierreLoteQuesoResponse cerrarLote(Long loteId, CierreLoteQuesoRequest request) {
+        LoteQueso loteQueso = obtenerLote(loteId);
+        validarEstado(loteQueso, Set.of(EstadoLote.PRENSADO), "cerrar loteQueso");
+        if (cierreLoteQuesoRepository.findByLoteId(loteId).isPresent()) {
+            throw new EstadoInvalidoException("El loteQueso " + loteQueso.getCodigoLote() + " ya tiene cierre registrado.");
         }
 
-        CierreLote cierre = new CierreLote();
+        CierreLoteQueso cierre = new CierreLoteQueso();
         cierre.setLoteId(loteId);
         cierre.setFechaHoraCierre(LocalDateTime.now());
         cierre.setUnidadesProducidas(request.getUnidadesProducidas());
         cierre.setPesoTotalKg(request.getPesoTotalKg());
-        cierre.setRendimientoGeneral(calcularRendimientoGeneral(request.getPesoTotalKg(), lote.getRecepcionLecheId()));
+        cierre.setRendimientoGeneral(calcularRendimientoGeneral(request.getPesoTotalKg(), loteQueso.getLoteLeche()));
         cierre.setRendimientoTeorico(null);
-        cierreLoteRepository.save(cierre);
+        cierreLoteQuesoRepository.save(cierre);
 
         if (request.getObservaciones() != null) {
-            lote.setObservaciones(request.getObservaciones());
+            loteQueso.setObservaciones(request.getObservaciones());
         }
-        lote.setEstadoActual(EstadoLote.FINALIZADO);
-        loteRepository.save(lote);
+        loteQueso.setEstadoActual(EstadoLote.FINALIZADO);
+        loteQuesoRepository.save(loteQueso);
 
-        return CierreLoteResponse.builder()
-                .codigoLote(lote.getCodigoLote())
-                .estadoActual(lote.getEstadoActual())
+        return CierreLoteQuesoResponse.builder()
+                .codigoLote(loteQueso.getCodigoLote())
+                .estadoActual(loteQueso.getEstadoActual())
                 .fechaHoraCierre(cierre.getFechaHoraCierre())
                 .unidadesProducidas(cierre.getUnidadesProducidas())
                 .pesoTotalKg(cierre.getPesoTotalKg())
@@ -431,16 +439,16 @@ public class LoteService {
 
     // ─── Métodos privados de apoyo ────────────────────────────────────────────
 
-    private void avanzarEstado(Lote lote, Producto producto) {
+    private void avanzarEstado(LoteQueso loteQueso, Producto producto) {
         LoteStateContext context = buildContext(producto);
-        LoteState actual = stateResolver.resolve(lote.getEstadoActual());
-        lote.setEstadoActual(actual.avanzar(context).getEstado());
+        LoteState actual = stateResolver.resolve(loteQueso.getEstadoActual());
+        loteQueso.setEstadoActual(actual.avanzar(context).getEstado());
     }
 
-    private void avanzarEstadoDesde(Lote lote, EstadoLote estado, Producto producto) {
+    private void avanzarEstadoDesde(LoteQueso loteQueso, EstadoLote estado, Producto producto) {
         LoteStateContext context = buildContext(producto);
         LoteState actual = stateResolver.resolve(estado);
-        lote.setEstadoActual(actual.avanzar(context).getEstado());
+        loteQueso.setEstadoActual(actual.avanzar(context).getEstado());
     }
 
     private LoteStateContext buildContext(Producto producto) {
@@ -464,10 +472,10 @@ public class LoteService {
         return Set.of(EstadoLote.INICIADO);
     }
 
-    private void validarEstado(Lote lote, Set<EstadoLote> permitidos, String accion) {
-        if (!permitidos.contains(lote.getEstadoActual())) {
-            throw new EstadoInvalidoException("El lote " + lote.getCodigoLote()
-                    + " esta en estado " + lote.getEstadoActual() + " y no puede " + accion + ".");
+    private void validarEstado(LoteQueso loteQueso, Set<EstadoLote> permitidos, String accion) {
+        if (!permitidos.contains(loteQueso.getEstadoActual())) {
+            throw new EstadoInvalidoException("El loteQueso " + loteQueso.getCodigoLote()
+                    + " esta en estado " + loteQueso.getEstadoActual() + " y no puede " + accion + ".");
         }
     }
 
@@ -484,22 +492,22 @@ public class LoteService {
      * evitando así que calcularSiguienteEtapa simule una transición real.
      * Los estados terminales (FINALIZADO, CANCELADO) retornan null.
      */
-    private EstadoLote calcularSiguienteEtapa(Lote lote, Producto producto) {
+    private EstadoLote calcularSiguienteEtapa(LoteQueso loteQueso, Producto producto) {
         LoteStateContext context = buildContext(producto);
-        LoteState state = stateResolver.resolve(lote.getEstadoActual());
+        LoteState state = stateResolver.resolve(loteQueso.getEstadoActual());
         LoteState siguiente = state.siguiente(context);
         return siguiente != null ? siguiente.getEstado() : null;
     }
 
-    private LoteResumenResponse mapResumen(Lote lote, Producto producto) {
+    private LoteResumenResponse mapResumen(LoteQueso loteQueso, Producto producto) {
         return LoteResumenResponse.builder()
-                .id(lote.getId())
-                .codigoLote(lote.getCodigoLote())
+                .id(loteQueso.getId())
+                .codigoLote(loteQueso.getCodigoLote())
                 .producto(mapProducto(producto))
-                .fechaHoraInicio(lote.getFechaHoraInicio())
-                .fechaVencimiento(lote.getFechaVencimiento())
-                .estadoActual(lote.getEstadoActual())
-                .siguienteEtapa(calcularSiguienteEtapa(lote, producto))
+                .fechaHoraInicio(loteQueso.getFechaHoraInicio())
+                .fechaVencimiento(loteQueso.getFechaVencimiento())
+                .estadoActual(loteQueso.getEstadoActual())
+                .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
                 .build();
     }
 
@@ -546,9 +554,9 @@ public class LoteService {
         return builder.build();
     }
 
-    private CierreLoteResponse mapCierre(Lote lote, CierreLote cierre) {
-        return CierreLoteResponse.builder()
-                .codigoLote(lote.getCodigoLote())
+    private CierreLoteQuesoResponse mapCierre(LoteQueso loteQueso, CierreLoteQueso cierre) {
+        return CierreLoteQuesoResponse.builder()
+                .codigoLote(loteQueso.getCodigoLote())
                 .estadoActual(EstadoLote.FINALIZADO)
                 .fechaHoraCierre(cierre.getFechaHoraCierre())
                 .unidadesProducidas(cierre.getUnidadesProducidas())
@@ -558,8 +566,8 @@ public class LoteService {
                 .build();
     }
 
-    private Lote obtenerLote(Long id) {
-        return loteRepository.findById(id)
+    private LoteQueso obtenerLote(Long id) {
+        return loteQuesoRepository.findById(id)
                 .orElseThrow(() -> new LoteNotFoundException(id));
     }
 
@@ -584,16 +592,12 @@ public class LoteService {
         return (int) java.time.Duration.between(inicio, fin).toMinutes();
     }
 
-    private Double calcularRendimientoGeneral(Double pesoTotalKg, Long recepcionLecheId) {
-        if (pesoTotalKg == null || recepcionLecheId == null) {
+    private Double calcularRendimientoGeneral(Double pesoTotalKg, LoteLeche loteLeche) {
+        if (pesoTotalKg == null || loteLeche == null || loteLeche.getCantidadLitrosTotal() == null
+                || loteLeche.getCantidadLitrosTotal() == 0) {
             return null;
         }
-        Optional<RecepcionLeche> recepcion = recepcionLecheRepository.findById(recepcionLecheId);
-        if (recepcion.isEmpty() || recepcion.get().getCantidadLitros() == null
-                || recepcion.get().getCantidadLitros() == 0) {
-            return null;
-        }
-        return (pesoTotalKg / recepcion.get().getCantidadLitros()) * 100;
+        return (pesoTotalKg / loteLeche.getCantidadLitrosTotal()) * 100;
     }
 
     private String generarCodigoLote(LocalDateTime fechaHoraInicio, int batchDelDia) {
@@ -602,3 +606,4 @@ public class LoteService {
         return String.format("L%03d%02d%d", diaDelAno, anno, batchDelDia);
     }
 }
+

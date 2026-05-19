@@ -2,19 +2,12 @@ package com.rochela.rochelasystem.modulos.produccion.service;
 
 import com.rochela.rochelasystem.modulos.catalogo.model.Producto;
 import com.rochela.rochelasystem.modulos.catalogo.repository.ProductoRepository;
-import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CloruroRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CorteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.CuajoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.DesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LavadoDesueradoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteCreateRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.LoteResumenResponse;
-import com.rochela.rochelasystem.modulos.produccion.dto.PasteurizacionRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.PrensadoRequest;
-import com.rochela.rochelasystem.modulos.produccion.dto.SaladoRequest;
+import com.rochela.rochelasystem.modulos.produccion.dto.*;
+import com.rochela.rochelasystem.modulos.produccion.dto.CierreLoteQuesoRequest;
+import com.rochela.rochelasystem.modulos.produccion.model.LoteLeche;
 import com.rochela.rochelasystem.modulos.produccion.repository.CorteRepository;
-import com.rochela.rochelasystem.modulos.produccion.repository.LoteRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.LoteLecheRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.LoteQuesoRepository;
 import com.rochela.rochelasystem.shared.enums.EstadoLote;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
@@ -28,13 +21,13 @@ import static org.junit.jupiter.api.Assertions.assertEquals;
 
 @SpringBootTest
 @Transactional
-class LoteServiceFlowIntegrationTest {
+class LoteQuesoServiceFlowIntegrationTest {
 
     @Autowired
     private LoteService loteService;
 
     @Autowired
-    private LoteRepository loteRepository;
+    private LoteQuesoRepository loteQuesoRepository;
 
     @Autowired
     private ProductoRepository productoRepository;
@@ -42,10 +35,13 @@ class LoteServiceFlowIntegrationTest {
     @Autowired
     private CorteRepository corteRepository;
 
+    @Autowired
+    private LoteLecheRepository loteLecheRepository;
+
     @DisplayName("Flujo completo para producto sin pasteurizacion ni cloruro")
     @Test
     void flujoCompleto_sin_pasteurizacion_ni_cloruro() {
-        LoteResumenResponse lote = crearLote("QF01");
+        LoteResumenResponse lote = crearLote("QF01", false, false, false);
         assertEquals(EstadoLote.INICIADO, lote.getEstadoActual());
 
         lote = loteService.registrarCuajo(lote.getId(), cuajo());
@@ -69,9 +65,13 @@ class LoteServiceFlowIntegrationTest {
 
         lote = loteService.registrarSalado(lote.getId(), salado());
         assertEquals(EstadoLote.SALADO, lote.getEstadoActual());
-        assertEquals(EstadoLote.PRENSADO, lote.getSiguienteEtapa());
+        assertEquals(EstadoLote.PRENSADO_INICIADO, lote.getSiguienteEtapa());
 
         lote = loteService.registrarPrensado(lote.getId(), prensado());
+        assertEquals(EstadoLote.PRENSADO_INICIADO, lote.getEstadoActual());
+        assertEquals(EstadoLote.PRENSADO, lote.getSiguienteEtapa());
+
+        lote = loteService.cerrarPrensado(lote.getId(), cierrePrensado());
         assertEquals(EstadoLote.PRENSADO, lote.getEstadoActual());
         assertEquals(EstadoLote.FINALIZADO, lote.getSiguienteEtapa());
 
@@ -82,7 +82,7 @@ class LoteServiceFlowIntegrationTest {
     @DisplayName("Flujo completo para producto con pasteurizacion y cloruro")
     @Test
     void flujoCompleto_con_pasteurizacion_y_cloruro() {
-        LoteResumenResponse lote = crearLote("SP004");
+        LoteResumenResponse lote = crearLote("SP004", true, true, false);
         assertEquals(EstadoLote.INICIADO, lote.getEstadoActual());
 
         lote = loteService.registrarPasteurizacion(lote.getId(), pasteurizacion());
@@ -110,6 +110,10 @@ class LoteServiceFlowIntegrationTest {
         assertEquals(EstadoLote.SALADO, lote.getEstadoActual());
 
         lote = loteService.registrarPrensado(lote.getId(), prensado());
+        assertEquals(EstadoLote.PRENSADO_INICIADO, lote.getEstadoActual());
+        assertEquals(EstadoLote.PRENSADO, lote.getSiguienteEtapa());
+
+        lote = loteService.cerrarPrensado(lote.getId(), cierrePrensado());
         assertEquals(EstadoLote.PRENSADO, lote.getEstadoActual());
         assertEquals(EstadoLote.FINALIZADO, lote.getSiguienteEtapa());
 
@@ -128,7 +132,7 @@ class LoteServiceFlowIntegrationTest {
                 .requiereLavadoDesuerado(true)
                 .build());
 
-        LoteResumenResponse lote = crearLote(producto.getCodigo());
+        LoteResumenResponse lote = crearLote(producto.getCodigo(), true, true, true);
         assertEquals(EstadoLote.INICIADO, lote.getEstadoActual());
 
         lote = loteService.registrarPasteurizacion(lote.getId(), pasteurizacion());
@@ -159,9 +163,13 @@ class LoteServiceFlowIntegrationTest {
 
         lote = loteService.registrarSalado(lote.getId(), salado());
         assertEquals(EstadoLote.SALADO, lote.getEstadoActual());
-        assertEquals(EstadoLote.PRENSADO, lote.getSiguienteEtapa());
+        assertEquals(EstadoLote.PRENSADO_INICIADO, lote.getSiguienteEtapa());
 
         lote = loteService.registrarPrensado(lote.getId(), prensado());
+        assertEquals(EstadoLote.PRENSADO_INICIADO, lote.getEstadoActual());
+        assertEquals(EstadoLote.PRENSADO, lote.getSiguienteEtapa());
+
+        lote = loteService.cerrarPrensado(lote.getId(), cierrePrensado());
         assertEquals(EstadoLote.PRENSADO, lote.getEstadoActual());
         assertEquals(EstadoLote.FINALIZADO, lote.getSiguienteEtapa());
 
@@ -169,15 +177,36 @@ class LoteServiceFlowIntegrationTest {
         assertEstado(lote.getId(), EstadoLote.FINALIZADO);
     }
 
-    private LoteResumenResponse crearLote(String productoCodigo) {
+    private LoteResumenResponse crearLote(String productoCodigo,
+                                          boolean requierePasteurizacion,
+                                          boolean requiereCloruro,
+                                          boolean requiereLavadoDesuerado) {
+        productoRepository.findByCodigo(productoCodigo)
+                .orElseGet(() -> productoRepository.save(Producto.builder()
+                        .codigo(productoCodigo)
+                        .nombre("Producto " + productoCodigo)
+                        .requierePasteurizacion(requierePasteurizacion)
+                        .requiereCloruro(requiereCloruro)
+                        .requiereLavadoDesuerado(requiereLavadoDesuerado)
+                        .build()));
+
+        LoteLeche loteLeche = loteLecheRepository.save(LoteLeche.builder()
+                .codigoLoteLeche("LL-TEST-" + productoCodigo)
+                .fechaHora(LocalDateTime.of(2026, 5, 15, 7, 30))
+                .cantidadLitrosTotal(500.0)
+                .tanqueProceso("SILO_1")
+                .realizadoPor("Operario")
+                .build());
+
         return loteService.crearLote(LoteCreateRequest.builder()
                 .productoCodigo(productoCodigo)
                 .fechaHoraInicio(LocalDateTime.of(2026, 5, 15, 8, 0))
+                .loteLecheId(loteLeche.getId())
                 .build());
     }
 
     private void assertEstado(Long loteId, EstadoLote estado) {
-        assertEquals(estado, loteRepository.findById(loteId).orElseThrow().getEstadoActual());
+        assertEquals(estado, loteQuesoRepository.findById(loteId).orElseThrow().getEstadoActual());
     }
 
     private PasteurizacionRequest pasteurizacion() {
@@ -240,14 +269,19 @@ class LoteServiceFlowIntegrationTest {
     private PrensadoRequest prensado() {
         return PrensadoRequest.builder()
                 .horaInicio(LocalTime.of(10, 15))
-                .horaFin(LocalTime.of(10, 45))
                 .presionPsi(20.0)
+                .build();
+    }
+
+    private PrensadoCierreRequest cierrePrensado() {
+        return PrensadoCierreRequest.builder()
+                .horaFin(LocalTime.of(10, 45))
                 .responsable("Operario 1")
                 .build();
     }
 
-    private CierreLoteRequest cierre() {
-        return CierreLoteRequest.builder()
+    private CierreLoteQuesoRequest cierre() {
+        return CierreLoteQuesoRequest.builder()
                 .unidadesProducidas(250)
                 .pesoTotalKg(120.5)
                 .observaciones("Proceso estable")

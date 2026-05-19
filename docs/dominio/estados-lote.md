@@ -1,10 +1,10 @@
-# Estados de lote
+# Estados de loteQueso
 
-Documenta el ciclo de vida del lote y la implementacion del patron State GoF en el modulo de produccion.
+Documenta el ciclo de vida del loteQueso y la implementacion del patron State GoF en el modulo de produccion.
 
 ## Diagrama de estados (PlantUML)
 
-![estadosLote](../images/lote-estados.png)
+![estadosLote](../images/loteQueso-estados.png)
 ```
 @startuml
 
@@ -38,7 +38,7 @@ skinparam state<<terminal_err>> {
 [*] --> INICIADO
 
 state INICIADO <<activo>>
-INICIADO : Codigo de lote generado
+INICIADO : Codigo de loteQueso generado
 INICIADO : Fecha de vencimiento calculada
 
 state PASTEURIZACION <<activo>>
@@ -46,11 +46,11 @@ PASTEURIZACION : hora · temperatura
 
 state CLORURO <<activo>>
 CLORURO : hora · temperatura
-CLORURO : cantidad (g) · lote insumo
+CLORURO : cantidad (g) · loteQueso insumo
 
 state CUAJO <<activo>>
 CUAJO : hora · temperatura
-CUAJO : cantidad (g) · lote insumo
+CUAJO : cantidad (g) · loteQueso insumo
 
 state LAVADO_DESUERADO <<activo>>
 LAVADO_DESUERADO : hora · litros
@@ -60,7 +60,7 @@ DESUERADO : hora · litros
 
 state SALADO <<activo>>
 SALADO : hora · temperatura · cantidad (kg)
-SALADO : sodio inicial % · sodio final % · lote sal
+SALADO : sodio inicial % · sodio final % · loteQueso sal
 
 state PRENSADO <<activo>>
 PRENSADO : hora inicio · hora fin
@@ -161,8 +161,8 @@ LoteStateContext context = new LoteStateContext(
     resolver
 );
 
-LoteState estadoActual = resolver.resolve(lote.getEstadoActual());
+LoteState estadoActual = resolver.resolve(loteQueso.getEstadoActual());
 LoteState siguiente = estadoActual.avanzar(context);
 
-lote.setEstadoActual(siguiente.getEstado());
+loteQueso.setEstadoActual(siguiente.getEstado());
 ```

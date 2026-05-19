@@ -13,7 +13,7 @@ sheets.spreadsheet.id=SPREADSHEET_ID_AQUI
 
 | Hoja | Contenido |
 | --- | --- |
-| `lotes` | Cabecera del lote por fila |
+| `loteQuesos` | Cabecera del loteQueso por fila |
 | `etapas` | Una fila por etapa registrada |
 | `cortes` | Una fila por corte |
 | `cierres` | Datos de cierre y rendimientos |

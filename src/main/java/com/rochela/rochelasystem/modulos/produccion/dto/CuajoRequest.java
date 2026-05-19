@@ -25,7 +25,7 @@ public class CuajoRequest {
     @Schema(description = "Cantidad en gramos", example = "8.0")
     private Double cantidadGramos;
 
-    @Schema(description = "Lote del cuajo", example = "CU-2026-05")
+    @Schema(description = "LoteQueso del cuajo", example = "CU-2026-05")
     private String loteCuajo;
 }
 

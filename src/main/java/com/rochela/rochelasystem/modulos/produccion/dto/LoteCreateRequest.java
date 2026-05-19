@@ -22,7 +22,6 @@ public class LoteCreateRequest {
     @Schema(description = "Fecha y hora de inicio", example = "2026-05-13T08:30:00")
     private LocalDateTime fechaHoraInicio;
 
-    @Schema(description = "Id de la recepcion de leche", example = "25")
-    private Long recepcionLecheId;
+    @Schema(description = "Id del lote de leche", example = "5")
+    private Long loteLecheId;
 }
-

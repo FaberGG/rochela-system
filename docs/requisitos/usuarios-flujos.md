@@ -6,15 +6,15 @@ El prototipo considera dos perfiles de usuario. No se implementa autenticación 
 
 Es quien ejecuta físicamente el proceso en planta y registra los datos en el sistema.
 
-**Flujo principal — Seguimiento de lote:**
+**Flujo principal — Seguimiento de loteQueso:**
 
 ```
-1. Ve la lista de lotes activos con su estado actual
-2. Selecciona un lote
-3. Ve el detalle del lote: datos generales, historial de etapas registradas
+1. Ve la lista de loteQuesos activos con su estado actual
+2. Selecciona un loteQueso
+3. Ve el detalle del loteQueso: datos generales, historial de etapas registradas
 4. Registra los datos de la etapa en curso
-5. El sistema avanza el lote al siguiente estado
-6. Puede agregar cortes adicionales mientras el lote está en estado CORTES
+5. El sistema avanza el loteQueso al siguiente estado
+6. Puede agregar cortes adicionales mientras el loteQueso está en estado CORTES
 7. Al finalizar, registra unidades producidas y peso total
 ```
 
@@ -32,13 +32,13 @@ Es quien ejecuta físicamente el proceso en planta y registra los datos en el si
 
 Supervisa los procesos, analiza la información registrada y genera reportes.
 
-**Flujo principal — Consulta de lotes:**
+**Flujo principal — Consulta de loteQuesos:**
 
 ```
-1. Ve todos los lotes: activos, finalizados y cancelados
+1. Ve todos los loteQuesos: activos, finalizados y cancelados
 2. Puede filtrar por fecha, producto o estado
-3. Selecciona un lote y ve el detalle completo con todas las etapas
-4. Consulta los índices de rendimiento del lote finalizado
+3. Selecciona un loteQueso y ve el detalle completo con todas las etapas
+4. Consulta los índices de rendimiento del loteQueso finalizado
 5. Exporta los datos a Google Sheets
 ```
 

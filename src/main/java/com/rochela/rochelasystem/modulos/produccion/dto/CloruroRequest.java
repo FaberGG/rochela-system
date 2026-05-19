@@ -25,7 +25,7 @@ public class CloruroRequest {
     @Schema(description = "Cantidad en gramos", example = "12.0")
     private Double cantidadGramos;
 
-    @Schema(description = "Lote del cloruro", example = "CL-2026-05")
+    @Schema(description = "LoteQueso del cloruro", example = "CL-2026-05")
     private String loteCloruro;
 }
 

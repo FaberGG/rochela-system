@@ -109,7 +109,7 @@ Al recibir la leche de cada proveedor, se registran los parámetros fisicoquími
 
 | Campo | Descripción |
 | --- | --- |
-| Lote de leche (tanque) | Identificador del lote recibido |
+| Lote de leche (tanque) | Identificador del loteQueso recibido |
 | Proveedor | Selección del proveedor correspondiente |
 | Ubicación | Tanque 1, Tanque 2, Tanque 3, Cuarto Frío, Proceso |
 | Cantidad | Litros recibidos |
@@ -167,7 +167,7 @@ La empresa fabrica 5 productos identificados por código:
 
 ### 5.2 Sistema de Loteado
 
-El código de lote sigue el formato:
+El código de loteQueso sigue el formato:
 
 ```
 L  [DDD]  [AA]  [B]
@@ -184,13 +184,13 @@ B     → Numero de batch (produccion del dia)
 
 ### 5.3 Datos Generales del Lote
 
-Al iniciar la producción de un lote se registra:
+Al iniciar la producción de un loteQueso se registra:
 
 | Campo | Descripción |
 | --- | --- |
 | Código de producto | QF01, QF01bs, SP004, QF03, QM001 |
 | Fecha y hora de inicio | Marca temporal de inicio del proceso |
-| Número de lote calculado | Generado automáticamente según la fórmula |
+| Número de loteQueso calculado | Generado automáticamente según la fórmula |
 | Fecha de vencimiento | 30 días después de la fecha de producción |
 
 ---
@@ -335,7 +335,7 @@ Al finalizar la producción:
 
 **Módulo de Producción de Queso:**
 
-- RF-05: Generar automáticamente el código de lote según la fórmula definida.
+- RF-05: Generar automáticamente el código de loteQueso según la fórmula definida.
 - RF-06: Calcular automáticamente la fecha de vencimiento (fecha de producción + 30 días).
 - RF-07: Registrar cada etapa del proceso con sus variables correspondientes.
 - RF-08: Restringir las etapas disponibles según el código de producto seleccionado.
@@ -343,7 +343,7 @@ Al finalizar la producción:
 - RF-10: Marcar la etapa de Lavado/Desuerado como opcional y configurable por producto.
 - RF-11: Calcular automáticamente la duración del prensado.
 - RF-12: Registrar unidades producidas, peso total y calcular rendimientos.
-- RF-13: Generar reportes de producción por lote.
+- RF-13: Generar reportes de producción por loteQueso.
 
 **Gestión de Proveedores:**
 
@@ -353,7 +353,7 @@ Al finalizar la producción:
 
 - RNF-01: La interfaz debe ser usable por operarios sin formación técnica avanzada.
 - RNF-02: El sistema debe poder funcionar desde distintas áreas de la planta.
-- RNF-03: Los datos deben tener trazabilidad completa por lote.
+- RNF-03: Los datos deben tener trazabilidad completa por loteQueso.
 - RNF-04: El sistema debe integrarse o coexistir con el software SIGO existente (o al menos no duplicar módulos innecesariamente).
 
 ---

@@ -7,7 +7,7 @@ import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.assertEquals;
 import static org.junit.jupiter.api.Assertions.assertThrows;
 
-class LoteStateTest {
+class LoteQuesoStateTest {
 
     @DisplayName("El estado INICIADO avanza correctamente según los flags de pasteurización y cloruro")
     @Test

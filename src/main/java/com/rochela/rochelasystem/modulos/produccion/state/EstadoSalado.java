@@ -17,7 +17,7 @@ public class EstadoSalado implements LoteState {
 
 	@Override
 	public LoteState avanzar(LoteStateContext context) {
-		return resolver.resolve(EstadoLote.PRENSADO);
+		return resolver.resolve(EstadoLote.PRENSADO_INICIADO);
 	}
 
 	@Override
@@ -25,4 +25,3 @@ public class EstadoSalado implements LoteState {
 		return resolver.resolve(EstadoLote.CANCELADO);
 	}
 }
-

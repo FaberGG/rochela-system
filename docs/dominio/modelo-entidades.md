@@ -49,11 +49,11 @@ Table recepcion_leche {
   observaciones text
 }
 
-Table lote {
+Table loteQueso {
   id bigint [primary key, increment]
   codigo_lote varchar [unique, not null, note: 'Formato: L[DDD][AA][B]']
   producto_id bigint [not null]
-  recepcion_leche_id bigint [note: 'Nullable — leche asociada al lote']
+  recepcion_leche_id bigint [note: 'Nullable — leche asociada al loteQueso']
   fecha_hora_inicio timestamp [not null]
   fecha_vencimiento date [not null, note: 'fecha_inicio + 30 días']
   estado_actual varchar [not null, note: 'INICIADO, PASTEURIZACION, CLORURO, CUAJO, CORTES, LAVADO_DESUERADO, DESUERADO, SALADO, PRENSADO, FINALIZADO, CANCELADO']
@@ -63,7 +63,7 @@ Table lote {
 
 Table cierre_lote {
   id bigint [primary key, increment]
-  lote_id bigint [unique, not null, note: 'Un cierre por lote']
+  lote_id bigint [unique, not null, note: 'Un cierre por loteQueso']
   fecha_hora_cierre timestamp [not null]
   unidades_producidas integer [not null]
   peso_total_kg double [not null]
@@ -141,11 +141,11 @@ Table corte {
 // ─── Referencias ─────────────────────────────────────────────────────────────
 
 Ref: recepcion_leche.proveedor_id > proveedor.id
-Ref: lote.producto_id > producto.id
-Ref: lote.recepcion_leche_id > recepcion_leche.id
-Ref: cierre_lote.lote_id - lote.id
-Ref: etapa_registro.lote_id > lote.id
-Ref: corte.lote_id > lote.id
+Ref: loteQueso.producto_id > producto.id
+Ref: loteQueso.recepcion_leche_id > recepcion_leche.id
+Ref: cierre_lote.lote_id - loteQueso.id
+Ref: etapa_registro.lote_id > loteQueso.id
+Ref: corte.lote_id > loteQueso.id
 
 // Herencia JOINED: cada tabla hija comparte PK con la base
 Ref: etapa_pasteurizacion.id - etapa_registro.id
@@ -220,7 +220,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `id` | Long | PK |
 | `fechaHora` | LocalDateTime | Timestamp de recepción |
 | `proveedor` | Proveedor | Relación |
-| `loteTanque` | String | Identificador del lote de tanque |
+| `loteTanque` | String | Identificador del loteQueso de tanque |
 | `ubicacion` | UbicacionTanque | TANQUE_1, TANQUE_2, TANQUE_3, CUARTO_FRIO, PROCESO |
 | `cantidadLitros` | Double | Litros recibidos |
 | `grasa` | Double | % |
@@ -246,9 +246,9 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `codigoLote` | String | Único. Formato L[DDD][AA][B] |
 | `producto` | Producto | Relación |
 | `recepcionLeche` | RecepcionLeche | Nullable |
-| `fechaHoraInicio` | LocalDateTime | Inicio del lote |
+| `fechaHoraInicio` | LocalDateTime | Inicio del loteQueso |
 | `fechaVencimiento` | LocalDate | Fecha de vencimiento |
-| `estadoActual` | EstadoLote | Estado actual del lote |
+| `estadoActual` | EstadoLote | Estado actual del loteQueso |
 | `batchDelDia` | Integer | Número de batch diario |
 | `observaciones` | String | Texto libre |
 
@@ -259,7 +259,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | Campo | Tipo | Descripción |
 | --- | --- | --- |
 | `id` | Long | PK |
-| `lote` | Lote | Relación 1:1 |
+| `loteQueso` | Lote | Relación 1:1 |
 | `fechaHoraCierre` | LocalDateTime | Cierre |
 | `unidadesProducidas` | Integer | Unidades |
 | `pesoTotalKg` | Double | Peso total |
@@ -273,7 +273,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | Campo | Tipo | Descripción |
 | --- | --- | --- |
 | `id` | Long | PK |
-| `lote` | Lote | Relación |
+| `loteQueso` | Lote | Relación |
 | `tipoEtapa` | TipoEtapa | PASTEURIZACION, CLORURO, CUAJO, LAVADO_DESUERADO, DESUERADO, SALADO, PRENSADO |
 | `hora` | LocalTime | Hora operativa |
 | `fechaHoraRegistro` | LocalDateTime | Timestamp de registro |
@@ -359,7 +359,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | Campo | Tipo | Descripción |
 | --- | --- | --- |
 | `id` | Long | PK |
-| `lote` | Lote | Relación |
+| `loteQueso` | Lote | Relación |
 | `numeroCorte` | Integer | Secuencia |
 | `hora` | LocalTime | Hora del corte |
 | `observacion` | String | Texto libre |

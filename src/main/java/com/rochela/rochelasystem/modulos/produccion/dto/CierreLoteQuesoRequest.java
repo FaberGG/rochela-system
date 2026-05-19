@@ -12,8 +12,8 @@ import lombok.Setter;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Schema(name = "CierreLoteRequest", description = "Datos para cerrar un lote")
-public class CierreLoteRequest {
+@Schema(name = "CierreLoteQuesoRequest", description = "Datos para cerrar un lote")
+public class CierreLoteQuesoRequest {
 
     @Schema(description = "Unidades producidas", example = "250")
     private Integer unidadesProducidas;

@@ -31,6 +31,6 @@ public class SaladoRequest {
     @Schema(description = "Sodio final", example = "1.8")
     private Double sodioFinal;
 
-    @Schema(description = "Lote de sal", example = "SAL-2026-05")
+    @Schema(description = "LoteQueso de sal", example = "SAL-2026-05")
     private String loteSal;
 }

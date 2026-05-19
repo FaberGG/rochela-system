@@ -68,7 +68,7 @@ src/
     │       │   │   └── EtapaController.java           # Endpoints de registro por etapa
     │       │   ├── service/
     │       │   │   ├── LoteService.java               # Orquestacion y transicion de estados
-    │       │   │   ├── LoteadoService.java            # Generacion del codigo de lote
+    │       │   │   ├── LoteadoService.java            # Generacion del codigo de loteQueso
     │       │   │   ├── EtapaService.java              # Persistencia de etapas y validacion de transicion
     │       │   │   └── RendimientoService.java        # Calculo de indices al cierre
     │       │   ├── repository/

@@ -18,7 +18,7 @@ import lombok.Setter;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-public class CierreLote {
+public class CierreLoteQueso {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

@@ -10,7 +10,7 @@ Este documento describe el formato estandar de errores del API y los codigos de 
   "status": 400,
   "error": "Bad Request",
   "message": "Datos de entrada invalidos",
-  "path": "/api/v1/lotes/5",
+  "path": "/api/v1/loteQuesos/5",
   "code": "VALIDACION_INVALIDA"
 }
 ```

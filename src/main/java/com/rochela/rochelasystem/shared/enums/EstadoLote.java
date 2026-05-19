@@ -10,6 +10,7 @@ public enum EstadoLote {
     LAVADO_DESUERADO,
     DESUERADO,
     SALADO,
+    PRENSADO_INICIADO,
     PRENSADO,
     FINALIZADO,
     CANCELADO

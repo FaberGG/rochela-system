@@ -27,7 +27,7 @@ public class EtapaDetalleDto {
     @Schema(description = "Cantidad en gramos", example = "12.5")
     private Double cantidadGramos;
 
-    @Schema(description = "Lote del insumo", example = "INS-CL-2026-05")
+    @Schema(description = "LoteQueso del insumo", example = "INS-CL-2026-05")
     private String loteInsumo;
 
     @Schema(description = "Litros procesados", example = "150.0")
@@ -42,7 +42,7 @@ public class EtapaDetalleDto {
     @Schema(description = "Sodio final", example = "1.8")
     private Double sodioFinal;
 
-    @Schema(description = "Lote de sal", example = "SAL-2026-05")
+    @Schema(description = "LoteQueso de sal", example = "SAL-2026-05")
     private String loteSal;
 
     @Schema(description = "Hora fin", example = "09:30:00")

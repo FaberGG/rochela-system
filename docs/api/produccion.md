@@ -10,6 +10,69 @@ Fuente central: `docs/api/api-docs.json` (Swagger).
 
 ## Endpoints
 
+### GET `/lotes-leche`
+
+Lista lotes de leche con filtros opcionales.
+
+**Query params**
+
+| Parametro | Tipo | Descripcion |
+| --- | --- | --- |
+| `desde` | string (date) | Fecha inicial (YYYY-MM-DD) |
+| `hasta` | string (date) | Fecha final (YYYY-MM-DD) |
+
+**Response 200**
+
+- `application/json`: array de `LoteLecheResponse`
+
+---
+
+### POST `/lotes-leche`
+
+Crea un nuevo lote de leche para produccion.
+
+**Request body**
+
+- `application/json`: `LoteLecheCreateRequest`
+
+**Ejemplo request**
+
+```json
+{
+  "codigoLoteLeche": "LL-170526-01",
+  "fechaHora": "2026-05-17T08:30:00",
+  "tanqueProceso": "SILO_1",
+  "realizadoPor": "Operario 1",
+  "recepcionLecheIds": [10, 11, 12],
+  "temperatura": 8.5,
+  "grasa": 3.4,
+  "ph": 6.6,
+  "observaciones": "Mezcla inicial"
+}
+```
+
+**Response 201**
+
+- `application/json`: `LoteLecheResponse`
+
+---
+
+### GET `/lotes-leche/{id}`
+
+Obtiene el detalle del lote de leche.
+
+**Path params**
+
+| Parametro | Tipo | Descripcion |
+| --- | --- | --- |
+| `id` | integer (int64) | Id del lote de leche |
+
+**Response 200**
+
+- `application/json`: `LoteLecheResponse`
+
+---
+
 ### GET `/lotes`
 
 Lista lotes con filtros opcionales.
@@ -18,11 +81,11 @@ Lista lotes con filtros opcionales.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `estado` | string | Estado actual del lote |
+| `estado` | string | Estado actual del loteQueso |
 | `productoCodigo` | string | Codigo del producto |
 | `desde` | string (date) | Fecha inicial (YYYY-MM-DD) |
 | `hasta` | string (date) | Fecha final (YYYY-MM-DD) |
-| `soloActivos` | boolean | Si es true, solo lotes activos |
+| `soloActivos` | boolean | Si es true, solo loteQuesos activos |
 
 **Response 200**
 
@@ -63,7 +126,7 @@ Crea un nuevo lote de produccion.
 {
   "productoCodigo": "QUESO-001",
   "fechaHoraInicio": "2026-05-13T08:30:00",
-  "recepcionLecheId": 25
+  "loteLecheId": 5
 }
 ```
 
@@ -96,13 +159,13 @@ Crea un nuevo lote de produccion.
 
 ### GET `/lotes/{id}`
 
-Devuelve el detalle completo del lote.
+Devuelve el detalle completo del loteQueso.
 
 **Path params**
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Response 200**
 
@@ -157,13 +220,13 @@ Devuelve el detalle completo del lote.
 
 ### PATCH `/lotes/{id}/cancelar`
 
-Cancela un lote en proceso.
+Cancela un loteQueso en proceso.
 
 **Path params**
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Response 200**
 
@@ -204,7 +267,7 @@ Registra la etapa de pasteurizacion.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -258,7 +321,7 @@ Registra la etapa de cloruro.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -314,7 +377,7 @@ Registra la etapa de cuajo.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -364,13 +427,13 @@ Registra la etapa de cuajo.
 
 ### POST `/lotes/{id}/cortes`
 
-Agrega un corte al lote.
+Agrega un corte al loteQueso.
 
 **Path params**
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -418,7 +481,7 @@ Finaliza la etapa de cortes.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Response 200**
 
@@ -459,7 +522,7 @@ Registra la etapa de lavado y desuerado.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -513,7 +576,7 @@ Registra la etapa de desuerado.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -567,7 +630,7 @@ Registra la etapa de salado.
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -603,7 +666,7 @@ Registra la etapa de salado.
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
   "estadoActual": "SALADO",
-  "siguienteEtapa": "PRENSADO"
+  "siguienteEtapa": "PRENSADO_INICIADO"
 }
 ```
 
@@ -619,13 +682,13 @@ Registra la etapa de salado.
 
 ### POST `/lotes/{id}/prensado`
 
-Registra la etapa de prensado.
+Inicia la etapa de prensado.
 
 **Path params**
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -636,9 +699,7 @@ Registra la etapa de prensado.
 ```json
 {
   "horaInicio": "11:30:00",
-  "horaFin": "12:00:00",
-  "presionPsi": 20.0,
-  "responsable": "Operario 1"
+  "presionPsi": 20.0
 }
 ```
 
@@ -647,6 +708,60 @@ Registra la etapa de prensado.
 - `application/json`: `LoteResumenResponse`
 
 **Ejemplo response 201**
+
+```json
+{
+  "id": 1,
+  "codigoLote": "L-20260513-01",
+  "producto": {
+    "codigo": "QUESO-001",
+    "nombre": "Queso campesino"
+  },
+  "fechaHoraInicio": "2026-05-13T08:30:00",
+  "fechaVencimiento": "2026-06-13",
+  "estadoActual": "PRENSADO_INICIADO",
+  "siguienteEtapa": "PRENSADO"
+}
+```
+
+**Response 404**
+
+- `application/json`: `ErrorResponse`
+
+**Response 409**
+
+- `application/json`: `ErrorResponse`
+
+---
+
+### POST `/lotes/{id}/prensado/cierre`
+
+Registra el cierre del prensado.
+
+**Path params**
+
+| Parametro | Tipo | Descripcion |
+| --- | --- | --- |
+| `id` | integer (int64) | Id del lote |
+
+**Request body**
+
+- `application/json`: `PrensadoCierreRequest`
+
+**Ejemplo request**
+
+```json
+{
+  "horaFin": "12:00:00",
+  "responsable": "Operario 1"
+}
+```
+
+**Response 200**
+
+- `application/json`: `LoteResumenResponse`
+
+**Ejemplo response 200**
 
 ```json
 {
@@ -675,13 +790,13 @@ Registra la etapa de prensado.
 
 ### POST `/lotes/{id}/cierre`
 
-Registra el cierre del lote y calcula rendimientos.
+Registra el cierre del loteQueso y calcula rendimientos.
 
 **Path params**
 
 | Parametro | Tipo | Descripcion |
 | --- | --- | --- |
-| `id` | integer (int64) | Id del lote |
+| `id` | integer (int64) | Id del loteQueso |
 
 **Request body**
 
@@ -729,7 +844,47 @@ Registra el cierre del lote y calcula rendimientos.
 
 - `productoCodigo` (string)
 - `fechaHoraInicio` (date-time)
-- `recepcionLecheId` (int64)
+- `loteLecheId` (int64)
+
+### `LoteLecheCreateRequest`
+
+- `codigoLoteLeche` (string)
+- `fechaHora` (date-time)
+- `tanqueProceso` (string)
+- `realizadoPor` (string)
+- `recepcionLecheIds` (array int64)
+- `grasa` (double)
+- `solidosNoGrasos` (double)
+- `temperatura` (double)
+- `proteina` (double)
+- `puntoCrioscopico` (double)
+- `densidad` (double)
+- `lactosa` (double)
+- `solidosTotales` (double)
+- `aguaAnadida` (double)
+- `ph` (double)
+- `observaciones` (string)
+
+### `LoteLecheResponse`
+
+- `id` (int64)
+- `codigoLoteLeche` (string)
+- `fechaHora` (date-time)
+- `cantidadLitrosTotal` (double)
+- `tanqueProceso` (string)
+- `realizadoPor` (string)
+- `recepcionLecheIds` (array int64)
+- `grasa` (double)
+- `solidosNoGrasos` (double)
+- `temperatura` (double)
+- `proteina` (double)
+- `puntoCrioscopico` (double)
+- `densidad` (double)
+- `lactosa` (double)
+- `solidosTotales` (double)
+- `aguaAnadida` (double)
+- `ph` (double)
+- `observaciones` (string)
 
 ### `LoteResumenResponse`
 
@@ -799,8 +954,11 @@ Registra el cierre del lote y calcula rendimientos.
 ### `PrensadoRequest`
 
 - `horaInicio` (string)
-- `horaFin` (string)
 - `presionPsi` (double)
+
+### `PrensadoCierreRequest`
+
+- `horaFin` (string)
 - `responsable` (string)
 
 ### `CierreLoteRequest`

@@ -17,16 +17,15 @@ import lombok.Setter;
 @AllArgsConstructor
 public class EtapaPrensado extends EtapaRegistro {
 
-    @Column(name = "hora_fin", nullable = false)
+    @Column(name = "hora_fin")
     private LocalTime horaFin;
 
-    @Column(name = "duracion_minutos", nullable = false)
+    @Column(name = "duracion_minutos")
     private Integer duracionMinutos;
 
     @Column(name = "presion_psi", nullable = false)
     private Double presionPsi;
 
-    @Column(name = "responsable", nullable = false)
+    @Column(name = "responsable")
     private String responsable;
 }
-
