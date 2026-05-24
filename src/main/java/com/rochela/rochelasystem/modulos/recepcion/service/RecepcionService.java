@@ -2,12 +2,17 @@ package com.rochela.rochelasystem.modulos.recepcion.service;
 
 import com.rochela.rochelasystem.modulos.proveedores.service.ProveedorService;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionCreateRequest;
+import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionDisponibleParaLoteDto;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionPendienteDto;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionReductasaResponse;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionResponse;
 import com.rochela.rochelasystem.modulos.recepcion.dto.ValidacionDetalleDto;
+import com.rochela.rochelasystem.modulos.produccion.model.Descarga;
 import com.rochela.rochelasystem.modulos.recepcion.model.RecepcionLeche;
 import com.rochela.rochelasystem.modulos.recepcion.repository.RecepcionLecheRepository;
+import com.rochela.rochelasystem.modulos.produccion.repository.DescargaRepository;
+import com.rochela.rochelasystem.modulos.proveedores.model.Proveedor;
+import com.rochela.rochelasystem.modulos.proveedores.repository.ProveedorRepository;
 import com.rochela.rochelasystem.shared.enums.EstadoRecepcion;
 import com.rochela.rochelasystem.shared.enums.ResultadoValidacion;
 import com.rochela.rochelasystem.shared.exception.RecepcionNotFoundException;
@@ -15,10 +20,12 @@ import java.time.Duration;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.time.LocalTime;
+import java.util.Comparator;
 import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.Objects;
+import java.util.Set;
 import java.util.stream.Collectors;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
@@ -42,10 +49,17 @@ public class RecepcionService {
     private static final long MIN_REDUCTASA_MINUTOS = 180;
 
     private final RecepcionLecheRepository recepcionLecheRepository;
-    private  final ProveedorService proveedorService;
+    private final DescargaRepository descargaRepository;
+    private final ProveedorRepository proveedorRepository;
+    private final ProveedorService proveedorService;
 
-    public RecepcionService(RecepcionLecheRepository recepcionLecheRepository, ProveedorService proveedorService) {
+    public RecepcionService(RecepcionLecheRepository recepcionLecheRepository,
+                            DescargaRepository descargaRepository,
+                            ProveedorRepository proveedorRepository,
+                            ProveedorService proveedorService) {
         this.recepcionLecheRepository = recepcionLecheRepository;
+        this.descargaRepository = descargaRepository;
+        this.proveedorRepository = proveedorRepository;
         this.proveedorService = proveedorService;
     }
 
@@ -183,6 +197,45 @@ public class RecepcionService {
                             .build();
                 })
                 .collect(Collectors.toList());
+    }
+
+    @Transactional(readOnly = true)
+    public List<RecepcionDisponibleParaLoteDto> listarDisponiblesParaLoteLeche() {
+        List<RecepcionLeche> recepciones = recepcionLecheRepository.findByEstadoRecepcion(EstadoRecepcion.COMPLETA);
+        if (recepciones.isEmpty()) {
+            return List.of();
+        }
+
+        List<Long> recepcionIds = recepciones.stream()
+                .map(RecepcionLeche::getId)
+                .toList();
+        Set<Long> usadasEnLotes = descargaRepository.findByRecepcionLecheIdIn(recepcionIds).stream()
+                .map(Descarga::getRecepcionLecheId)
+                .collect(Collectors.toSet());
+        Map<Long, String> proveedores = proveedorRepository.findAllById(recepciones.stream()
+                        .map(RecepcionLeche::getProveedorId)
+                        .distinct()
+                        .toList())
+                .stream()
+                .collect(Collectors.toMap(Proveedor::getId, Proveedor::getNombreEmpresa));
+
+        return recepciones.stream()
+                .filter(recepcion -> !usadasEnLotes.contains(recepcion.getId()))
+                .sorted(Comparator.comparing(RecepcionLeche::getFechaHora).reversed())
+                .map(recepcion -> RecepcionDisponibleParaLoteDto.builder()
+                        .id(recepcion.getId())
+                        .proveedorId(recepcion.getProveedorId())
+                        .proveedor(proveedores.getOrDefault(
+                                recepcion.getProveedorId(),
+                                "Proveedor " + recepcion.getProveedorId()))
+                        .fechaHora(recepcion.getFechaHora())
+                        .jornada(recepcion.getJornada())
+                        .ubicacion(recepcion.getUbicacion())
+                        .cantidadLitros(recepcion.getCantidadLitros())
+                        .resultadoValidacion(recepcion.getResultadoValidacion())
+                        .estadoRecepcion(recepcion.getEstadoRecepcion())
+                        .build())
+                .toList();
     }
 
     private RecepcionLeche obtenerEntidad(Long id) {

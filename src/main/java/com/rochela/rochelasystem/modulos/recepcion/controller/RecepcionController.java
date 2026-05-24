@@ -1,6 +1,7 @@
 package com.rochela.rochelasystem.modulos.recepcion.controller;
 
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionCreateRequest;
+import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionDisponibleParaLoteDto;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionPendienteDto;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionReductasaRequest;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionReductasaResponse;
@@ -124,5 +125,18 @@ public class RecepcionController {
     })
     public List<RecepcionPendienteDto> listarPendientes() {
         return recepcionService.listarPendientes();
+    }
+
+    @GetMapping("/disponibles-para-lote-leche")
+    @Operation(
+            summary = "Listar recepciones disponibles para lote de leche",
+            description = "Devuelve solo recepciones completas, aptas y no asociadas a otro lote de leche"
+    )
+    @ApiResponses({
+            @ApiResponse(responseCode = "200", description = "Lista de recepciones disponibles",
+                    content = @Content(array = @ArraySchema(schema = @Schema(implementation = RecepcionDisponibleParaLoteDto.class))))
+    })
+    public List<RecepcionDisponibleParaLoteDto> listarDisponiblesParaLoteLeche() {
+        return recepcionService.listarDisponiblesParaLoteLeche();
     }
 }

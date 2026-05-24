@@ -8,6 +8,7 @@ import com.rochela.rochelasystem.modulos.produccion.repository.DescargaRepositor
 import com.rochela.rochelasystem.modulos.produccion.repository.LoteLecheRepository;
 import com.rochela.rochelasystem.modulos.recepcion.model.RecepcionLeche;
 import com.rochela.rochelasystem.modulos.recepcion.repository.RecepcionLecheRepository;
+import com.rochela.rochelasystem.shared.enums.EstadoRecepcion;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.ArrayList;
@@ -44,6 +45,7 @@ public class LoteLecheService {
         List<Long> recepcionIds = request.getRecepcionLecheIds().stream().distinct().toList();
         List<RecepcionLeche> recepciones = recepcionLecheRepository.findAllById(recepcionIds);
         validarRecepciones(recepcionIds, recepciones);
+        validarRecepcionesDisponibles(recepcionIds, recepciones);
 
         double totalLitros = recepciones.stream()
                 .map(RecepcionLeche::getCantidadLitros)
@@ -121,6 +123,25 @@ public class LoteLecheService {
         }
     }
 
+    private void validarRecepcionesDisponibles(List<Long> recepcionIds, List<RecepcionLeche> recepciones) {
+        List<Long> noCompletas = recepciones.stream()
+                .filter(recepcion -> !EstadoRecepcion.COMPLETA.equals(recepcion.getEstadoRecepcion()))
+                .map(RecepcionLeche::getId)
+                .toList();
+        if (!noCompletas.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "Recepciones no disponibles porque no han completado reductasa: " + noCompletas);
+        }
+
+        Set<Long> usadasEnOtrosLotes = descargaRepository.findByRecepcionLecheIdIn(recepcionIds).stream()
+                .map(Descarga::getRecepcionLecheId)
+                .collect(Collectors.toSet());
+        if (!usadasEnOtrosLotes.isEmpty()) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "Recepciones ya asignadas a otro lote de leche: " + usadasEnOtrosLotes);
+        }
+    }
+
     private boolean filtraPorFecha(LocalDateTime fechaHora, LocalDate desde, LocalDate hasta) {
         if (fechaHora == null) {
             return false;
@@ -164,4 +185,3 @@ public class LoteLecheService {
                 .build();
     }
 }
-

@@ -31,6 +31,8 @@ Lista lotes de leche con filtros opcionales.
 
 Crea un nuevo lote de leche para produccion.
 
+Antes de abrir el formulario, el front debe consultar `GET /api/v1/recepciones/disponibles-para-lote-leche` para poblar la seleccion de recepciones. Ese endpoint devuelve recepciones con reductasa completada y no asociadas, sin filtrar por `resultadoValidacion`.
+
 **Request body**
 
 - `application/json`: `LoteLecheCreateRequest`
@@ -915,7 +917,7 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `solidosTotales` (double)
 - `aguaAnadida` (double)
 - `ph` (double)
-- `observaciones` (string)
+- `observaciones` (string, opcional)
 
 ### `LoteLecheResponse`
 

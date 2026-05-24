@@ -250,6 +250,39 @@ Lista recepciones con reductasa pendiente.
 ]
 ```
 
+---
+
+### GET `/recepciones/disponibles-para-lote-leche`
+
+Lista recepciones disponibles para armar un lote de leche.
+
+**Criterios**
+
+- `estadoRecepcion = COMPLETA`
+- no asociadas a otro lote de leche
+
+**Response 200**
+
+- `application/json`: array de `RecepcionDisponibleParaLote`
+
+**Ejemplo response 200**
+
+```json
+[
+  {
+    "id": 1,
+    "proveedorId": 10,
+    "proveedor": "Lacteos del Norte",
+    "fechaHora": "2026-05-13T09:05:00",
+    "jornada": "AM",
+    "ubicacion": "TANQUE_1",
+    "cantidadLitros": 150.0,
+    "resultadoValidacion": "NO_APTA",
+    "estadoRecepcion": "COMPLETA"
+  }
+]
+```
+
 ## Esquemas (resumen)
 
 ### `RecepcionCreateRequest`
@@ -316,6 +349,18 @@ Lista recepciones con reductasa pendiente.
 - `proveedor` (string)
 - `horaInicioReductasa` (string)
 - `minutosTranscurridos` (int64)
+
+### `RecepcionDisponibleParaLote`
+
+- `id` (int64)
+- `proveedorId` (int64)
+- `proveedor` (string)
+- `fechaHora` (date-time)
+- `jornada` (string: `AM`, `PM`)
+- `ubicacion` (string: `TANQUE_1`, `TANQUE_2`, `TANQUE_3`, `CUARTO_FRIO`, `PROCESO`)
+- `cantidadLitros` (double)
+- `resultadoValidacion` (string: `APTA`, `NO_APTA`, `CONDICIONAL`)
+- `estadoRecepcion` (string: `PENDIENTE_REDUCTASA`, `COMPLETA`)
 
 ### `RecepcionLeche`
 
