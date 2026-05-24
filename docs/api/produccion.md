@@ -86,6 +86,7 @@ Lista lotes con filtros opcionales.
 | `desde` | string (date) | Fecha inicial (YYYY-MM-DD) |
 | `hasta` | string (date) | Fecha final (YYYY-MM-DD) |
 | `soloActivos` | boolean | Si es true, solo loteQuesos activos |
+| `limit` | integer | Limite de registros recientes (ordenado por `fechaHoraInicio` desc) |
 
 **Response 200**
 
@@ -104,11 +105,27 @@ Lista lotes con filtros opcionales.
     },
     "fechaHoraInicio": "2026-05-13T08:30:00",
     "fechaVencimiento": "2026-06-13",
+    "grasa": 3.4,
+    "solidosNoGrasos": 8.1,
+    "proteina": 3.2,
+    "puntoCrioscopico": -0.52,
+    "temperatura": 8.5,
+    "densidad": 1.03,
+    "lactosa": 4.8,
+    "solidosTotales": 12.3,
+    "aguaAnadida": 0.0,
+    "ph": 6.6,
+    "sales": 0.6,
     "estadoActual": "INICIADO",
-    "siguienteEtapa": "PASTEURIZACION"
+    "siguienteEtapa": "PASTEURIZACION",
+    "etapaActualInicio": "2026-05-13T08:30:00",
+    "porcentajeCompletado": 0.0
   }
 ]
 ```
+
+Nota: todas las respuestas de tipo `LoteResumenResponse` incluyen `etapaActualInicio` y `porcentajeCompletado`.
+Nota: cuando se usa `limit`, la lista se ordena por `fechaHoraInicio` descendente (registros mas recientes primero).
 
 ---
 
@@ -126,7 +143,18 @@ Crea un nuevo lote de produccion.
 {
   "productoCodigo": "QUESO-001",
   "fechaHoraInicio": "2026-05-13T08:30:00",
-  "loteLecheId": 5
+  "loteLecheId": 5,
+  "grasa": 3.4,
+  "solidosNoGrasos": 8.1,
+  "proteina": 3.2,
+  "puntoCrioscopico": -0.52,
+  "temperatura": 8.5,
+  "densidad": 1.03,
+  "lactosa": 4.8,
+  "solidosTotales": 12.3,
+  "aguaAnadida": 0.0,
+  "ph": 6.6,
+  "sales": 0.6
 }
 ```
 
@@ -147,7 +175,9 @@ Crea un nuevo lote de produccion.
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
   "estadoActual": "INICIADO",
-  "siguienteEtapa": "PASTEURIZACION"
+  "siguienteEtapa": "PASTEURIZACION",
+  "etapaActualInicio": "2026-05-13T08:30:00",
+  "porcentajeCompletado": 0.0
 }
 ```
 
@@ -183,6 +213,17 @@ Devuelve el detalle completo del loteQueso.
   },
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
+  "grasa": 3.4,
+  "solidosNoGrasos": 8.1,
+  "proteina": 3.2,
+  "puntoCrioscopico": -0.52,
+  "temperatura": 8.5,
+  "densidad": 1.03,
+  "lactosa": 4.8,
+  "solidosTotales": 12.3,
+  "aguaAnadida": 0.0,
+  "ph": 6.6,
+  "sales": 0.6,
   "estadoActual": "INICIADO",
   "siguienteEtapa": "PASTEURIZACION",
   "etapas": [
@@ -845,6 +886,17 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `productoCodigo` (string)
 - `fechaHoraInicio` (date-time)
 - `loteLecheId` (int64)
+- `grasa` (double, opcional)
+- `solidosNoGrasos` (double, opcional)
+- `proteina` (double, opcional)
+- `puntoCrioscopico` (double, opcional)
+- `temperatura` (double, opcional)
+- `densidad` (double, opcional)
+- `lactosa` (double, opcional)
+- `solidosTotales` (double, opcional)
+- `aguaAnadida` (double, opcional)
+- `ph` (double, opcional)
+- `sales` (double, opcional)
 
 ### `LoteLecheCreateRequest`
 
@@ -893,8 +945,21 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `producto` (ProductoResumen)
 - `fechaHoraInicio` (date-time)
 - `fechaVencimiento` (date)
+- `grasa` (double, opcional)
+- `solidosNoGrasos` (double, opcional)
+- `proteina` (double, opcional)
+- `puntoCrioscopico` (double, opcional)
+- `temperatura` (double, opcional)
+- `densidad` (double, opcional)
+- `lactosa` (double, opcional)
+- `solidosTotales` (double, opcional)
+- `aguaAnadida` (double, opcional)
+- `ph` (double, opcional)
+- `sales` (double, opcional)
 - `estadoActual` (string)
 - `siguienteEtapa` (string)
+- `etapaActualInicio` (date-time)
+- `porcentajeCompletado` (double)
 
 ### `ProductoResumen`
 
@@ -984,6 +1049,17 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `producto` (ProductoResumen)
 - `fechaHoraInicio` (date-time)
 - `fechaVencimiento` (date)
+- `grasa` (double, opcional)
+- `solidosNoGrasos` (double, opcional)
+- `proteina` (double, opcional)
+- `puntoCrioscopico` (double, opcional)
+- `temperatura` (double, opcional)
+- `densidad` (double, opcional)
+- `lactosa` (double, opcional)
+- `solidosTotales` (double, opcional)
+- `aguaAnadida` (double, opcional)
+- `ph` (double, opcional)
+- `sales` (double, opcional)
 - `estadoActual` (string)
 - `siguienteEtapa` (string)
 - `etapas` (array de EtapaDetalle)

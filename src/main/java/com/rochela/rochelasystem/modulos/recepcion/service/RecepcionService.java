@@ -1,5 +1,6 @@
 package com.rochela.rochelasystem.modulos.recepcion.service;
 
+import com.rochela.rochelasystem.modulos.proveedores.service.ProveedorService;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionCreateRequest;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionPendienteDto;
 import com.rochela.rochelasystem.modulos.recepcion.dto.RecepcionReductasaResponse;
@@ -41,16 +42,19 @@ public class RecepcionService {
     private static final long MIN_REDUCTASA_MINUTOS = 180;
 
     private final RecepcionLecheRepository recepcionLecheRepository;
+    private  final ProveedorService proveedorService;
 
-    public RecepcionService(RecepcionLecheRepository recepcionLecheRepository) {
+    public RecepcionService(RecepcionLecheRepository recepcionLecheRepository, ProveedorService proveedorService) {
         this.recepcionLecheRepository = recepcionLecheRepository;
+        this.proveedorService = proveedorService;
     }
 
     @Transactional(readOnly = true)
     public List<RecepcionLeche> listarRecepciones(Long proveedorId,
                                                   LocalDate desde,
                                                   LocalDate hasta,
-                                                  ResultadoValidacion resultado) {
+                                                  ResultadoValidacion resultado,
+                                                  Integer limit) {
         Specification<RecepcionLeche> spec = (root, query, cb) -> cb.conjunction();
         if (proveedorId != null) {
             spec = spec.and((root, query, cb) -> cb.equal(root.get("proveedorId"), proveedorId));
@@ -63,6 +67,11 @@ public class RecepcionService {
         }
         if (resultado != null) {
             spec = spec.and((root, query, cb) -> cb.equal(root.get("resultadoValidacion"), resultado));
+        }
+        if (limit != null && limit > 0) {
+            org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(
+                    0, limit, org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.DESC, "fechaHora"));
+            return recepcionLecheRepository.findAll(spec, pageable).getContent();
         }
         return recepcionLecheRepository.findAll(spec);
     }
@@ -98,10 +107,13 @@ public class RecepcionService {
                 .ph(request.getPh())
                 .proteina(request.getProteina())
                 .grasa(request.getGrasa())
+                .solidosNoGrasos(request.getSolidosNoGrasos())
                 .solidosTotales(request.getSolidosTotales())
                 .acidezTitulable(request.getAcidezTitulable())
+                .lactosa(request.getLactosa())
                 .aguaAnadida(request.getAguaAnadida())
                 .puntoCrioscopico(request.getPuntoCrioscopico())
+                .sales(request.getSales())
                 .horaInicioReductasa(request.getHoraInicioReductasa())
                 .observaciones(request.getObservaciones())
                 .build();
@@ -164,9 +176,10 @@ public class RecepcionService {
                             .id(recepcion.getId())
                             .fecha(recepcion.getFecha())
                             .jornada(recepcion.getJornada())
-                            .proveedor(String.valueOf(recepcion.getProveedorId()))
+                            .proveedor(proveedorService.obtenerPorId(recepcion.getProveedorId()).getNombreEmpresa())
                             .horaInicioReductasa(recepcion.getHoraInicioReductasa())
                             .minutosTranscurridos(minutos)
+                            .fechaHora(recepcion.getFechaHora())
                             .build();
                 })
                 .collect(Collectors.toList());

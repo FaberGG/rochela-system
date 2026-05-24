@@ -1,5 +1,5 @@
 $kind: http-request
-name: Registrar prensado
+name: Iniciar prensado
 url: "{{baseUrl}}/api/v1/lotes/{{loteId}}/prensado"
 method: POST
 headers:
@@ -17,9 +17,6 @@ body:
   content: |-
     {
       "horaInicio": "11:30:00",
-      "horaFin": "12:00:00",
-      "presionPsi": 20.0,
-      "responsable": "Operario 1"
+      "presionPsi": 20.0
     }
 order: 12000
-

@@ -7,5 +7,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 public interface EtapaRegistroRepository extends JpaRepository<EtapaRegistro, Long> {
 
     List<EtapaRegistro> findByLoteIdOrderByFechaHoraRegistroAsc(Long loteId);
+    java.util.Optional<EtapaRegistro> findTopByLoteIdOrderByFechaHoraRegistroDesc(Long loteId);
 }
-

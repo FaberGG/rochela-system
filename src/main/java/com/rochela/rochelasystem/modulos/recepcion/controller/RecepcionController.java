@@ -56,8 +56,10 @@ public class RecepcionController {
             @Parameter(description = "Fecha final (YYYY-MM-DD)", example = "2026-05-31")
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate hasta,
             @Parameter(description = "Resultado de validacion", example = "APTA")
-            @RequestParam(required = false) ResultadoValidacion resultado) {
-        return recepcionService.listarRecepciones(proveedorId, desde, hasta, resultado);
+            @RequestParam(required = false) ResultadoValidacion resultado,
+            @Parameter(description = "Limite de registros recientes", example = "50")
+            @RequestParam(required = false) Integer limit) {
+        return recepcionService.listarRecepciones(proveedorId, desde, hasta, resultado, limit);
     }
 
     @GetMapping("/{id}")
@@ -124,4 +126,3 @@ public class RecepcionController {
         return recepcionService.listarPendientes();
     }
 }
-

@@ -36,7 +36,7 @@ Table recepcion_leche {
   ubicacion varchar [not null, note: 'TANQUE_1, TANQUE_2, TANQUE_3, CUARTO_FRIO, PROCESO']
   cantidad_litros double [not null]
   grasa double
-  solidos double
+  solidos_no_grasos double
   proteina double
   punto_congelacion double
   temperatura double
@@ -45,6 +45,7 @@ Table recepcion_leche {
   solidos_totales double
   agua_anadida double
   ph double
+  sales double
   resultado_validacion varchar [not null, note: 'APTA, NO_APTA, CONDICIONAL']
   observaciones text
 }
@@ -56,6 +57,17 @@ Table loteQueso {
   recepcion_leche_id bigint [note: 'Nullable — leche asociada al loteQueso']
   fecha_hora_inicio timestamp [not null]
   fecha_vencimiento date [not null, note: 'fecha_inicio + 30 días']
+  grasa double
+  solidos_no_grasos double
+  proteina double
+  punto_congelacion double
+  temperatura double
+  densidad double
+  lactosa double
+  solidos_totales double
+  agua_anadida double
+  ph double
+  sales double
   estado_actual varchar [not null, note: 'INICIADO, PASTEURIZACION, CLORURO, CUAJO, CORTES, LAVADO_DESUERADO, DESUERADO, SALADO, PRENSADO, FINALIZADO, CANCELADO']
   batch_del_dia integer [not null]
   observaciones text
@@ -224,7 +236,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `ubicacion` | UbicacionTanque | TANQUE_1, TANQUE_2, TANQUE_3, CUARTO_FRIO, PROCESO |
 | `cantidadLitros` | Double | Litros recibidos |
 | `grasa` | Double | % |
-| `solidos` | Double | % |
+| `solidosNoGrasos` | Double | % (opcional) |
 | `proteina` | Double | % |
 | `puntoCongelacion` | Double | °C |
 | `temperatura` | Double | °C |
@@ -233,6 +245,7 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `solidosTotales` | Double | % |
 | `aguaAnadida` | Double | % |
 | `ph` | Double | — |
+| `sales` | Double | % (opcional) |
 | `resultadoValidacion` | ResultadoValidacion | APTA, NO_APTA, CONDICIONAL |
 | `observaciones` | String | Texto libre |
 
@@ -248,6 +261,17 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `recepcionLeche` | RecepcionLeche | Nullable |
 | `fechaHoraInicio` | LocalDateTime | Inicio del loteQueso |
 | `fechaVencimiento` | LocalDate | Fecha de vencimiento |
+| `grasa` | Double | % (opcional) |
+| `solidosNoGrasos` | Double | % (opcional) |
+| `proteina` | Double | % (opcional) |
+| `puntoCongelacion` | Double | °C (opcional) |
+| `temperatura` | Double | °C (opcional) |
+| `densidad` | Double | g/mL (opcional) |
+| `lactosa` | Double | % (opcional) |
+| `solidosTotales` | Double | % (opcional) |
+| `aguaAnadida` | Double | % (opcional) |
+| `ph` | Double | — (opcional) |
+| `sales` | Double | % (opcional) |
 | `estadoActual` | EstadoLote | Estado actual del loteQueso |
 | `batchDelDia` | Integer | Número de batch diario |
 | `observaciones` | String | Texto libre |
@@ -364,4 +388,3 @@ Catálogo de los 5 productos fabricados. Define qué etapas aplican a cada uno.
 | `hora` | LocalTime | Hora del corte |
 | `observacion` | String | Texto libre |
 | `fechaHoraRegistro` | LocalDateTime | Timestamp de registro |
-

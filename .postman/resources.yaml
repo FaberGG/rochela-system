@@ -5,3 +5,7 @@ workspace:
 localResources:
   specs:
     - ..\docs\api\api-docs.json
+
+cloudResources:
+  collections:
+    ..\postman\collections\OpenAPI definition: c4ee9e1c-3676-4d14-877e-ba7baf154553

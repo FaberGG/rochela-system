@@ -68,17 +68,29 @@ public class RecepcionCreateRequest {
     @Schema(description = "Grasa", example = "3.5")
     private Double grasa;
 
+    @Schema(description = "Opcional. Solidos no grasos (SNF)", example = "8.1",
+            requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double solidosNoGrasos;
+
     @Schema(description = "Solidos totales", example = "12.3")
     private Double solidosTotales;
 
     @Schema(description = "Acidez titulable", example = "0.13")
     private Double acidezTitulable;
 
+    @Schema(description = "Opcional. Lactosa", example = "4.8",
+            requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double lactosa;
+
     @Schema(description = "Agua anadida", example = "0.0")
     private Double aguaAnadida;
 
     @Schema(description = "Punto crioscopico", example = "-0.52")
     private Double puntoCrioscopico;
+
+    @Schema(description = "Opcional. Sales", example = "0.6",
+            requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double sales;
 
     @Schema(description = "Hora inicio reductasa", example = "09:00:00")
     private LocalTime horaInicioReductasa;

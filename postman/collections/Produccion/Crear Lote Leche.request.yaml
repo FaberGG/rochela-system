@@ -1,0 +1,42 @@
+$kind: http-request
+name: Crear lote de leche
+url: "{{baseUrl}}/api/v1/lotes-leche"
+method: POST
+headers:
+  Accept: application/json
+  Content-Type: application/json
+body:
+  type: json
+  content: |-
+    {
+      "codigoLoteLeche": "LL-{{$timestamp}}",
+      "fechaHora": "2026-05-23T08:30:00",
+      "tanqueProceso": "SILO_1",
+      "realizadoPor": "Operario 1",
+      "recepcionLecheIds": [1,2],
+      "temperatura": 8.5,
+      "grasa": 3.4,
+      "solidosNoGrasos": 8.7,
+      "proteina": 3.1,
+      "puntoCrioscopico": -0.52,
+      "densidad": 1.03,
+      "lactosa": 4.8,
+      "solidosTotales": 12.1,
+      "aguaAnadida": 0.0,
+      "ph": 6.6,
+      "observaciones": "Registro automatico desde Postman"
+    }
+scripts:
+  - type: afterResponse
+    code: |-
+      pm.test('status 201', function () {
+        pm.response.to.have.status(201);
+      });
+
+      var data = pm.response.json();
+
+      if (data && data.id) {
+        pm.environment.set('loteLecheId', data.id);
+      }
+    language: text/javascript
+order: 1000

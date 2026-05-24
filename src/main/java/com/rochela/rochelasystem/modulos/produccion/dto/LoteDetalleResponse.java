@@ -28,6 +28,39 @@ public class LoteDetalleResponse {
     @Schema(description = "Fecha de vencimiento", example = "2026-06-13")
     private LocalDate fechaVencimiento;
 
+    @Schema(description = "Opcional. Grasa", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double grasa;
+
+    @Schema(description = "Opcional. Solidos no grasos (SNF)", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double solidosNoGrasos;
+
+    @Schema(description = "Opcional. Proteina", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double proteina;
+
+    @Schema(description = "Opcional. Punto de congelacion", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double puntoCrioscopico;
+
+    @Schema(description = "Opcional. Temperatura", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double temperatura;
+
+    @Schema(description = "Opcional. Densidad", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double densidad;
+
+    @Schema(description = "Opcional. Lactosa", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double lactosa;
+
+    @Schema(description = "Opcional. Solidos totales", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double solidosTotales;
+
+    @Schema(description = "Opcional. Agua anadida", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double aguaAnadida;
+
+    @Schema(description = "Opcional. Potencial de hidrogeno", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double ph;
+
+    @Schema(description = "Opcional. Sales", requiredMode = Schema.RequiredMode.NOT_REQUIRED)
+    private Double sales;
+
     @Schema(description = "Estado actual del lote", example = "INICIADO")
     private EstadoLote estadoActual;
 
@@ -43,4 +76,3 @@ public class LoteDetalleResponse {
     @Schema(description = "Cierre del lote")
     private CierreLoteQuesoResponse cierre;
 }
-

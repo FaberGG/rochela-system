@@ -80,7 +80,8 @@ public class LoteService {
                                                  String productoCodigo,
                                                  LocalDate desde,
                                                  LocalDate hasta,
-                                                 Boolean soloActivos) {
+                                                 Boolean soloActivos,
+                                                 Integer limit) {
         Specification<LoteQueso> spec = (root, query, cb) -> cb.conjunction();
         if (estado != null) {
             spec = spec.and((root, query, cb) -> cb.equal(root.get("estadoActual"), estado));
@@ -104,7 +105,15 @@ public class LoteService {
                     .in(EstadoLote.FINALIZADO, EstadoLote.CANCELADO)));
         }
 
-        List<LoteQueso> loteQuesos = loteQuesoRepository.findAll(spec);
+        List<LoteQueso> loteQuesos;
+        if (limit != null && limit > 0) {
+            org.springframework.data.domain.Pageable pageable = org.springframework.data.domain.PageRequest.of(
+                    0, limit, org.springframework.data.domain.Sort.by(org.springframework.data.domain.Sort.Direction.DESC, "fechaHoraInicio"));
+            loteQuesos = loteQuesoRepository.findAll(spec, pageable).getContent();
+        } else {
+            loteQuesos = loteQuesoRepository.findAll(spec);
+        }
+
         Map<Long, Producto> productos = productoRepository.findAllById(
                         loteQuesos.stream().map(LoteQueso::getProductoId).distinct().toList())
                 .stream()
@@ -142,6 +151,17 @@ public class LoteService {
                 .producto(mapProducto(producto))
                 .fechaHoraInicio(loteQueso.getFechaHoraInicio())
                 .fechaVencimiento(loteQueso.getFechaVencimiento())
+                .grasa(loteQueso.getGrasa())
+                .solidosNoGrasos(loteQueso.getSolidosNoGrasos())
+                .proteina(loteQueso.getProteina())
+                .puntoCrioscopico(loteQueso.getPuntoCrioscopico())
+                .temperatura(loteQueso.getTemperatura())
+                .densidad(loteQueso.getDensidad())
+                .lactosa(loteQueso.getLactosa())
+                .solidosTotales(loteQueso.getSolidosTotales())
+                .aguaAnadida(loteQueso.getAguaAnadida())
+                .ph(loteQueso.getPh())
+                .sales(loteQueso.getSales())
                 .estadoActual(loteQueso.getEstadoActual())
                 .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
                 .etapas(etapas)
@@ -183,6 +203,17 @@ public class LoteService {
         loteQueso.setFechaVencimiento(fechaInicio.plusDays(30));
         loteQueso.setEstadoActual(EstadoLote.INICIADO);
         loteQueso.setBatchDelDia(batchDelDia);
+        loteQueso.setGrasa(request.getGrasa());
+        loteQueso.setSolidosNoGrasos(request.getSolidosNoGrasos());
+        loteQueso.setProteina(request.getProteina());
+        loteQueso.setPuntoCrioscopico(request.getPuntoCrioscopico());
+        loteQueso.setTemperatura(request.getTemperatura());
+        loteQueso.setDensidad(request.getDensidad());
+        loteQueso.setLactosa(request.getLactosa());
+        loteQueso.setSolidosTotales(request.getSolidosTotales());
+        loteQueso.setAguaAnadida(request.getAguaAnadida());
+        loteQueso.setPh(request.getPh());
+        loteQueso.setSales(request.getSales());
 
         LoteQueso guardado = loteQuesoRepository.save(loteQueso);
         return mapResumen(guardado, producto);
@@ -506,9 +537,70 @@ public class LoteService {
                 .producto(mapProducto(producto))
                 .fechaHoraInicio(loteQueso.getFechaHoraInicio())
                 .fechaVencimiento(loteQueso.getFechaVencimiento())
+                .grasa(loteQueso.getGrasa())
+                .solidosNoGrasos(loteQueso.getSolidosNoGrasos())
+                .proteina(loteQueso.getProteina())
+                .puntoCrioscopico(loteQueso.getPuntoCrioscopico())
+                .temperatura(loteQueso.getTemperatura())
+                .densidad(loteQueso.getDensidad())
+                .lactosa(loteQueso.getLactosa())
+                .solidosTotales(loteQueso.getSolidosTotales())
+                .aguaAnadida(loteQueso.getAguaAnadida())
+                .ph(loteQueso.getPh())
+                .sales(loteQueso.getSales())
                 .estadoActual(loteQueso.getEstadoActual())
                 .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
+                .etapaActualInicio(resolverEtapaActualInicio(loteQueso))
+                .porcentajeCompletado(calcularPorcentajeCompletado(loteQueso, producto))
                 .build();
+    }
+
+    private LocalDateTime resolverEtapaActualInicio(LoteQueso loteQueso) {
+        EstadoLote estado = loteQueso.getEstadoActual();
+        if (estado == EstadoLote.INICIADO) {
+            return loteQueso.getFechaHoraInicio();
+        }
+        if (estado == EstadoLote.FINALIZADO || estado == EstadoLote.CANCELADO) {
+            return null;
+        }
+        return etapaRegistroRepository.findTopByLoteIdOrderByFechaHoraRegistroDesc(loteQueso.getId())
+                .map(EtapaRegistro::getFechaHoraRegistro)
+                .orElse(null);
+    }
+
+    private Double calcularPorcentajeCompletado(LoteQueso loteQueso, Producto producto) {
+        if (loteQueso.getEstadoActual() == EstadoLote.CANCELADO) {
+            return null;
+        }
+        List<EstadoLote> flujo = construirFlujo(producto);
+        int indice = flujo.indexOf(loteQueso.getEstadoActual());
+        if (indice < 0 || flujo.size() < 2) {
+            return null;
+        }
+        return (indice * 100.0) / (flujo.size() - 1);
+    }
+
+    private List<EstadoLote> construirFlujo(Producto producto) {
+        List<EstadoLote> flujo = new java.util.ArrayList<>();
+        flujo.add(EstadoLote.INICIADO);
+        if (Boolean.TRUE.equals(producto.getRequierePasteurizacion())) {
+            flujo.add(EstadoLote.PASTEURIZACION);
+        }
+        if (Boolean.TRUE.equals(producto.getRequiereCloruro())) {
+            flujo.add(EstadoLote.CLORURO);
+        }
+        flujo.add(EstadoLote.CUAJO);
+        flujo.add(EstadoLote.CORTES);
+        flujo.add(EstadoLote.CORTES_CERRADOS);
+        if (Boolean.TRUE.equals(producto.getRequiereLavadoDesuerado())) {
+            flujo.add(EstadoLote.LAVADO_DESUERADO);
+        }
+        flujo.add(EstadoLote.DESUERADO);
+        flujo.add(EstadoLote.SALADO);
+        flujo.add(EstadoLote.PRENSADO_INICIADO);
+        flujo.add(EstadoLote.PRENSADO);
+        flujo.add(EstadoLote.FINALIZADO);
+        return flujo;
     }
 
     private ProductoResumenDto mapProducto(Producto producto) {
@@ -606,4 +698,3 @@ public class LoteService {
         return String.format("L%03d%02d%d", diaDelAno, anno, batchDelDia);
     }
 }
-

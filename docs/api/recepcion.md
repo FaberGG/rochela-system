@@ -22,6 +22,7 @@ Lista recepciones con filtros opcionales.
 | `desde` | string (date) | Fecha inicial (YYYY-MM-DD) |
 | `hasta` | string (date) | Fecha final (YYYY-MM-DD) |
 | `resultado` | string | `APTA`, `NO_APTA`, `CONDICIONAL` |
+| `limit` | integer | Limite de registros recientes (ordenado por `fechaHora` desc) |
 
 **Response 200**
 
@@ -49,10 +50,13 @@ Lista recepciones con filtros opcionales.
 	"ph": 6.6,
 	"proteina": 3.2,
 	"grasa": 3.5,
+	"solidosNoGrasos": 8.1,
 	"solidosTotales": 12.3,
 	"acidezTitulable": 0.13,
+	"lactosa": 4.8,
 	"aguaAnadida": 0.0,
 	"puntoCrioscopico": -0.52,
+	"sales": 0.6,
 	"horaInicioReductasa": "09:00:00",
 	"horaFinReductasa": "11:30:00",
 	"tiempoReductasaMinutos": 150,
@@ -62,6 +66,8 @@ Lista recepciones con filtros opcionales.
   }
 ]
 ```
+
+Nota: cuando se usa `limit`, la lista se ordena por `fechaHora` descendente (registros mas recientes primero).
 
 ---
 
@@ -92,10 +98,13 @@ Registra una nueva recepcion de leche.
   "ph": 6.6,
   "proteina": 3.2,
   "grasa": 3.5,
+  "solidosNoGrasos": 8.1,
   "solidosTotales": 12.3,
   "acidezTitulable": 0.13,
+  "lactosa": 4.8,
   "aguaAnadida": 0.0,
   "puntoCrioscopico": -0.52,
+  "sales": 0.6,
   "horaInicioReductasa": "09:00:00",
   "observaciones": "Sin novedades"
 }
@@ -232,6 +241,7 @@ Lista recepciones con reductasa pendiente.
   {
 	"id": 1,
 	"fecha": "2026-05-13",
+	"fechaHora": "2026-05-13T09:05:00",
 	"jornada": "AM",
 	"proveedor": "Lacteos del Norte",
 	"horaInicioReductasa": "09:00:00",
@@ -259,10 +269,13 @@ Lista recepciones con reductasa pendiente.
 - `ph` (double)
 - `proteina` (double)
 - `grasa` (double)
+- `solidosNoGrasos` (double, opcional)
 - `solidosTotales` (double)
 - `acidezTitulable` (double)
+- `lactosa` (double, opcional)
 - `aguaAnadida` (double)
 - `puntoCrioscopico` (double)
+- `sales` (double, opcional)
 - `horaInicioReductasa` (string)
 - `observaciones` (string)
 
@@ -298,6 +311,7 @@ Lista recepciones con reductasa pendiente.
 
 - `id` (int64)
 - `fecha` (date)
+- `fechaHora` (date-time)
 - `jornada` (string: `AM`, `PM`)
 - `proveedor` (string)
 - `horaInicioReductasa` (string)
@@ -322,14 +336,16 @@ Lista recepciones con reductasa pendiente.
 - `ph` (double)
 - `proteina` (double)
 - `grasa` (double)
+- `solidosNoGrasos` (double, opcional)
 - `solidosTotales` (double)
 - `acidezTitulable` (double)
+- `lactosa` (double, opcional)
 - `aguaAnadida` (double)
 - `puntoCrioscopico` (double)
+- `sales` (double, opcional)
 - `horaInicioReductasa` (string)
 - `horaFinReductasa` (string)
 - `tiempoReductasaMinutos` (int32)
 - `resultadoValidacion` (string: `APTA`, `NO_APTA`, `CONDICIONAL`)
 - `estadoRecepcion` (string: `PENDIENTE_REDUCTASA`, `COMPLETA`)
 - `observaciones` (string)
-

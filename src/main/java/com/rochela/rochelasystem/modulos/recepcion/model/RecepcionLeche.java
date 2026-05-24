@@ -89,17 +89,26 @@ public class RecepcionLeche {
     @Column(name = "grasa")
     private Double grasa;
 
+    @Column(name = "solidos_no_grasos")
+    private Double solidosNoGrasos;
+
     @Column(name = "solidos_totales")
     private Double solidosTotales;
 
     @Column(name = "acidez_titulable")
     private Double acidezTitulable;
 
+    @Column(name = "lactosa")
+    private Double lactosa;
+
     @Column(name = "agua_anadida")
     private Double aguaAnadida;
 
     @Column(name = "punto_crioscopico")
     private Double puntoCrioscopico;
+
+    @Column(name = "sales")
+    private Double sales;
 
     @Column(name = "hora_inicio_reductasa", nullable = false)
     private LocalTime horaInicioReductasa;

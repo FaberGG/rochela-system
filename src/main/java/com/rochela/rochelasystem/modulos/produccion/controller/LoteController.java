@@ -54,8 +54,10 @@ public class LoteController {
             @Parameter(description = "Fecha final (YYYY-MM-DD)", example = "2026-05-31")
             @RequestParam(required = false) @DateTimeFormat(iso = DateTimeFormat.ISO.DATE) LocalDate hasta,
             @Parameter(description = "Si es true, solo lotes activos", example = "true")
-            @RequestParam(required = false) Boolean soloActivos) {
-        return loteService.listarLotes(estado, productoCodigo, desde, hasta, soloActivos);
+            @RequestParam(required = false) Boolean soloActivos,
+            @Parameter(description = "Limite de registros recientes", example = "50")
+            @RequestParam(required = false) Integer limit) {
+        return loteService.listarLotes(estado, productoCodigo, desde, hasta, soloActivos, limit);
     }
 
     @GetMapping("/{id}")
@@ -350,4 +352,3 @@ public class LoteController {
         return loteService.cerrarLote(id, request);
     }
 }
-

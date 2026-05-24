@@ -24,3 +24,5 @@ values:
     value: '2026-05-31'
   - key: lotesSoloActivos
     value: 'true'
+  - key: loteLecheId
+    value: ''

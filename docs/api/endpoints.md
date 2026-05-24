@@ -8,8 +8,8 @@ Fuente central: `docs/api/api-docs.json` (Swagger).
 - Catalogo (Productos): `docs/api/catalogo.md`
 - Proveedores: `docs/api/proveedores.md`
 - Produccion (Lotes): `docs/api/produccion.md`
+- Operario (Feed): `docs/api/operario.md`
 
 ## Modulos pendientes
 
 - Exportacion
-

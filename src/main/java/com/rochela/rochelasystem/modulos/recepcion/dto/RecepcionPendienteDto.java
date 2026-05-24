@@ -3,6 +3,7 @@ package com.rochela.rochelasystem.modulos.recepcion.dto;
 import com.rochela.rochelasystem.shared.enums.Jornada;
 import io.swagger.v3.oas.annotations.media.Schema;
 import java.time.LocalDate;
+import java.time.LocalDateTime;
 import java.time.LocalTime;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -31,4 +32,7 @@ public class RecepcionPendienteDto {
 
     @Schema(description = "Minutos transcurridos", example = "120")
     private final long minutosTranscurridos;
+
+    @Schema(description = "Fecha y hora de recepcion", example = "2026-05-13T09:05:00")
+    private final LocalDateTime fechaHora;
 }
