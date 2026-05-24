@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes/:id/prensado"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  pathVariables:
+    - key: id
+      value: "1"
+      description: Id del lote
+  body:
+    type: json
+    content: |-
+      {
+        "horaInicio": "11:30:00",
+        "horaFin": "12:00:00",
+        "presionPsi": 3226.577644922668,
+        "responsable": "Operario 1"
+      }
+response:
+  statusCode: 409
+  statusText: Conflict
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "timestamp": "2026-05-13T12:00:00",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Recurso no encontrado",
+        "path": "/api/v1/lotes/99",
+        "code": "RECURSO_NO_ENCONTRADO"
+      }
+order: 3000

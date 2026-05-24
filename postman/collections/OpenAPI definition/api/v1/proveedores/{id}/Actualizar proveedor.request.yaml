@@ -1,0 +1,25 @@
+$kind: http-request
+description: Actualiza los datos de un proveedor
+url: "{{baseUrl}}/api/v1/proveedores/:id"
+method: PUT
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "10"
+    description: Id del proveedor
+body:
+  type: json
+  content: |-
+    {
+      "nombreEmpresa": "Lacteos del Norte",
+      "nombrePropietario": "Juan Perez",
+      "nombreMayordomo": "Carlos Gomez",
+      "telefono": "+57 3001234567",
+      "correo": "contacto@lacteos.com",
+      "direccion": "Km 5 via principal, Vereda La Isla",
+      "activo": true
+    }
+examples: ./.resources/Actualizar proveedor.resources/examples
+order: 2000

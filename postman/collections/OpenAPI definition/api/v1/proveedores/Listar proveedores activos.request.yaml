@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retorna los proveedores con estado activo
+url: "{{baseUrl}}/api/v1/proveedores"
+method: GET
+headers:
+  Accept: "*/*"
+examples: ./.resources/Listar proveedores activos.resources/examples
+order: 2000

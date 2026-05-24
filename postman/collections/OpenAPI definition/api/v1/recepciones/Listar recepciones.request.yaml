@@ -1,0 +1,21 @@
+$kind: http-request
+description: Filtra recepciones por proveedor, fechas y resultado
+url: "{{baseUrl}}/api/v1/recepciones?proveedorId=10&desde=2026-05-01&hasta=2026-05-31&resultado=APTA"
+method: GET
+headers:
+  Accept: "*/*"
+queryParams:
+  - key: proveedorId
+    value: "10"
+    description: Id del proveedor
+  - key: desde
+    value: 2026-05-01
+    description: Fecha inicial (YYYY-MM-DD)
+  - key: hasta
+    value: 2026-05-31
+    description: Fecha final (YYYY-MM-DD)
+  - key: resultado
+    value: APTA
+    description: Resultado de validacion
+examples: ./.resources/Listar recepciones.resources/examples
+order: 3000

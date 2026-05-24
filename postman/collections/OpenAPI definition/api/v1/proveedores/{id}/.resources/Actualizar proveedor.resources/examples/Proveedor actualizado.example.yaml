@@ -1,0 +1,42 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/proveedores/:id"
+  method: PUT
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  pathVariables:
+    - key: id
+      value: "10"
+      description: Id del proveedor
+  body:
+    type: json
+    content: |-
+      {
+        "nombreEmpresa": "Lacteos del Norte",
+        "nombrePropietario": "Juan Perez",
+        "nombreMayordomo": "Carlos Gomez",
+        "telefono": "+57 3001234567",
+        "correo": "contacto@lacteos.com",
+        "direccion": "Km 5 via principal, Vereda La Isla",
+        "activo": true
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "id": 10,
+        "nombreEmpresa": "Lacteos del Norte",
+        "nombrePropietario": "Juan Perez",
+        "nombreMayordomo": "Carlos Gomez",
+        "telefono": "+57 3001234567",
+        "correo": "contacto@lacteos.com",
+        "direccion": "Km 5 via principal, Vereda La Isla",
+        "activo": true
+      }
+order: 1000

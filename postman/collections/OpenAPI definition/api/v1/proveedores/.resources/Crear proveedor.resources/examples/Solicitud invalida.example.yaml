@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/proveedores"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  body:
+    type: json
+    content: |-
+      {
+        "nombreEmpresa": "Lacteos del Norte",
+        "nombrePropietario": "Juan Perez",
+        "nombreMayordomo": "Carlos Gomez",
+        "telefono": "+57 3001234567",
+        "correo": "contacto@lacteos.com",
+        "direccion": "Km 5 via principal, Vereda La Isla",
+        "activo": true
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "timestamp": "2026-05-13T12:00:00",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Recurso no encontrado",
+        "path": "/api/v1/lotes/99",
+        "code": "RECURSO_NO_ENCONTRADO"
+      }
+order: 2000

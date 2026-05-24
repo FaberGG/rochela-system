@@ -1,0 +1,24 @@
+$kind: http-request
+description: Filtra lotes por estado, producto y rango de fechas
+url: "{{baseUrl}}/api/v1/lotes?estado=INICIADO&productoCodigo=QUESO-001&desde=2026-05-01&hasta=2026-05-31&soloActivos=true"
+method: GET
+headers:
+  Accept: "*/*"
+queryParams:
+  - key: estado
+    value: INICIADO
+    description: Estado actual del lote
+  - key: productoCodigo
+    value: QUESO-001
+    description: Codigo del producto
+  - key: desde
+    value: 2026-05-01
+    description: Fecha inicial (YYYY-MM-DD)
+  - key: hasta
+    value: 2026-05-31
+    description: Fecha final (YYYY-MM-DD)
+  - key: soloActivos
+    value: "true"
+    description: Si es true, solo lotes activos
+examples: ./.resources/Listar lotes.resources/examples
+order: 2000

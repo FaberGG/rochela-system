@@ -1,0 +1,88 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/recepciones?proveedorId=10&desde=2026-05-01&hasta=2026-05-31&resultado=APTA"
+  method: GET
+  headers:
+    Accept: "*/*"
+  queryParams:
+    - key: proveedorId
+      value: "10"
+      description: Id del proveedor
+    - key: desde
+      value: 2026-05-01
+      description: Fecha inicial (YYYY-MM-DD)
+    - key: hasta
+      value: 2026-05-31
+      description: Fecha final (YYYY-MM-DD)
+    - key: resultado
+      value: APTA
+      description: Resultado de validacion
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      [
+        {
+          "id": 7777,
+          "fecha": "2011-01-27",
+          "fechaHora": "1983-10-11T05:36:12.317Z",
+          "proveedorId": 9696,
+          "jornada": "PM",
+          "ubicacion": "PROCESO",
+          "cantidadLitros": 8484.922377118037,
+          "realizadoPor": "string",
+          "analisisOrganoleptico": "NO_CUMPLE",
+          "colorCumple": true,
+          "olorCumple": false,
+          "alcohol": "NEGATIVO",
+          "temperatura": 9771.40205233094,
+          "densidad": 3957.2979437863496,
+          "ph": 6187.024668236786,
+          "proteina": 5702.905664024543,
+          "grasa": 9634.057749813303,
+          "solidosTotales": 5618.733047147449,
+          "acidezTitulable": 2438.911201233063,
+          "aguaAnadida": 1061.246609603882,
+          "puntoCrioscopico": 7750.544508371126,
+          "horaInicioReductasa": "string",
+          "horaFinReductasa": "string",
+          "tiempoReductasaMinutos": 3843,
+          "resultadoValidacion": "CONDICIONAL",
+          "estadoRecepcion": "PENDIENTE_REDUCTASA",
+          "observaciones": "string"
+        },
+        {
+          "id": 9835,
+          "fecha": "1988-12-04",
+          "fechaHora": "1947-07-05T15:39:03.778Z",
+          "proveedorId": 4467,
+          "jornada": "AM",
+          "ubicacion": "TANQUE_3",
+          "cantidadLitros": 873.852663347131,
+          "realizadoPor": "string",
+          "analisisOrganoleptico": "CUMPLE",
+          "colorCumple": true,
+          "olorCumple": true,
+          "alcohol": "POSITIVO",
+          "temperatura": 3781.5872926936277,
+          "densidad": 2931.7828509844758,
+          "ph": 1729.4754990019767,
+          "proteina": 9061.361873171756,
+          "grasa": 8620.479287983262,
+          "solidosTotales": 8226.941595615346,
+          "acidezTitulable": 6812.442949637731,
+          "aguaAnadida": 4850.005041371887,
+          "puntoCrioscopico": 8201.435255421782,
+          "horaInicioReductasa": "string",
+          "horaFinReductasa": "string",
+          "tiempoReductasaMinutos": 2224,
+          "resultadoValidacion": "APTA",
+          "estadoRecepcion": "PENDIENTE_REDUCTASA",
+          "observaciones": "string"
+        }
+      ]
+order: 1000

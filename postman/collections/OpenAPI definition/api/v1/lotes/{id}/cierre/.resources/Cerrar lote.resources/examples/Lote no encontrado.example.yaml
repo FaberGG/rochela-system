@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes/:id/cierre"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  pathVariables:
+    - key: id
+      value: "1"
+      description: Id del lote
+  body:
+    type: json
+    content: |-
+      {
+        "unidadesProducidas": 250,
+        "pesoTotalKg": 6714.415278758847,
+        "observaciones": "Proceso estable"
+      }
+response:
+  statusCode: 404
+  statusText: Not Found
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "timestamp": "2026-05-13T12:00:00",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Recurso no encontrado",
+        "path": "/api/v1/lotes/99",
+        "code": "RECURSO_NO_ENCONTRADO"
+      }
+order: 2000

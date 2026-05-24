@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/productos"
+  method: GET
+  headers:
+    Accept: "*/*"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      [
+        {
+          "id": 1,
+          "codigo": "QUESO-001",
+          "nombre": "Queso campesino",
+          "requierePasteurizacion": true,
+          "requiereCloruro": true,
+          "requiereLavadoDesuerado": false
+        },
+        {
+          "id": 1,
+          "codigo": "QUESO-001",
+          "nombre": "Queso campesino",
+          "requierePasteurizacion": true,
+          "requiereCloruro": true,
+          "requiereLavadoDesuerado": false
+        }
+      ]
+order: 1000

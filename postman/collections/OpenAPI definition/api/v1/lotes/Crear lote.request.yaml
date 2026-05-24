@@ -1,0 +1,17 @@
+$kind: http-request
+description: Crea un nuevo lote de produccion
+url: "{{baseUrl}}/api/v1/lotes"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+body:
+  type: json
+  content: |-
+    {
+      "productoCodigo": "QUESO-001",
+      "fechaHoraInicio": "2026-05-13T08:30:00",
+      "loteLecheId": 25
+    }
+examples: ./.resources/Crear lote.resources/examples
+order: 3000

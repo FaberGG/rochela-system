@@ -1,0 +1,12 @@
+$kind: http-request
+description: Finaliza la etapa de cortes
+url: "{{baseUrl}}/api/v1/lotes/:id/cortes/cerrar"
+method: POST
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "1"
+    description: Id del lote
+examples: ./.resources/Cerrar cortes.resources/examples
+order: 1000

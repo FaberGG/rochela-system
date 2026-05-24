@@ -1,0 +1,32 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  body:
+    type: json
+    content: |-
+      {
+        "productoCodigo": "QUESO-001",
+        "fechaHoraInicio": "2026-05-13T08:30:00",
+        "recepcionLecheId": 25
+      }
+response:
+  statusCode: 400
+  statusText: Bad Request
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "timestamp": "2026-05-13T12:00:00",
+        "status": 404,
+        "error": "Not Found",
+        "message": "Recurso no encontrado",
+        "path": "/api/v1/lotes/99",
+        "code": "RECURSO_NO_ENCONTRADO"
+      }
+order: 2000

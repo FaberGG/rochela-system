@@ -1,0 +1,21 @@
+$kind: http-request
+description: Crea un nuevo proveedor
+url: "{{baseUrl}}/api/v1/proveedores"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+body:
+  type: json
+  content: |-
+    {
+      "nombreEmpresa": "Lacteos del Norte",
+      "nombrePropietario": "Juan Perez",
+      "nombreMayordomo": "Carlos Gomez",
+      "telefono": "+57 3001234567",
+      "correo": "contacto@lacteos.com",
+      "direccion": "Km 5 via principal, Vereda La Isla",
+      "activo": true
+    }
+examples: ./.resources/Crear proveedor.resources/examples
+order: 3000

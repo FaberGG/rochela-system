@@ -1,0 +1,8 @@
+$kind: http-request
+description: Retorna todos los productos del catalogo
+url: "{{baseUrl}}/api/v1/productos"
+method: GET
+headers:
+  Accept: "*/*"
+examples: ./.resources/Listar productos.resources/examples
+order: 2000

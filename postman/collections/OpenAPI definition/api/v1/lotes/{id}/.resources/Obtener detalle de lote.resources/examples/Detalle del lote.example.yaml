@@ -1,0 +1,88 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes/:id"
+  method: GET
+  headers:
+    Accept: "*/*"
+  pathVariables:
+    - key: id
+      value: "1"
+      description: Id del lote
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "id": 1,
+        "codigoLote": "L-20260513-01",
+        "producto": {
+          "codigo": "QUESO-001",
+          "nombre": "Queso campesino"
+        },
+        "fechaHoraInicio": "2026-05-13T08:30:00",
+        "fechaVencimiento": "2026-06-13",
+        "estadoActual": "INICIADO",
+        "siguienteEtapa": "PASTEURIZACION",
+        "etapas": [
+          {
+            "tipoEtapa": "PASTEURIZACION",
+            "hora": "08:45:00",
+            "fechaHoraRegistro": "2026-05-13T08:45:00",
+            "temperatura": 5026.6430328425095,
+            "cantidadGramos": 8699.419532851087,
+            "loteInsumo": "INS-CL-2026-05",
+            "litros": 460.40975778072647,
+            "cantidadKg": 3716.548836120229,
+            "sodioInicial": 8614.35317466675,
+            "sodioFinal": 856.844205894155,
+            "loteSal": "SAL-2026-05",
+            "horaFin": "09:30:00",
+            "duracionMinutos": 45,
+            "presionPsi": 7287.477490490362,
+            "responsable": "Operario 1"
+          },
+          {
+            "tipoEtapa": "PASTEURIZACION",
+            "hora": "08:45:00",
+            "fechaHoraRegistro": "2026-05-13T08:45:00",
+            "temperatura": 8962.86781340671,
+            "cantidadGramos": 6211.628472189695,
+            "loteInsumo": "INS-CL-2026-05",
+            "litros": 4681.295236777887,
+            "cantidadKg": 267.54778123560527,
+            "sodioInicial": 4989.542665554699,
+            "sodioFinal": 1133.2362118146466,
+            "loteSal": "SAL-2026-05",
+            "horaFin": "09:30:00",
+            "duracionMinutos": 45,
+            "presionPsi": 2261.2282126223795,
+            "responsable": "Operario 1"
+          }
+        ],
+        "cortes": [
+          {
+            "numeroCorte": 1,
+            "hora": "10:15:00",
+            "observacion": "Corte uniforme"
+          },
+          {
+            "numeroCorte": 1,
+            "hora": "10:15:00",
+            "observacion": "Corte uniforme"
+          }
+        ],
+        "cierre": {
+          "codigoLote": "L-132261-01",
+          "estadoActual": "FINALIZADO",
+          "fechaHoraCierre": "2026-05-13T13:00:00",
+          "unidadesProducidas": 250,
+          "pesoTotalKg": 2606.09031584922,
+          "rendimientoTeorico": 6559.572992030857,
+          "rendimientoGeneral": 4615.22261451128
+        }
+      }
+order: 1000

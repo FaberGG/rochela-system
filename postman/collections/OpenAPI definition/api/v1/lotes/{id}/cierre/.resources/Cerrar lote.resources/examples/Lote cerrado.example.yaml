@@ -1,0 +1,37 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes/:id/cierre"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  pathVariables:
+    - key: id
+      value: "1"
+      description: Id del lote
+  body:
+    type: json
+    content: |-
+      {
+        "unidadesProducidas": 250,
+        "pesoTotalKg": 6714.415278758847,
+        "observaciones": "Proceso estable"
+      }
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "codigoLote": "L-132261-01",
+        "estadoActual": "FINALIZADO",
+        "fechaHoraCierre": "2026-05-13T13:00:00",
+        "unidadesProducidas": 250,
+        "pesoTotalKg": 1898.951501625784,
+        "rendimientoTeorico": 1854.5851311783667,
+        "rendimientoGeneral": 9448.73814183578
+      }
+order: 1000

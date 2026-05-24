@@ -1,0 +1,33 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/recepciones/pendientes"
+  method: GET
+  headers:
+    Accept: "*/*"
+response:
+  statusCode: 200
+  statusText: OK
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      [
+        {
+          "id": 1,
+          "fecha": "2026-05-13",
+          "jornada": "AM",
+          "proveedor": "Lacteos del Norte",
+          "horaInicioReductasa": "09:00:00",
+          "minutosTranscurridos": 120
+        },
+        {
+          "id": 1,
+          "fecha": "2026-05-13",
+          "jornada": "AM",
+          "proveedor": "Lacteos del Norte",
+          "horaInicioReductasa": "09:00:00",
+          "minutosTranscurridos": 120
+        }
+      ]
+order: 1000

@@ -1,0 +1,35 @@
+$kind: http-request
+description: Registra una nueva recepcion de leche
+url: "{{baseUrl}}/api/v1/recepciones"
+method: POST
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+body:
+  type: json
+  content: |-
+    {
+      "fecha": "2026-05-13",
+      "proveedorId": 10,
+      "jornada": "AM",
+      "ubicacion": "TANQUE_1",
+      "cantidadLitros": 6926.917295615309,
+      "realizadoPor": "Operario 1",
+      "analisisOrganoleptico": "CUMPLE",
+      "colorCumple": true,
+      "olorCumple": true,
+      "alcohol": "NEGATIVO",
+      "temperatura": 8137.030637049607,
+      "densidad": 5046.620224708752,
+      "ph": 1124.253940656622,
+      "proteina": 3244.767700812824,
+      "grasa": 5948.608728013839,
+      "solidosTotales": 3542.6102470345213,
+      "acidezTitulable": 4307.927573812212,
+      "aguaAnadida": 4504.92767179161,
+      "puntoCrioscopico": 3138.869352240119,
+      "horaInicioReductasa": "09:00:00",
+      "observaciones": "Sin novedades"
+    }
+examples: ./.resources/Registrar recepcion.resources/examples
+order: 4000

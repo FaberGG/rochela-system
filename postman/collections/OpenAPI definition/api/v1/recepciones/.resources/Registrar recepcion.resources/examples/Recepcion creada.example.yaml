@@ -1,0 +1,67 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/recepciones"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  body:
+    type: json
+    content: |-
+      {
+        "fecha": "2026-05-13",
+        "proveedorId": 10,
+        "jornada": "AM",
+        "ubicacion": "TANQUE_1",
+        "cantidadLitros": 6926.917295615309,
+        "realizadoPor": "Operario 1",
+        "analisisOrganoleptico": "CUMPLE",
+        "colorCumple": true,
+        "olorCumple": true,
+        "alcohol": "NEGATIVO",
+        "temperatura": 8137.030637049607,
+        "densidad": 5046.620224708752,
+        "ph": 1124.253940656622,
+        "proteina": 3244.767700812824,
+        "grasa": 5948.608728013839,
+        "solidosTotales": 3542.6102470345213,
+        "acidezTitulable": 4307.927573812212,
+        "aguaAnadida": 4504.92767179161,
+        "puntoCrioscopico": 3138.869352240119,
+        "horaInicioReductasa": "09:00:00",
+        "observaciones": "Sin novedades"
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "id": 1,
+        "estadoRecepcion": "COMPLETA",
+        "resultadoValidacion": "APTA",
+        "validacionDetalle": {
+          "key_0": {
+            "valor": 5162.774195411428,
+            "rangoMin": 6454.096625465254,
+            "rangoMax": 7689.917342334731,
+            "apto": true
+          },
+          "key_1": {
+            "valor": 542.1407020060487,
+            "rangoMin": 5899.20335321949,
+            "rangoMax": 1991.6004600850956,
+            "apto": true
+          },
+          "key_2": {
+            "valor": 3715.9638013860354,
+            "rangoMin": 4318.661032245997,
+            "rangoMax": 3420.1149820643873,
+            "apto": true
+          }
+        }
+      }
+order: 1000

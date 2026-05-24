@@ -1,0 +1,12 @@
+$kind: http-request
+description: Marca un proveedor como inactivo
+url: "{{baseUrl}}/api/v1/proveedores/:id"
+method: DELETE
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "10"
+    description: Id del proveedor
+examples: ./.resources/Eliminar proveedor.resources/examples
+order: 3000

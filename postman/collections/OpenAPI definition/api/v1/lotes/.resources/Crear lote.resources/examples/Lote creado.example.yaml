@@ -1,0 +1,36 @@
+$kind: http-example
+request:
+  url: "{{baseUrl}}/api/v1/lotes"
+  method: POST
+  headers:
+    Content-Type: application/json
+    Accept: "*/*"
+  body:
+    type: json
+    content: |-
+      {
+        "productoCodigo": "QUESO-001",
+        "fechaHoraInicio": "2026-05-13T08:30:00",
+        "recepcionLecheId": 25
+      }
+response:
+  statusCode: 201
+  statusText: Created
+  headers:
+    Content-Type: "*/*"
+  body:
+    type: text
+    content: |-
+      {
+        "id": 1,
+        "codigoLote": "L-20260513-01",
+        "producto": {
+          "codigo": "QUESO-001",
+          "nombre": "Queso campesino"
+        },
+        "fechaHoraInicio": "2026-05-13T08:30:00",
+        "fechaVencimiento": "2026-06-13",
+        "estadoActual": "INICIADO",
+        "siguienteEtapa": "PASTEURIZACION"
+      }
+order: 1000

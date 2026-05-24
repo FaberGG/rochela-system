@@ -1,0 +1,8 @@
+$kind: http-request
+description: Lista recepciones con reductasa pendiente
+url: "{{baseUrl}}/api/v1/recepciones/pendientes"
+method: GET
+headers:
+  Accept: "*/*"
+examples: ./.resources/Listar pendientes de reductasa.resources/examples
+order: 1000

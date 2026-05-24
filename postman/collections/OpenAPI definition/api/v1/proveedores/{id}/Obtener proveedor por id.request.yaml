@@ -1,0 +1,12 @@
+$kind: http-request
+description: Busca un proveedor por su id
+url: "{{baseUrl}}/api/v1/proveedores/:id"
+method: GET
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "10"
+    description: Id del proveedor
+examples: ./.resources/Obtener proveedor por id.resources/examples
+order: 1000

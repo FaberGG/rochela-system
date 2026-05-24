@@ -1,0 +1,12 @@
+$kind: http-request
+description: Devuelve el detalle de validaciones
+url: "{{baseUrl}}/api/v1/recepciones/:id"
+method: GET
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "1"
+    description: Id de la recepcion
+examples: ./.resources/Obtener detalle de recepcion.resources/examples
+order: 2000

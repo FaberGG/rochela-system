@@ -1,0 +1,19 @@
+$kind: http-request
+description: Registra la hora fin de la prueba de reductasa
+url: "{{baseUrl}}/api/v1/recepciones/:id/reductasa"
+method: PATCH
+headers:
+  Content-Type: application/json
+  Accept: "*/*"
+pathVariables:
+  - key: id
+    value: "1"
+    description: Id de la recepcion
+body:
+  type: json
+  content: |-
+    {
+      "horaFinReductasa": "11:30:00"
+    }
+examples: ./.resources/Cerrar reductasa.resources/examples
+order: 1000

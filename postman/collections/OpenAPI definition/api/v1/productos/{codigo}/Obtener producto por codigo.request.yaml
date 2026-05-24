@@ -1,0 +1,12 @@
+$kind: http-request
+description: Busca un producto por su codigo unico
+url: "{{baseUrl}}/api/v1/productos/:codigo"
+method: GET
+headers:
+  Accept: "*/*"
+pathVariables:
+  - key: codigo
+    value: QUESO-001
+    description: Codigo del producto
+examples: ./.resources/Obtener producto por codigo.resources/examples
+order: 1000
