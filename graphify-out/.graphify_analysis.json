@@ -1,108 +1,69 @@
 {
   "communities": {
     "0": [
-      "api_api_docs_200_content",
-      "api_api_docs_api_v1_lotes_get",
-      "api_api_docs_api_v1_lotes_id_cancelar_patch",
-      "api_api_docs_api_v1_lotes_post",
-      "api_api_docs_api_v1_proveedores_id_delete",
-      "api_api_docs_api_v1_proveedores_id_put",
-      "api_api_docs_application_json_schema",
       "api_api_docs_content",
-      "api_api_docs_content_application_json",
-      "api_api_docs_get_description",
-      "api_api_docs_get_operationid",
-      "api_api_docs_get_parameters",
-      "api_api_docs_get_responses",
-      "api_api_docs_get_summary",
-      "api_api_docs_paths",
-      "api_api_docs_paths_api_v1_lotes",
-      "api_api_docs_paths_api_v1_lotes_id_cancelar",
-      "api_api_docs_paths_api_v1_lotes_id_cierre",
-      "api_api_docs_paths_api_v1_lotes_id_cloruro",
-      "api_api_docs_paths_api_v1_lotes_id_cortes",
-      "api_api_docs_paths_api_v1_lotes_id_cuajo",
-      "api_api_docs_paths_api_v1_lotes_id_desuerado",
-      "api_api_docs_paths_api_v1_lotes_id_lavado_desuerado",
-      "api_api_docs_paths_api_v1_lotes_id_pasteurizacion",
-      "api_api_docs_paths_api_v1_lotes_id_prensado",
-      "api_api_docs_paths_api_v1_lotes_id_salado",
       "api_api_docs_paths_api_v1_productos",
-      "api_api_docs_paths_api_v1_proveedores",
-      "api_api_docs_paths_api_v1_recepciones",
-      "api_api_docs_paths_api_v1_recepciones_id_reductasa",
       "api_api_docs_paths_api_v1_recepciones_pendientes",
-      "api_api_docs_put_requestbody",
-      "api_api_docs_requestbody_required",
-      "api_api_docs_responses_200",
-      "api_api_docs_responses_201",
-      "api_api_docs_responses_204",
-      "api_api_docs_responses_400",
-      "api_api_docs_responses_404",
-      "api_api_docs_responses_409",
-      "api_api_docs_tags"
+      "api_openapi_200_content",
+      "api_openapi_api_v1_lotes_get",
+      "api_openapi_api_v1_lotes_id_cancelar_patch",
+      "api_openapi_api_v1_lotes_post",
+      "api_openapi_api_v1_proveedores_id_delete",
+      "api_openapi_api_v1_proveedores_id_put",
+      "api_openapi_application_json_schema",
+      "api_openapi_content",
+      "api_openapi_content_application_json",
+      "api_openapi_get_description",
+      "api_openapi_get_operationid",
+      "api_openapi_get_parameters",
+      "api_openapi_get_responses",
+      "api_openapi_get_summary",
+      "api_openapi_paths",
+      "api_openapi_paths_api_v1_lotes",
+      "api_openapi_paths_api_v1_lotes_id_cancelar",
+      "api_openapi_paths_api_v1_lotes_id_cierre",
+      "api_openapi_paths_api_v1_lotes_id_cloruro",
+      "api_openapi_paths_api_v1_lotes_id_cortes",
+      "api_openapi_paths_api_v1_lotes_id_cuajo",
+      "api_openapi_paths_api_v1_lotes_id_desuerado",
+      "api_openapi_paths_api_v1_lotes_id_lavado_desuerado",
+      "api_openapi_paths_api_v1_lotes_id_pasteurizacion",
+      "api_openapi_paths_api_v1_lotes_id_prensado",
+      "api_openapi_paths_api_v1_lotes_id_salado",
+      "api_openapi_paths_api_v1_proveedores",
+      "api_openapi_paths_api_v1_recepciones",
+      "api_openapi_paths_api_v1_recepciones_id_reductasa",
+      "api_openapi_put_requestbody",
+      "api_openapi_requestbody_required",
+      "api_openapi_responses_200",
+      "api_openapi_responses_201",
+      "api_openapi_responses_204",
+      "api_openapi_responses_400",
+      "api_openapi_responses_404",
+      "api_openapi_responses_409",
+      "api_openapi_tags"
     ],
     "1": [
-      "applicationrunner",
-      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo",
-      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_run",
-      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_upsertproducto",
-      "controller_lotecontroller_lotecontroller_crear",
-      "controller_productocontroller_productocontroller",
-      "controller_proveedorcontroller_proveedorcontroller",
-      "repository_loterepository_loterepository",
-      "repository_loterepository_loterepository_countbyfechahorainiciobetween",
-      "repository_productorepository_productorepository",
-      "repository_productorepository_productorepository_existsbycodigo",
-      "repository_productorepository_productorepository_findbycodigo",
-      "repository_proveedorrepository_proveedorrepository",
-      "repository_proveedorrepository_proveedorrepository_findbyactivotrue",
-      "rochelasystem_rochelasystemapplication_rochelasystemapplication",
-      "rochelasystem_rochelasystemapplication_rochelasystemapplication_main",
-      "rochelasystem_rochelasystemapplicationtests_rochelasystemapplicationtests_contextloads",
-      "service_loteservice_loteservice_crearlote",
-      "service_loteservice_loteservice_generarcodigolote",
-      "service_productoservice_productoservice",
-      "service_productoservice_productoservice_listarproductos",
-      "service_productoservice_productoservice_maptoresponse",
-      "service_productoservice_productoservice_obtenerporcodigo",
-      "service_proveedorservice_proveedorservice",
-      "service_proveedorservice_proveedorservice_actualizar",
-      "service_proveedorservice_proveedorservice_eliminar",
-      "service_proveedorservice_proveedorservice_listaractivos",
-      "service_proveedorservice_proveedorservice_obtenerporid",
-      "src_main_java_com_rochela_rochelasystem_modulos_catalogo_service_productoservice_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_loterepository_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_proveedores_controller_proveedorcontroller_java",
-      "state_lotestatecontext_lotestatecontext",
-      "state_lotestatecontext_lotestatecontext_getresolver",
-      "state_lotestatecontext_lotestatecontext_requierecloruro",
-      "state_lotestatecontext_lotestatecontext_requierelavadodesuerado",
-      "state_lotestatecontext_lotestatecontext_requierepasteurizacion"
-    ],
-    "2": [
       "controller_lotecontroller_lotecontroller",
-      "model_producto_producto",
-      "repository_cierreloterepository_cierreloterepository",
-      "repository_cierreloterepository_cierreloterepository_findbyloteid",
       "service_loteservice_loteservice",
       "service_loteservice_loteservice_agregarcorte",
       "service_loteservice_loteservice_avanzarestado",
       "service_loteservice_loteservice_buildcontext",
       "service_loteservice_loteservice_calcularduracionminutos",
+      "service_loteservice_loteservice_calcularporcentajecompletado",
       "service_loteservice_loteservice_calcularrendimientogeneral",
       "service_loteservice_loteservice_calcularsiguienteetapa",
       "service_loteservice_loteservice_cancelarlote",
       "service_loteservice_loteservice_cerrarcortes",
       "service_loteservice_loteservice_cerrarlote",
+      "service_loteservice_loteservice_cerrarprensado",
+      "service_loteservice_loteservice_construirflujo",
       "service_loteservice_loteservice_getproducto",
       "service_loteservice_loteservice_inicializaretapa",
       "service_loteservice_loteservice_listarlotes",
-      "service_loteservice_loteservice_mapcierre",
       "service_loteservice_loteservice_mapetapa",
       "service_loteservice_loteservice_mapproducto",
       "service_loteservice_loteservice_mapresumen",
-      "service_loteservice_loteservice_obtenerdetalle",
       "service_loteservice_loteservice_obtenerlote",
       "service_loteservice_loteservice_obtenerproducto",
       "service_loteservice_loteservice_registrarcloruro",
@@ -113,40 +74,126 @@
       "service_loteservice_loteservice_registrarprensado",
       "service_loteservice_loteservice_registrarsalado",
       "service_loteservice_loteservice_resolverestadosparacuajo",
-      "service_loteservice_loteservice_validarestado",
+      "service_loteservice_loteservice_resolveretapaactualinicio",
+      "service_loteservice_loteservice_validarestado"
+    ],
+    "2": [
+      "controller_lotecontroller_lotecontroller_crear",
+      "controller_lotelechecontroller_lotelechecontroller",
+      "controller_recepcioncontroller_recepcioncontroller",
+      "model_producto_producto",
+      "model_proveedor_proveedor",
+      "repository_cierrelotequesorepository_cierrelotequesorepository",
+      "repository_cierreloterepository_cierreloterepository",
+      "repository_cierreloterepository_cierreloterepository_findbyloteid",
+      "repository_descargarepository_descargarepository",
+      "repository_descargarepository_descargarepository_findbylotelecheid",
+      "repository_recepcionlecherepository_recepcionlecherepository",
+      "repository_recepcionlecherepository_recepcionlecherepository_findbyestadorecepcion",
+      "service_lotelecheservice_lotelecheservice",
+      "service_lotelecheservice_lotelecheservice_filtraporfecha",
+      "service_lotelecheservice_lotelecheservice_listar",
+      "service_lotelecheservice_lotelecheservice_mapresponse",
+      "service_lotelecheservice_lotelecheservice_validarrecepciones",
+      "service_loteservice_loteservice_mapcierre",
+      "service_loteservice_loteservice_obtenerdetalle",
+      "service_recepcionservice_recepcionservice",
+      "service_recepcionservice_recepcionservice_agregarvalidacion",
+      "service_recepcionservice_recepcionservice_calcularresultado",
+      "service_recepcionservice_recepcionservice_cerrarreductasa",
+      "service_recepcionservice_recepcionservice_construirvalidaciondetalle",
+      "service_recepcionservice_recepcionservice_listarpendientes",
+      "service_recepcionservice_recepcionservice_listarrecepciones",
+      "service_recepcionservice_recepcionservice_obtenerentidad",
       "src_main_java_com_rochela_rochelasystem_modulos_catalogo_model_producto_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_cierreloterepository_java"
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_cierrelotequesorepository_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_cierreloterepository_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_proveedores_model_proveedor_java"
     ],
     "3": [
-      "lotestate",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadocloruro_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadosalado_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_lotestate_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_stateresolver_java",
-      "src_test_java_com_rochela_rochelasystem_modulos_produccion_state_lotestatetest_java",
-      "state_estadocancelado_estadocancelado",
-      "state_estadocloruro_estadocloruro",
-      "state_estadocortes_estadocortes",
-      "state_estadocuajo_estadocuajo",
-      "state_estadodesuerado_estadodesuerado",
-      "state_estadofinalizado_estadofinalizado",
-      "state_estadoiniciado_estadoiniciado",
-      "state_estadolavadodesuerado_estadolavadodesuerado",
-      "state_estadopasteurizacion_estadopasteurizacion",
-      "state_estadoprensado_estadoprensado",
-      "state_estadosalado_estadosalado",
-      "state_lotestate_lotestate_avanzar",
-      "state_lotestate_lotestate_cancelar",
-      "state_lotestate_lotestate_getestado",
-      "state_lotestate_lotestate_siguiente",
-      "state_lotestatetest_lotestatetest",
-      "state_lotestatetest_lotestatetest_cortes_avanza_a_lavado_o_desuerado",
-      "state_lotestatetest_lotestatetest_estados_terminales_no_avanzan",
-      "state_lotestatetest_lotestatetest_iniciado_avanza_segun_flags",
-      "state_stateresolver_stateresolver",
-      "state_stateresolver_stateresolver_resolve"
+      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_upsertproducto",
+      "controller_productocontroller_productocontroller",
+      "controller_proveedorcontroller_proveedorcontroller",
+      "repository_corterepository_corterepository",
+      "repository_corterepository_corterepository_findbyloteidorderbynumerocorteasc",
+      "repository_corterepository_corterepository_findtopbyloteidorderbynumerocortedesc",
+      "repository_productorepository_productorepository",
+      "repository_productorepository_productorepository_existsbycodigo",
+      "repository_productorepository_productorepository_findbycodigo",
+      "repository_proveedorrepository_proveedorrepository_findbyactivotrue",
+      "service_lotequesoservicetest_lotequesoservicetest",
+      "service_lotequesoservicetest_lotequesoservicetest_agregarcorte_avanza_de_cuajo_a_cortes",
+      "service_lotequesoservicetest_lotequesoservicetest_registrarprensado_avanza_a_prensado_iniciado_y_bloquea_repeticion",
+      "service_productoservice_productoservice",
+      "service_productoservice_productoservice_listarproductos",
+      "service_productoservice_productoservice_maptoresponse",
+      "service_productoservice_productoservice_obtenerporcodigo",
+      "service_proveedorservice_proveedorservice",
+      "service_proveedorservice_proveedorservice_actualizar",
+      "service_proveedorservice_proveedorservice_eliminar",
+      "service_proveedorservice_proveedorservice_listaractivos",
+      "service_proveedorservice_proveedorservice_obtenerporid",
+      "src_main_java_com_rochela_rochelasystem_modulos_catalogo_service_productoservice_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_corterepository_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_proveedores_controller_proveedorcontroller_java",
+      "state_lotestatecontext_lotestatecontext",
+      "state_lotestatecontext_lotestatecontext_getresolver",
+      "state_lotestatecontext_lotestatecontext_requierecloruro",
+      "state_lotestatecontext_lotestatecontext_requierelavadodesuerado",
+      "state_lotestatecontext_lotestatecontext_requierepasteurizacion"
     ],
     "4": [
+      "dto_lavadodesueradorequest_lavadodesueradorequest",
+      "dto_pasteurizacionrequest_pasteurizacionrequest",
+      "model_corte_corte",
+      "repository_corterepository_corterepository_countbyloteid",
+      "repository_lotequesorepository_lotequesorepository",
+      "repository_loterepository_loterepository",
+      "repository_loterepository_loterepository_countbyfechahorainiciobetween",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_assertestado",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cierre",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cierreprensado",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cloruro",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cuajo",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_desuerado",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_con_lavado_desuerado",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_con_pasteurizacion_y_cloruro",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_sin_pasteurizacion_ni_cloruro",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_prensado",
+      "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_salado",
+      "service_loteservice_loteservice_crearlote",
+      "service_loteservice_loteservice_generarcodigolote",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_corte_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_lotequesorepository_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_loterepository_java"
+    ],
+    "5": [
+      "estados_lote_state_pattern",
+      "estructura_proyecto_produccion",
+      "estructura_proyecto_recepcion",
+      "etapa_etapacloruro_etapacloruro",
+      "etapa_etapacuajo_etapacuajo",
+      "etapa_etapadesuerado_etapadesuerado",
+      "etapa_etapalavadodesuerado_etapalavadodesuerado",
+      "etapa_etapapasteurizacion_etapapasteurizacion",
+      "etapa_etapaprensado_etapaprensado",
+      "etapa_etapasalado_etapasalado",
+      "etaparegistro",
+      "modelo_entidades_lote",
+      "modelo_entidades_producto",
+      "modelo_entidades_proveedor",
+      "modelo_entidades_recepcion_leche",
+      "repository_etapaprensadorepository_etapaprensadorepository",
+      "repository_etapaprensadorepository_etapaprensadorepository_findtopbyloteidorderbyfechahoraregistrodesc",
+      "repository_etaparegistrorepository_etaparegistrorepository",
+      "repository_etaparegistrorepository_etaparegistrorepository_findbyloteidorderbyfechahoraregistroasc",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacloruro_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacuajo_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapasalado_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_service_loteservice_java"
+    ],
+    "6": [
       "exception_errorresponsedto_errorresponsedto",
       "exception_errorresponsedto_errorresponsedto_getcode",
       "exception_errorresponsedto_errorresponsedto_geterror",
@@ -169,191 +216,239 @@
       "lacteaexception",
       "runtimeexception"
     ],
-    "5": [
-      "etapa_etapacloruro_etapacloruro",
-      "etapa_etapacuajo_etapacuajo",
-      "etapa_etapadesuerado_etapadesuerado",
-      "etapa_etapalavadodesuerado_etapalavadodesuerado",
-      "etapa_etapapasteurizacion_etapapasteurizacion",
-      "etapa_etapaprensado_etapaprensado",
-      "etapa_etapasalado_etapasalado",
-      "etaparegistro",
-      "repository_etaparegistrorepository_etaparegistrorepository",
-      "repository_etaparegistrorepository_etaparegistrorepository_findbyloteidorderbyfechahoraregistroasc",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacloruro_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacuajo_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapasalado_java",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_service_loteservice_java"
-    ],
-    "6": [
-      "controller_recepcioncontroller_recepcioncontroller",
-      "model_proveedor_proveedor",
-      "repository_recepcionlecherepository_recepcionlecherepository",
-      "repository_recepcionlecherepository_recepcionlecherepository_findbyestadorecepcion",
-      "service_recepcionservice_recepcionservice",
-      "service_recepcionservice_recepcionservice_agregarvalidacion",
-      "service_recepcionservice_recepcionservice_calcularresultado",
-      "service_recepcionservice_recepcionservice_cerrarreductasa",
-      "service_recepcionservice_recepcionservice_construirvalidaciondetalle",
-      "service_recepcionservice_recepcionservice_listarpendientes",
-      "service_recepcionservice_recepcionservice_listarrecepciones",
-      "service_recepcionservice_recepcionservice_obtenerentidad",
-      "src_main_java_com_rochela_rochelasystem_modulos_proveedores_model_proveedor_java"
-    ],
     "7": [
-      "api_api_docs_info",
-      "api_api_docs_info_title",
-      "api_api_docs_info_version",
-      "api_api_docs_openapi",
-      "api_api_docs_servers",
-      "docs_api_api_docs_json"
+      "lotestate",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadocloruro_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadosalado_java",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_lotestate_java",
+      "state_estadocancelado_estadocancelado",
+      "state_estadocloruro_estadocloruro",
+      "state_estadocortes_estadocortes",
+      "state_estadocortescerrados_estadocortescerrados",
+      "state_estadocuajo_estadocuajo",
+      "state_estadodesuerado_estadodesuerado",
+      "state_estadofinalizado_estadofinalizado",
+      "state_estadoiniciado_estadoiniciado",
+      "state_estadolavadodesuerado_estadolavadodesuerado",
+      "state_estadopasteurizacion_estadopasteurizacion",
+      "state_estadoprensado_estadoprensado",
+      "state_estadoprensadoiniciado_estadoprensadoiniciado",
+      "state_estadosalado_estadosalado",
+      "state_lotestate_lotestate_avanzar",
+      "state_lotestate_lotestate_cancelar",
+      "state_lotestate_lotestate_getestado",
+      "state_lotestate_lotestate_siguiente"
     ],
     "8": [
-      "repository_corterepository_corterepository",
-      "repository_corterepository_corterepository_countbyloteid",
-      "repository_corterepository_corterepository_findbyloteidorderbynumerocorteasc",
-      "repository_corterepository_corterepository_findtopbyloteidorderbynumerocortedesc",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_corterepository_java"
+      "api_openapi_info",
+      "api_openapi_info_title",
+      "api_openapi_info_version",
+      "api_openapi_openapi",
+      "api_openapi_servers",
+      "applicationrunner",
+      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo",
+      "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_run",
+      "docs_api_api_docs_json",
+      "docs_api_openapi_json",
+      "proveedores_datainicializadorproveedores_datainicializadorproveedores",
+      "proveedores_datainicializadorproveedores_datainicializadorproveedores_upsertproveedor",
+      "repository_proveedorrepository_proveedorrepository",
+      "repository_proveedorrepository_proveedorrepository_existsbynombreempresa",
+      "rochelasystem_rochelasystemapplication_rochelasystemapplication",
+      "rochelasystem_rochelasystemapplication_rochelasystemapplication_main",
+      "rochelasystem_rochelasystemapplicationtests_rochelasystemapplicationtests_contextloads"
     ],
     "9": [
-      "dto_cierreloterequest_cierreloterequest",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cierreloterequest_java"
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_stateresolver_java",
+      "src_test_java_com_rochela_rochelasystem_modulos_produccion_state_lotestatetest_java",
+      "state_lotequesostatetest_lotequesostatetest",
+      "state_lotequesostatetest_lotequesostatetest_cortes_avanza_a_cortes_cerrados",
+      "state_lotequesostatetest_lotequesostatetest_cortes_cerrados_avanza_segun_lavado",
+      "state_lotestatetest_lotestatetest",
+      "state_lotestatetest_lotestatetest_cortes_avanza_a_lavado_o_desuerado",
+      "state_lotestatetest_lotestatetest_estados_terminales_no_avanzan",
+      "state_lotestatetest_lotestatetest_iniciado_avanza_segun_flags",
+      "state_stateresolver_stateresolver",
+      "state_stateresolver_stateresolver_resolve"
     ],
     "10": [
+      "controller_operariocontroller_operariocontroller",
+      "service_operariofeedservice_operariofeedservice",
+      "service_operariofeedservice_operariofeedservice_obtenerfeed"
+    ],
+    "11": [
+      "application_yml_datasource",
+      "docker_compose_postgres_rochela"
+    ],
+    "12": [
+      "dto_cierrelotequesorequest_cierrelotequesorequest",
+      "dto_cierreloterequest_cierreloterequest"
+    ],
+    "13": [
       "dto_clorurorequest_clorurorequest",
       "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_clorurorequest_java"
     ],
-    "11": [
-      "dto_cortecreaterequest_cortecreaterequest",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cortecreaterequest_java"
-    ],
-    "12": [
-      "dto_cuajorequest_cuajorequest",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cuajorequest_java"
-    ],
-    "13": [
-      "dto_etapadetalledto_etapadetalledto",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_etapadetalledto_java"
-    ],
     "14": [
       "dto_lotecreaterequest_lotecreaterequest",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_lotecreaterequest_java"
+      "dto_lotelechecreaterequest_lotelechecreaterequest"
     ],
     "15": [
-      "model_cierrelote_cierrelote",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_cierrelote_java"
+      "estructura_proyecto_exportacion",
+      "google_sheets_integration"
     ],
     "16": [
       "model_lote_lote",
       "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_lote_java"
     ],
     "17": [
-      "model_corte_corte",
-      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_corte_java"
+      "model_loteleche_loteleche",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_loteleche_java"
     ],
     "18": [
-      "dto_productoresponsedto_productoresponsedto"
+      "dto_cortecreaterequest_cortecreaterequest",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cortecreaterequest_java"
     ],
     "19": [
-      "dto_cierreloteresponse_cierreloteresponse"
+      "dto_cuajorequest_cuajorequest",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cuajorequest_java"
     ],
     "20": [
-      "dto_cortecreateresponse_cortecreateresponse"
+      "dto_etapadetalledto_etapadetalledto",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_etapadetalledto_java"
     ],
     "21": [
-      "dto_cortedetalledto_cortedetalledto"
+      "model_cierrelote_cierrelote",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_cierrelote_java"
     ],
     "22": [
-      "dto_desueradorequest_desueradorequest"
+      "model_descarga_descarga",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_descarga_java"
     ],
     "23": [
-      "dto_lavadodesueradorequest_lavadodesueradorequest"
+      "model_lotequeso_lotequeso",
+      "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_lotequeso_java"
     ],
     "24": [
-      "dto_lotedetalleresponse_lotedetalleresponse"
+      "dto_productoresponsedto_productoresponsedto"
     ],
     "25": [
-      "dto_loteresumenresponse_loteresumenresponse"
+      "dto_cierreloteresponse_cierreloteresponse"
     ],
     "26": [
-      "dto_pasteurizacionrequest_pasteurizacionrequest"
+      "dto_cortecreateresponse_cortecreateresponse"
     ],
     "27": [
-      "dto_prensadorequest_prensadorequest"
+      "dto_cortedetalledto_cortedetalledto"
     ],
     "28": [
-      "dto_productoresumendto_productoresumendto"
+      "dto_desueradorequest_desueradorequest"
     ],
     "29": [
-      "dto_saladorequest_saladorequest"
+      "dto_lotedetalleresponse_lotedetalleresponse"
     ],
     "30": [
-      "dto_proveedorrequestdto_proveedorrequestdto"
+      "dto_loteresumenresponse_loteresumenresponse"
     ],
     "31": [
-      "dto_proveedorresponsedto_proveedorresponsedto"
+      "dto_prensadorequest_prensadorequest"
     ],
     "32": [
-      "dto_recepcioncreaterequest_recepcioncreaterequest"
+      "dto_productoresumendto_productoresumendto"
     ],
     "33": [
-      "dto_recepcionpendientedto_recepcionpendientedto"
+      "dto_saladorequest_saladorequest"
     ],
     "34": [
-      "dto_recepcionreductasarequest_recepcionreductasarequest"
+      "dto_proveedorrequestdto_proveedorrequestdto"
     ],
     "35": [
-      "dto_recepcionreductasaresponse_recepcionreductasaresponse"
+      "dto_proveedorresponsedto_proveedorresponsedto"
     ],
     "36": [
-      "dto_recepcionresponse_recepcionresponse"
+      "dto_recepcioncreaterequest_recepcioncreaterequest"
     ],
     "37": [
-      "dto_validaciondetalledto_validaciondetalledto"
+      "dto_recepcionpendientedto_recepcionpendientedto"
     ],
     "38": [
-      "model_recepcionleche_recepcionleche"
+      "dto_recepcionreductasarequest_recepcionreductasarequest"
     ],
     "39": [
-      "src_main_java_com_rochela_rochelasystem_shared_package_info_java"
+      "dto_recepcionreductasaresponse_recepcionreductasaresponse"
     ],
     "40": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_analisisorganoleptico_java"
+      "dto_recepcionresponse_recepcionresponse"
     ],
     "41": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_estadolote_java"
+      "dto_validaciondetalledto_validaciondetalledto"
     ],
     "42": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_estadorecepcion_java"
+      "src_main_java_com_rochela_rochelasystem_shared_package_info_java"
     ],
     "43": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_jornada_java"
+      "src_main_java_com_rochela_rochelasystem_shared_enums_analisisorganoleptico_java"
     ],
     "44": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_resultadoalcohol_java"
+      "src_main_java_com_rochela_rochelasystem_shared_enums_estadolote_java"
     ],
     "45": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_resultadovalidacion_java"
+      "src_main_java_com_rochela_rochelasystem_shared_enums_estadorecepcion_java"
     ],
     "46": [
-      "src_main_java_com_rochela_rochelasystem_shared_enums_tipoetapa_java"
+      "src_main_java_com_rochela_rochelasystem_shared_enums_jornada_java"
     ],
     "47": [
+      "src_main_java_com_rochela_rochelasystem_shared_enums_resultadoalcohol_java"
+    ],
+    "48": [
+      "src_main_java_com_rochela_rochelasystem_shared_enums_resultadovalidacion_java"
+    ],
+    "49": [
+      "src_main_java_com_rochela_rochelasystem_shared_enums_tipoetapa_java"
+    ],
+    "50": [
       "src_main_java_com_rochela_rochelasystem_shared_enums_ubicaciontanque_java"
+    ],
+    "51": [
+      "dto_operariofeedresponse_operariofeedresponse"
+    ],
+    "52": [
+      "dto_cierrelotequesoresponse_cierrelotequesoresponse"
+    ],
+    "53": [
+      "dto_lotelecheresponse_lotelecheresponse"
+    ],
+    "54": [
+      "dto_prensadocierrerequest_prensadocierrerequest"
+    ],
+    "55": [
+      "model_cierrelotequeso_cierrelotequeso"
+    ],
+    "56": [
+      "repository_lotelecherepository_lotelecherepository"
+    ],
+    "57": [
+      "estructura_proyecto_shared"
+    ],
+    "58": [
+      "estructura_proyecto_proveedores"
+    ],
+    "59": [
+      "estructura_proyecto_catalogo"
     ]
   },
   "cohesion": {
-    "0": 0.12,
-    "1": 0.08,
-    "2": 0.19,
-    "3": 0.19,
-    "4": 0.1,
-    "5": 0.14,
-    "6": 0.21,
-    "7": 0.33,
-    "8": 0.4,
-    "9": 1.0,
-    "10": 1.0,
+    "0": 0.11,
+    "1": 0.24,
+    "2": 0.11,
+    "3": 0.11,
+    "4": 0.21,
+    "5": 0.09,
+    "6": 0.1,
+    "7": 0.3,
+    "8": 0.15,
+    "9": 0.27,
+    "10": 0.67,
     "11": 1.0,
     "12": 1.0,
     "13": 1.0,
@@ -390,53 +485,65 @@
     "44": 1.0,
     "45": 1.0,
     "46": 1.0,
-    "47": 1.0
+    "47": 1.0,
+    "48": 1.0,
+    "49": 1.0,
+    "50": 1.0,
+    "51": 1.0,
+    "52": 1.0,
+    "53": 1.0,
+    "54": 1.0,
+    "55": 1.0,
+    "56": 1.0,
+    "57": 1.0,
+    "58": 1.0,
+    "59": 1.0
   },
   "gods": [
     {
       "id": "service_loteservice_loteservice",
       "label": "LoteService",
-      "degree": 31
+      "degree": 35
     },
     {
-      "id": "api_api_docs_api_v1_lotes_post",
+      "id": "api_openapi_api_v1_lotes_post",
       "label": "post",
       "degree": 19
     },
     {
-      "id": "api_api_docs_paths",
+      "id": "api_openapi_paths",
       "label": "paths",
-      "degree": 17
+      "degree": 18
     },
     {
       "id": "controller_lotecontroller_lotecontroller",
       "label": "LoteController",
-      "degree": 14
+      "degree": 15
     },
     {
-      "id": "api_api_docs_get_description",
+      "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest",
+      "label": "LoteQuesoServiceFlowIntegrationTest",
+      "degree": 15
+    },
+    {
+      "id": "api_openapi_get_description",
       "label": "description",
       "degree": 12
     },
     {
-      "id": "api_api_docs_get_responses",
+      "id": "api_openapi_get_responses",
       "label": "responses",
       "degree": 11
     },
     {
-      "id": "api_api_docs_api_v1_lotes_get",
+      "id": "api_openapi_api_v1_lotes_get",
       "label": "get",
       "degree": 11
     },
     {
-      "id": "api_api_docs_api_v1_proveedores_id_put",
+      "id": "api_openapi_api_v1_proveedores_id_put",
       "label": "put",
       "degree": 10
-    },
-    {
-      "id": "api_api_docs_api_v1_lotes_id_cancelar_patch",
-      "label": "patch",
-      "degree": 9
     },
     {
       "id": "service_recepcionservice_recepcionservice",
@@ -450,15 +557,59 @@
       "target": "put",
       "source_files": [
         "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/StateResolver.java",
-        "docs/api/api-docs.json"
+        "docs/api/openapi.json"
       ],
       "confidence": "INFERRED",
       "relation": "calls",
       "why": "inferred connection - not explicitly stated in source; connects across different repos/directories; bridges separate communities"
+    },
+    {
+      "source": "Spring Datasource Configuration",
+      "target": "PostgreSQL Service",
+      "source_files": [
+        "src/main/resources/application.yml",
+        "docker-compose.yml"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "references",
+      "why": "connects across different repos/directories"
+    },
+    {
+      "source": "Recepcion Module",
+      "target": "RecepcionLeche Entity",
+      "source_files": [
+        "docs/arquitectura/estructura-proyecto.md",
+        "docs/dominio/modelo-entidades.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "Produccion Module",
+      "target": "Lote Entity",
+      "source_files": [
+        "docs/arquitectura/estructura-proyecto.md",
+        "docs/dominio/modelo-entidades.md"
+      ],
+      "confidence": "INFERRED",
+      "relation": "references",
+      "why": "inferred connection - not explicitly stated in source"
+    },
+    {
+      "source": "Produccion Module",
+      "target": "Lote State Pattern",
+      "source_files": [
+        "docs/arquitectura/estructura-proyecto.md",
+        "docs/dominio/estados-lote.md"
+      ],
+      "confidence": "EXTRACTED",
+      "relation": "implements",
+      "why": "cross-file semantic connection"
     }
   ],
   "tokens": {
-    "input": 0,
-    "output": 0
+    "input": 78467,
+    "output": 1574
   }
 }
