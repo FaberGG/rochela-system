@@ -26,7 +26,7 @@ public class GoogleSheetsSyncService {
             "Codigo Lote Leche",
             "Fecha Hora Inicio",
             "Fecha Hora Cierre",
-            "Litros Totales Leche",
+            "Litros Usados Leche",
             "Grasa",
             "Proteina",
             "PH",

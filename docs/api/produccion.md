@@ -107,17 +107,7 @@ Lista lotes con filtros opcionales.
     },
     "fechaHoraInicio": "2026-05-13T08:30:00",
     "fechaVencimiento": "2026-06-13",
-    "grasa": 3.4,
-    "solidosNoGrasos": 8.1,
-    "proteina": 3.2,
-    "puntoCrioscopico": -0.52,
-    "temperatura": 8.5,
-    "densidad": 1.03,
-    "lactosa": 4.8,
-    "solidosTotales": 12.3,
-    "aguaAnadida": 0.0,
-    "ph": 6.6,
-    "sales": 0.6,
+    "cantidadLitrosUsados": 500.0,
     "estadoActual": "INICIADO",
     "siguienteEtapa": "PASTEURIZACION",
     "etapaActualInicio": "2026-05-13T08:30:00",
@@ -146,17 +136,7 @@ Crea un nuevo lote de produccion.
   "productoCodigo": "QUESO-001",
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "loteLecheId": 5,
-  "grasa": 3.4,
-  "solidosNoGrasos": 8.1,
-  "proteina": 3.2,
-  "puntoCrioscopico": -0.52,
-  "temperatura": 8.5,
-  "densidad": 1.03,
-  "lactosa": 4.8,
-  "solidosTotales": 12.3,
-  "aguaAnadida": 0.0,
-  "ph": 6.6,
-  "sales": 0.6
+  "cantidadLitrosUsados": 500.0
 }
 ```
 
@@ -176,6 +156,7 @@ Crea un nuevo lote de produccion.
   },
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
+  "cantidadLitrosUsados": 500.0,
   "estadoActual": "INICIADO",
   "siguienteEtapa": "PASTEURIZACION",
   "etapaActualInicio": "2026-05-13T08:30:00",
@@ -215,17 +196,7 @@ Devuelve el detalle completo del loteQueso.
   },
   "fechaHoraInicio": "2026-05-13T08:30:00",
   "fechaVencimiento": "2026-06-13",
-  "grasa": 3.4,
-  "solidosNoGrasos": 8.1,
-  "proteina": 3.2,
-  "puntoCrioscopico": -0.52,
-  "temperatura": 8.5,
-  "densidad": 1.03,
-  "lactosa": 4.8,
-  "solidosTotales": 12.3,
-  "aguaAnadida": 0.0,
-  "ph": 6.6,
-  "sales": 0.6,
+  "cantidadLitrosUsados": 500.0,
   "estadoActual": "INICIADO",
   "siguienteEtapa": "PASTEURIZACION",
   "etapas": [
@@ -888,17 +859,7 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `productoCodigo` (string)
 - `fechaHoraInicio` (date-time)
 - `loteLecheId` (int64)
-- `grasa` (double, opcional)
-- `solidosNoGrasos` (double, opcional)
-- `proteina` (double, opcional)
-- `puntoCrioscopico` (double, opcional)
-- `temperatura` (double, opcional)
-- `densidad` (double, opcional)
-- `lactosa` (double, opcional)
-- `solidosTotales` (double, opcional)
-- `aguaAnadida` (double, opcional)
-- `ph` (double, opcional)
-- `sales` (double, opcional)
+- `cantidadLitrosUsados` (double)
 
 ### `LoteLecheCreateRequest`
 
@@ -925,6 +886,7 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `codigoLoteLeche` (string)
 - `fechaHora` (date-time)
 - `cantidadLitrosTotal` (double)
+- `cantidadLitrosDisponibles` (double)
 - `tanqueProceso` (string)
 - `realizadoPor` (string)
 - `recepcionLecheIds` (array int64)
@@ -947,17 +909,7 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `producto` (ProductoResumen)
 - `fechaHoraInicio` (date-time)
 - `fechaVencimiento` (date)
-- `grasa` (double, opcional)
-- `solidosNoGrasos` (double, opcional)
-- `proteina` (double, opcional)
-- `puntoCrioscopico` (double, opcional)
-- `temperatura` (double, opcional)
-- `densidad` (double, opcional)
-- `lactosa` (double, opcional)
-- `solidosTotales` (double, opcional)
-- `aguaAnadida` (double, opcional)
-- `ph` (double, opcional)
-- `sales` (double, opcional)
+- `cantidadLitrosUsados` (double)
 - `estadoActual` (string)
 - `siguienteEtapa` (string)
 - `etapaActualInicio` (date-time)
@@ -1051,17 +1003,7 @@ Registra el cierre del loteQueso y calcula rendimientos.
 - `producto` (ProductoResumen)
 - `fechaHoraInicio` (date-time)
 - `fechaVencimiento` (date)
-- `grasa` (double, opcional)
-- `solidosNoGrasos` (double, opcional)
-- `proteina` (double, opcional)
-- `puntoCrioscopico` (double, opcional)
-- `temperatura` (double, opcional)
-- `densidad` (double, opcional)
-- `lactosa` (double, opcional)
-- `solidosTotales` (double, opcional)
-- `aguaAnadida` (double, opcional)
-- `ph` (double, opcional)
-- `sales` (double, opcional)
+- `cantidadLitrosUsados` (double)
 - `estadoActual` (string)
 - `siguienteEtapa` (string)
 - `etapas` (array de EtapaDetalle)

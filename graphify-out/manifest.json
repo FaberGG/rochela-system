@@ -10,9 +10,9 @@
     "semantic_hash": "0c9756f3b505fafb9aa98a34a63ba3d9"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\RochelasystemApplication.java": {
-    "mtime": 1778632323.563601,
-    "ast_hash": "a0b000be9f5d2c3944fa4585cf3f5c6d",
-    "semantic_hash": "a0b000be9f5d2c3944fa4585cf3f5c6d"
+    "mtime": 1779668519.7996495,
+    "ast_hash": "5dbdd248e676cf55111127fe053890da",
+    "semantic_hash": "5dbdd248e676cf55111127fe053890da"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\package-info.java": {
     "mtime": 1778635087.5206506,
@@ -48,6 +48,81 @@
     "mtime": 1778651009.9523444,
     "ast_hash": "81d36aef7d1d543488bb1d8252e74755",
     "semantic_hash": "81d36aef7d1d543488bb1d8252e74755"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\config\\GoogleSheetsConfig.java": {
+    "mtime": 1779694269.9156284,
+    "ast_hash": "0770d4cf86a6a6e0910faa9e3fb4f19d",
+    "semantic_hash": "0770d4cf86a6a6e0910faa9e3fb4f19d"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\controller\\ExportacionController.java": {
+    "mtime": 1779669387.4958375,
+    "ast_hash": "e1b0c8228a704ea057ace7836fc39b2c",
+    "semantic_hash": "e1b0c8228a704ea057ace7836fc39b2c"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\dto\\EtapasProcesoDto.java": {
+    "mtime": 1779673472.022165,
+    "ast_hash": "c51acf991b7cc8083d7c06a37baadb27",
+    "semantic_hash": "c51acf991b7cc8083d7c06a37baadb27"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\dto\\RecepcionProveedorDto.java": {
+    "mtime": 1779667938.4245713,
+    "ast_hash": "56d1d5276e0231b8e28939a5e70f6466",
+    "semantic_hash": "56d1d5276e0231b8e28939a5e70f6466"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\dto\\TrazabilidadRendimientoDto.java": {
+    "mtime": 1779673469.56426,
+    "ast_hash": "63dca3f51d1531e786e9cd378540d688",
+    "semantic_hash": "63dca3f51d1531e786e9cd378540d688"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\listener\\LoteQuesoCerradoExportListener.java": {
+    "mtime": 1779671780.8545372,
+    "ast_hash": "da259f77eff9b6a477a819124772b522",
+    "semantic_hash": "da259f77eff9b6a477a819124772b522"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\listener\\RecepcionCompletadaExportListener.java": {
+    "mtime": 1779675453.3970876,
+    "ast_hash": "824ac148ee11c000069e7c501d746537",
+    "semantic_hash": "824ac148ee11c000069e7c501d746537"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\model\\VistaEtapasProcesoEntity.java": {
+    "mtime": 1779673477.8359437,
+    "ast_hash": "fd37416d00b352b35f13729e5b3f2dae",
+    "semantic_hash": "fd37416d00b352b35f13729e5b3f2dae"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\model\\VistaRecepcionEntity.java": {
+    "mtime": 1779667956.1082647,
+    "ast_hash": "80e3d239d498b819eb7579ebdab08338",
+    "semantic_hash": "80e3d239d498b819eb7579ebdab08338"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\model\\VistaRendimientoEntity.java": {
+    "mtime": 1779673474.5956202,
+    "ast_hash": "df8ea314392dfc14edc0659dcf7b6cb2",
+    "semantic_hash": "df8ea314392dfc14edc0659dcf7b6cb2"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\repository\\VistaEtapasProcesoRepository.java": {
+    "mtime": 1779667968.4871948,
+    "ast_hash": "6614485cec0a48682862126d84745355",
+    "semantic_hash": "6614485cec0a48682862126d84745355"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\repository\\VistaRecepcionRepository.java": {
+    "mtime": 1779673528.7860785,
+    "ast_hash": "8bc90878907723a637ad249b64e2620d",
+    "semantic_hash": "8bc90878907723a637ad249b64e2620d"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\repository\\VistaRendimientoRepository.java": {
+    "mtime": 1779667963.8233235,
+    "ast_hash": "3310dd8d04ef81b34bc6795137c546f7",
+    "semantic_hash": "3310dd8d04ef81b34bc6795137c546f7"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\service\\ExportacionVistaService.java": {
+    "mtime": 1779677020.0601752,
+    "ast_hash": "0d64a8a10443b55fe9660568e580f77f",
+    "semantic_hash": "0d64a8a10443b55fe9660568e580f77f"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\exportacion\\service\\GoogleSheetsSyncService.java": {
+    "mtime": 1779676891.8299694,
+    "ast_hash": "6f9e216055c8c3301c09d7eb0a2f346d",
+    "semantic_hash": "6f9e216055c8c3301c09d7eb0a2f346d"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\operario\\controller\\OperarioController.java": {
     "mtime": 1779554450.6645443,
@@ -125,14 +200,14 @@
     "semantic_hash": "c11bf4f6a5a19e4c7a42c9b19e5dedb0"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\LoteCreateRequest.java": {
-    "mtime": 1779634819.880836,
-    "ast_hash": "4dc5b90acde53bc7565e82deff258179",
-    "semantic_hash": "4dc5b90acde53bc7565e82deff258179"
+    "mtime": 1779676841.8556666,
+    "ast_hash": "bbfff5a46713c563dfccb9a3f6fc43a9",
+    "semantic_hash": "bbfff5a46713c563dfccb9a3f6fc43a9"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\LoteDetalleResponse.java": {
-    "mtime": 1779634829.3911233,
-    "ast_hash": "cb7012595b9ba3b5c457d94e082edd5f",
-    "semantic_hash": "cb7012595b9ba3b5c457d94e082edd5f"
+    "mtime": 1779676851.9515727,
+    "ast_hash": "98606036d66aab3d687d2fe32ac2b5aa",
+    "semantic_hash": "98606036d66aab3d687d2fe32ac2b5aa"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\LoteLecheCreateRequest.java": {
     "mtime": 1779161774.1162999,
@@ -140,14 +215,14 @@
     "semantic_hash": "efc575d9b7c859511b2bd5d05ef63153"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\LoteLecheResponse.java": {
-    "mtime": 1779161779.8160791,
-    "ast_hash": "de4a0ae4182c97aba7b45f514cfb3bd6",
-    "semantic_hash": "de4a0ae4182c97aba7b45f514cfb3bd6"
+    "mtime": 1779676854.7516584,
+    "ast_hash": "0c285475121d3ab7aae834018a5b2462",
+    "semantic_hash": "0c285475121d3ab7aae834018a5b2462"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\LoteResumenResponse.java": {
-    "mtime": 1779634825.3404357,
-    "ast_hash": "42dbafcc488fbe312f48cd491c6bc748",
-    "semantic_hash": "42dbafcc488fbe312f48cd491c6bc748"
+    "mtime": 1779676846.9567382,
+    "ast_hash": "978fb62ee3fde5d98d9a9be16457c1c3",
+    "semantic_hash": "978fb62ee3fde5d98d9a9be16457c1c3"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\dto\\PasteurizacionRequest.java": {
     "mtime": 1778696060.7897427,
@@ -185,19 +260,19 @@
     "semantic_hash": "d71cb43718025b56032b784ce1f9b7e7"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\model\\Descarga.java": {
-    "mtime": 1779161763.0016348,
-    "ast_hash": "3d6d08182092dc23cf66217bb6c01f94",
-    "semantic_hash": "3d6d08182092dc23cf66217bb6c01f94"
+    "mtime": 1779639460.769079,
+    "ast_hash": "7410d5fb8fdcf43f9e272fe1f54f081c",
+    "semantic_hash": "7410d5fb8fdcf43f9e272fe1f54f081c"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\model\\LoteLeche.java": {
-    "mtime": 1779158815.8673882,
-    "ast_hash": "361eca36bde4764583e76b67d12db071",
-    "semantic_hash": "361eca36bde4764583e76b67d12db071"
+    "mtime": 1779676836.2067573,
+    "ast_hash": "f51657659b4b6a1c11c877cf50c9ca93",
+    "semantic_hash": "f51657659b4b6a1c11c877cf50c9ca93"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\model\\LoteQueso.java": {
-    "mtime": 1779634822.3861468,
-    "ast_hash": "cd7b3ac574b02918c584d53d24d39888",
-    "semantic_hash": "cd7b3ac574b02918c584d53d24d39888"
+    "mtime": 1779676833.4682844,
+    "ast_hash": "bea973a32b9b811e970682881c6336ab",
+    "semantic_hash": "bea973a32b9b811e970682881c6336ab"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\model\\etapa\\EtapaCloruro.java": {
     "mtime": 1778633851.4196844,
@@ -250,9 +325,9 @@
     "semantic_hash": "bf6e96f8c2af47dd296075ca281f010c"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\repository\\DescargaRepository.java": {
-    "mtime": 1779161768.3971531,
-    "ast_hash": "12312d605b16344c6a33e48b19273c76",
-    "semantic_hash": "12312d605b16344c6a33e48b19273c76"
+    "mtime": 1779639457.1533422,
+    "ast_hash": "0a208a74880f768dbe070787a3b94e82",
+    "semantic_hash": "0a208a74880f768dbe070787a3b94e82"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\repository\\EtapaPrensadoRepository.java": {
     "mtime": 1779164941.9377258,
@@ -275,14 +350,14 @@
     "semantic_hash": "c9940c2f5cda1710bd9e5542f8905d90"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\service\\LoteLecheService.java": {
-    "mtime": 1779161793.4394233,
-    "ast_hash": "9dbeceeeaaa267fc26d2c072cd63dc23",
-    "semantic_hash": "9dbeceeeaaa267fc26d2c072cd63dc23"
+    "mtime": 1779676859.5921638,
+    "ast_hash": "50e2d236ec74f9ce1012aebd86a3d84d",
+    "semantic_hash": "50e2d236ec74f9ce1012aebd86a3d84d"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\service\\LoteService.java": {
-    "mtime": 1779634837.5373688,
-    "ast_hash": "af3b715accbea079d104aa03840a1b19",
-    "semantic_hash": "af3b715accbea079d104aa03840a1b19"
+    "mtime": 1779676876.8859289,
+    "ast_hash": "6a3488c4c6ada3178ed0dbe544de4fbc",
+    "semantic_hash": "6a3488c4c6ada3178ed0dbe544de4fbc"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\state\\EstadoCancelado.java": {
     "mtime": 1778792264.2067568,
@@ -400,14 +475,19 @@
     "semantic_hash": "9421843268b99b039a80768a5dcab772"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\recepcion\\controller\\RecepcionController.java": {
-    "mtime": 1779554976.0399013,
-    "ast_hash": "52061f025fc79b37188b09a296df773a",
-    "semantic_hash": "52061f025fc79b37188b09a296df773a"
+    "mtime": 1779639478.0878541,
+    "ast_hash": "7077503babea4810be5cfbf9f6313192",
+    "semantic_hash": "7077503babea4810be5cfbf9f6313192"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\recepcion\\dto\\RecepcionCreateRequest.java": {
     "mtime": 1779634812.6929178,
     "ast_hash": "f07d086547aabe396b5b002190ac4f29",
     "semantic_hash": "f07d086547aabe396b5b002190ac4f29"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\recepcion\\dto\\RecepcionDisponibleParaLoteDto.java": {
+    "mtime": 1779639453.7200403,
+    "ast_hash": "37ae014a6892a8136797424b921b00dc",
+    "semantic_hash": "37ae014a6892a8136797424b921b00dc"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\recepcion\\dto\\RecepcionPendienteDto.java": {
     "mtime": 1779554402.8176408,
@@ -445,14 +525,19 @@
     "semantic_hash": "e0d5bd61843ee26ab00a3bc01153b6c9"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\modulos\\recepcion\\service\\RecepcionService.java": {
-    "mtime": 1779634816.5416932,
-    "ast_hash": "16eadfc52cb32b8d62b027099cafcde5",
-    "semantic_hash": "16eadfc52cb32b8d62b027099cafcde5"
+    "mtime": 1779673525.6791062,
+    "ast_hash": "19d0111210f034e001f5010d52eb73d4",
+    "semantic_hash": "19d0111210f034e001f5010d52eb73d4"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\package-info.java": {
     "mtime": 1778635087.0647082,
     "ast_hash": "d41d8cd98f00b204e9800998ecf8427e",
     "semantic_hash": "d41d8cd98f00b204e9800998ecf8427e"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\config\\CorsConfig.java": {
+    "mtime": 1779694075.3761396,
+    "ast_hash": "14e35befc51cdf4fa3d6ce4e1d9c3b55",
+    "semantic_hash": "14e35befc51cdf4fa3d6ce4e1d9c3b55"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\enums\\AnalisisOrganoleptico.java": {
     "mtime": 1778633804.1612797,
@@ -499,6 +584,21 @@
     "ast_hash": "a9e1ac605eb9a48bfaeb80a64421d287",
     "semantic_hash": "a9e1ac605eb9a48bfaeb80a64421d287"
   },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\event\\LoteQuesoCerradoEvent.java": {
+    "mtime": 1779667546.7599287,
+    "ast_hash": "a71a331c8a11115d5ec299ca48c62eb7",
+    "semantic_hash": "a71a331c8a11115d5ec299ca48c62eb7"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\event\\RecepcionCompletadaEvent.java": {
+    "mtime": 1779667541.848525,
+    "ast_hash": "855613d89731ec8de18a4ffa2ef52348",
+    "semantic_hash": "855613d89731ec8de18a4ffa2ef52348"
+  },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\event\\RecepcionPendienteReductasaEvent.java": {
+    "mtime": 1779673522.553655,
+    "ast_hash": "2b31f08dda58fc5abb58ad9a89219f45",
+    "semantic_hash": "2b31f08dda58fc5abb58ad9a89219f45"
+  },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\java\\com\\rochela\\rochelasystem\\shared\\exception\\ErrorResponseDto.java": {
     "mtime": 1778708403.1657233,
     "ast_hash": "186fcf4cdf2f9eae4f94fbaa1ab2f061",
@@ -544,10 +644,15 @@
     "ast_hash": "7c4c7d71abc439b3a1106e1e66826422",
     "semantic_hash": "7c4c7d71abc439b3a1106e1e66826422"
   },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\test\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\service\\LoteLecheServiceAvailabilityIntegrationTest.java": {
+    "mtime": 1779640019.9655566,
+    "ast_hash": "cdb8183206cb58ff1b452038bac591c4",
+    "semantic_hash": "cdb8183206cb58ff1b452038bac591c4"
+  },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\test\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\service\\LoteQuesoServiceFlowIntegrationTest.java": {
-    "mtime": 1779165073.7250159,
-    "ast_hash": "ec9293054b9a97f0bd814c584ef0236e",
-    "semantic_hash": "ec9293054b9a97f0bd814c584ef0236e"
+    "mtime": 1779676897.822781,
+    "ast_hash": "4f1ca3eaf86712138ffb2eb1049b1df3",
+    "semantic_hash": "4f1ca3eaf86712138ffb2eb1049b1df3"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\test\\java\\com\\rochela\\rochelasystem\\modulos\\produccion\\service\\LoteQuesoServiceTest.java": {
     "mtime": 1779165000.2003455,
@@ -610,9 +715,9 @@
     "semantic_hash": "363accb1316eb8ce704072a7a002e25f"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\docs\\api\\produccion.md": {
-    "mtime": 1779634933.113273,
-    "ast_hash": "a53a8b25180e016dd0eb07386f1bf7e6",
-    "semantic_hash": "a53a8b25180e016dd0eb07386f1bf7e6"
+    "mtime": 1779676947.0530643,
+    "ast_hash": "f174546ecf8de1afd0f6ef63d1a8dc26",
+    "semantic_hash": "f174546ecf8de1afd0f6ef63d1a8dc26"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\docs\\api\\proveedores.md": {
     "mtime": 1778713340.5750692,
@@ -620,9 +725,9 @@
     "semantic_hash": "32e09ceafbb25f35f415c3f8f844e917"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\docs\\api\\recepcion.md": {
-    "mtime": 1779634879.530085,
-    "ast_hash": "dd8978996b4bcc6cf427799144659ac7",
-    "semantic_hash": "dd8978996b4bcc6cf427799144659ac7"
+    "mtime": 1779639943.4670987,
+    "ast_hash": "ff153aff49a66d6b463490e626f2316b",
+    "semantic_hash": "ff153aff49a66d6b463490e626f2316b"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\docs\\arquitectura\\estructura-proyecto.md": {
     "mtime": 1779158037.6436179,
@@ -679,6 +784,11 @@
     "ast_hash": "e980f7672ab95fe0817474f15ec0defe",
     "semantic_hash": "e980f7672ab95fe0817474f15ec0defe"
   },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Catalogo\\sincronizar.request.yaml": {
+    "mtime": 1779672143.9431405,
+    "ast_hash": "c2c7ac7bc94d6794e81c6dff85919677",
+    "semantic_hash": "c2c7ac7bc94d6794e81c6dff85919677"
+  },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\OpenAPI definition\\.resources\\definition.yaml": {
     "mtime": 1779519291.1546702,
     "ast_hash": "73cac978acb5d34165df7291ea66cc0e",
@@ -695,9 +805,9 @@
     "semantic_hash": "3f540a5d593cb3221d323f88f4fe3b05"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\OpenAPI definition\\api\\v1\\lotes\\Crear lote.request.yaml": {
-    "mtime": 1779569490.6568007,
-    "ast_hash": "6f3931b40334dbdad0692409daddad7f",
-    "semantic_hash": "6f3931b40334dbdad0692409daddad7f"
+    "mtime": 1779676903.046353,
+    "ast_hash": "9ce38f985af02f11bfb93965bca3eb21",
+    "semantic_hash": "9ce38f985af02f11bfb93965bca3eb21"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\OpenAPI definition\\api\\v1\\lotes\\Listar lotes.request.yaml": {
     "mtime": 1779519291.186872,
@@ -1245,14 +1355,14 @@
     "semantic_hash": "e8d51be5833d1ee49de3177325f6d3c2"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Produccion\\Crear Lote Leche.request.yaml": {
-    "mtime": 1779569978.1565087,
-    "ast_hash": "cb4b5295323b869ab74687504ca1d922",
-    "semantic_hash": "cb4b5295323b869ab74687504ca1d922"
+    "mtime": 1779678629.7227788,
+    "ast_hash": "e2a8ab662c56e1a7aa834bd7e58d407c",
+    "semantic_hash": "e2a8ab662c56e1a7aa834bd7e58d407c"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Produccion\\Crear lote.request.yaml": {
-    "mtime": 1779570199.6062715,
-    "ast_hash": "b79b77da5740f75116dfc5858c164912",
-    "semantic_hash": "b79b77da5740f75116dfc5858c164912"
+    "mtime": 1779676900.6717997,
+    "ast_hash": "1563e6e2c3481e67748827f257631b6f",
+    "semantic_hash": "1563e6e2c3481e67748827f257631b6f"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Produccion\\Listar lotes de leche.request.yaml": {
     "mtime": 1779569500.6178608,
@@ -1345,9 +1455,9 @@
     "semantic_hash": "4576503795527c86532005f4a543247f"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Recepcion\\Crear recepcion.request.yaml": {
-    "mtime": 1778715469.23357,
-    "ast_hash": "0e53721631db4144c821323efec6ad50",
-    "semantic_hash": "0e53721631db4144c821323efec6ad50"
+    "mtime": 1779673008.316533,
+    "ast_hash": "688ba3ed118bf38742e45dbbad87e7ca",
+    "semantic_hash": "688ba3ed118bf38742e45dbbad87e7ca"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\collections\\Recepcion\\Listar pendientes.request.yaml": {
     "mtime": 1778715477.0663948,
@@ -1365,7 +1475,7 @@
     "semantic_hash": "03a407a9cc6facc93f84d26b6bbd8b4e"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\postman\\environments\\local.environment.yaml": {
-    "mtime": 1779583497.875765,
+    "mtime": 1779678626.0243118,
     "ast_hash": "aa65682b75d890f3ac55b32466949912",
     "semantic_hash": "aa65682b75d890f3ac55b32466949912"
   },
@@ -1374,10 +1484,15 @@
     "ast_hash": "a255bf3fa7e8762ed256d17832966a3f",
     "semantic_hash": "a255bf3fa7e8762ed256d17832966a3f"
   },
+  "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\resources\\application-prod.yml": {
+    "mtime": 1779694272.2980483,
+    "ast_hash": "f4afd162f427f54511d5ec1d4d809d34",
+    "semantic_hash": "f4afd162f427f54511d5ec1d4d809d34"
+  },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\src\\main\\resources\\application.yml": {
-    "mtime": 1779569044.1783214,
-    "ast_hash": "e8021314f21fa7fbfc8ff9246287a431",
-    "semantic_hash": "e8021314f21fa7fbfc8ff9246287a431"
+    "mtime": 1779675457.9961224,
+    "ast_hash": "a478d086ed066ae8c8653dd5b4eb9499",
+    "semantic_hash": "a478d086ed066ae8c8653dd5b4eb9499"
   },
   "C:\\Users\\jhonn\\OneDrive\\Almacen\\Repositorios\\ROCHELA-Productora de Lacteos\\rochelasystem\\docs\\images\\lote-estados.png": {
     "mtime": 1778649932.0,

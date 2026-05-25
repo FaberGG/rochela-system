@@ -87,12 +87,16 @@ public class ExportacionVistaService {
         CierreLoteQuesoResponse cierre = detalle.getCierre();
 
         VistaRendimientoEntity rendimiento = new VistaRendimientoEntity();
+        Double litrosUsados = detalle.getCantidadLitrosUsados();
+        if (litrosUsados == null) {
+            litrosUsados = loteLeche.getCantidadLitrosTotal();
+        }
         rendimiento.setCodigoLoteQueso(detalle.getCodigoLote());
         rendimiento.setProductoNombre(detalle.getProducto() != null ? detalle.getProducto().getNombre() : null);
         rendimiento.setCodigoLoteLeche(loteLeche.getCodigoLoteLeche());
         rendimiento.setFechaHoraInicio(detalle.getFechaHoraInicio());
         rendimiento.setFechaHoraCierre(cierre != null ? cierre.getFechaHoraCierre() : null);
-        rendimiento.setLitrosTotalesLeche(loteLeche.getCantidadLitrosTotal());
+        rendimiento.setLitrosTotalesLeche(litrosUsados);
         rendimiento.setGrasa(loteLeche.getGrasa());
         rendimiento.setProteina(loteLeche.getProteina());
         rendimiento.setPh(loteLeche.getPh());

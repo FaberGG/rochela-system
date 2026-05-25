@@ -1,0 +1,45 @@
+spring:
+  application:
+    name: rochelasystem
+  datasource:
+    url: ${SPRING_DATASOURCE_URL}
+    driver-class-name: org.postgresql.Driver
+    username: ${SPRING_DATASOURCE_USERNAME}
+    password: ${SPRING_DATASOURCE_PASSWORD}
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    open-in-view: false
+    properties:
+      hibernate:
+        format_sql: false
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+    show-sql: false
+  lifecycle:
+    timeout-per-shutdown-phase: 20s
+
+server:
+  port: ${SERVER_PORT:8080}
+  shutdown: graceful
+
+app:
+  cors:
+    allowed-origins: ${CORS_ALLOWED_ORIGINS}
+    allowed-methods: ${CORS_ALLOWED_METHODS:GET,POST,PUT,DELETE,PATCH,OPTIONS}
+    allowed-headers: ${CORS_ALLOWED_HEADERS:*}
+    allow-credentials: ${CORS_ALLOW_CREDENTIALS:true}
+    max-age: ${CORS_MAX_AGE:3600}
+
+exportacion:
+  recepcion:
+    pendiente:
+      enabled: ${EXPORTACION_RECEPCION_PENDIENTE_ENABLED:false}
+  google:
+    spreadsheet-id: ${EXPORTACION_GOOGLE_SPREADSHEET_ID}
+    credentials-base64: ${EXPORTACION_GOOGLE_CREDENTIALS_BASE64}
+    credentials-path: ${EXPORTACION_GOOGLE_CREDENTIALS_PATH:}
+    application-name: ${EXPORTACION_GOOGLE_APPLICATION_NAME:rochelasystem}
+    sheets:
+      rendimiento: ${EXPORTACION_GOOGLE_SHEET_RENDIMIENTO}
+      recepciones: ${EXPORTACION_GOOGLE_SHEET_RECEPCIONES}
+      etapas: ${EXPORTACION_GOOGLE_SHEET_ETAPAS}

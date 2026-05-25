@@ -194,6 +194,7 @@ class LoteQuesoServiceFlowIntegrationTest {
                 .codigoLoteLeche("LL-TEST-" + productoCodigo)
                 .fechaHora(LocalDateTime.of(2026, 5, 15, 7, 30))
                 .cantidadLitrosTotal(500.0)
+                .cantidadLitrosDisponibles(500.0)
                 .tanqueProceso("SILO_1")
                 .realizadoPor("Operario")
                 .build());
@@ -202,6 +203,7 @@ class LoteQuesoServiceFlowIntegrationTest {
                 .productoCodigo(productoCodigo)
                 .fechaHoraInicio(LocalDateTime.of(2026, 5, 15, 8, 0))
                 .loteLecheId(loteLeche.getId())
+                .cantidadLitrosUsados(350.0)
                 .build());
     }
 

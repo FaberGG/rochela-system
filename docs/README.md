@@ -20,4 +20,4 @@ Esta carpeta contiene la documentacion organizada por tema y audiencia.
 - `arquitectura/google-sheets.md` - Integracion con Google Sheets.
 - `arquitectura/dependencias.md` - Dependencias clave del backend.
 - `arquitectura/pendientes-tecnicos.md` - Pendientes y decisiones abiertas.
-
+- `produccion-render.md` - Guia de despliegue a produccion en Render.

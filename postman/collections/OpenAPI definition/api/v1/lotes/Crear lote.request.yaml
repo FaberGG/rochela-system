@@ -11,7 +11,8 @@ body:
     {
       "productoCodigo": "QUESO-001",
       "fechaHoraInicio": "2026-05-13T08:30:00",
-      "loteLecheId": 25
+      "loteLecheId": 25,
+      "cantidadLitrosUsados": 500.0
     }
 examples: ./.resources/Crear lote.resources/examples
 order: 3000

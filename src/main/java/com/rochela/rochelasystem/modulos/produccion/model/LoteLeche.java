@@ -28,6 +28,9 @@ public class LoteLeche {
     @Column(name = "cantidad_litros_total", nullable = false)
     private Double cantidadLitrosTotal;
 
+    @Column(name = "cantidad_litros_disponibles")
+    private Double cantidadLitrosDisponibles;
+
     @Column(name = "tanque_proceso", nullable = false)
     private String tanqueProceso;
 

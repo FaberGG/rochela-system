@@ -29,6 +29,9 @@ public class LoteLecheResponse {
     @Schema(description = "Litros totales de la mezcla", example = "1200.5")
     private Double cantidadLitrosTotal;
 
+    @Schema(description = "Litros disponibles para produccion", example = "750.0")
+    private Double cantidadLitrosDisponibles;
+
     @Schema(description = "Tanque donde se hizo la mezcla", example = "SILO_1")
     private String tanqueProceso;
 
@@ -71,4 +74,3 @@ public class LoteLecheResponse {
     @Schema(description = "Observaciones")
     private String observaciones;
 }
-

@@ -57,6 +57,7 @@ public class LoteLecheService {
                 .codigoLoteLeche(request.getCodigoLoteLeche())
                 .fechaHora(request.getFechaHora() != null ? request.getFechaHora() : LocalDateTime.now())
                 .cantidadLitrosTotal(totalLitros)
+                .cantidadLitrosDisponibles(totalLitros)
                 .tanqueProceso(request.getTanqueProceso())
                 .realizadoPor(request.getRealizadoPor())
                 .grasa(request.getGrasa())
@@ -163,11 +164,16 @@ public class LoteLecheService {
     }
 
     private LoteLecheResponse mapResponse(LoteLeche loteLeche, List<Long> recepcionIds) {
+        Double litrosDisponibles = loteLeche.getCantidadLitrosDisponibles();
+        if (litrosDisponibles == null) {
+            litrosDisponibles = loteLeche.getCantidadLitrosTotal();
+        }
         return LoteLecheResponse.builder()
                 .id(loteLeche.getId())
                 .codigoLoteLeche(loteLeche.getCodigoLoteLeche())
                 .fechaHora(loteLeche.getFechaHora())
                 .cantidadLitrosTotal(loteLeche.getCantidadLitrosTotal())
+                .cantidadLitrosDisponibles(litrosDisponibles)
                 .tanqueProceso(loteLeche.getTanqueProceso())
                 .realizadoPor(loteLeche.getRealizadoPor())
                 .recepcionLecheIds(recepcionIds)

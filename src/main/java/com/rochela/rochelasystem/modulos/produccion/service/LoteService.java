@@ -156,17 +156,7 @@ public class LoteService {
                 .producto(mapProducto(producto))
                 .fechaHoraInicio(loteQueso.getFechaHoraInicio())
                 .fechaVencimiento(loteQueso.getFechaVencimiento())
-                .grasa(loteQueso.getGrasa())
-                .solidosNoGrasos(loteQueso.getSolidosNoGrasos())
-                .proteina(loteQueso.getProteina())
-                .puntoCrioscopico(loteQueso.getPuntoCrioscopico())
-                .temperatura(loteQueso.getTemperatura())
-                .densidad(loteQueso.getDensidad())
-                .lactosa(loteQueso.getLactosa())
-                .solidosTotales(loteQueso.getSolidosTotales())
-                .aguaAnadida(loteQueso.getAguaAnadida())
-                .ph(loteQueso.getPh())
-                .sales(loteQueso.getSales())
+                .cantidadLitrosUsados(loteQueso.getCantidadLitrosUsados())
                 .estadoActual(loteQueso.getEstadoActual())
                 .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
                 .etapas(etapas)
@@ -198,6 +188,27 @@ public class LoteService {
                 .orElseThrow(() -> new ResponseStatusException(
                         HttpStatus.NOT_FOUND, "LoteLeche no encontrado: " + request.getLoteLecheId()));
 
+        if (request.getCantidadLitrosUsados() == null || request.getCantidadLitrosUsados() <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST,
+                    "Debe indicar una cantidad de litros usados mayor a cero.");
+        }
+
+        Double litrosDisponibles = loteLeche.getCantidadLitrosDisponibles();
+        if (litrosDisponibles == null) {
+            litrosDisponibles = loteLeche.getCantidadLitrosTotal();
+        }
+        if (litrosDisponibles == null) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "El lote de leche no tiene litros disponibles registrados.");
+        }
+        if (request.getCantidadLitrosUsados() > litrosDisponibles) {
+            throw new ResponseStatusException(HttpStatus.CONFLICT,
+                    "El lote de leche no tiene litros disponibles suficientes.");
+        }
+
+        loteLeche.setCantidadLitrosDisponibles(litrosDisponibles - request.getCantidadLitrosUsados());
+        loteLecheRepository.save(loteLeche);
+
         LocalDateTime fechaHoraInicio = request.getFechaHoraInicio() != null
                 ? request.getFechaHoraInicio()
                 : LocalDateTime.now();
@@ -210,21 +221,11 @@ public class LoteService {
         loteQueso.setCodigoLote(generarCodigoLote(fechaHoraInicio, batchDelDia));
         loteQueso.setProductoId(producto.getId());
         loteQueso.setLoteLeche(loteLeche);
+        loteQueso.setCantidadLitrosUsados(request.getCantidadLitrosUsados());
         loteQueso.setFechaHoraInicio(fechaHoraInicio);
         loteQueso.setFechaVencimiento(fechaInicio.plusDays(30));
         loteQueso.setEstadoActual(EstadoLote.INICIADO);
         loteQueso.setBatchDelDia(batchDelDia);
-        loteQueso.setGrasa(request.getGrasa());
-        loteQueso.setSolidosNoGrasos(request.getSolidosNoGrasos());
-        loteQueso.setProteina(request.getProteina());
-        loteQueso.setPuntoCrioscopico(request.getPuntoCrioscopico());
-        loteQueso.setTemperatura(request.getTemperatura());
-        loteQueso.setDensidad(request.getDensidad());
-        loteQueso.setLactosa(request.getLactosa());
-        loteQueso.setSolidosTotales(request.getSolidosTotales());
-        loteQueso.setAguaAnadida(request.getAguaAnadida());
-        loteQueso.setPh(request.getPh());
-        loteQueso.setSales(request.getSales());
 
         LoteQueso guardado = loteQuesoRepository.save(loteQueso);
         return mapResumen(guardado, producto);
@@ -458,7 +459,8 @@ public class LoteService {
         cierre.setFechaHoraCierre(LocalDateTime.now());
         cierre.setUnidadesProducidas(request.getUnidadesProducidas());
         cierre.setPesoTotalKg(request.getPesoTotalKg());
-        cierre.setRendimientoGeneral(calcularRendimientoGeneral(request.getPesoTotalKg(), loteQueso.getLoteLeche()));
+        cierre.setRendimientoGeneral(calcularRendimientoGeneral(request.getPesoTotalKg(), loteQueso.getCantidadLitrosUsados(),
+                loteQueso.getLoteLeche()));
         cierre.setRendimientoTeorico(null);
         cierreLoteQuesoRepository.save(cierre);
 
@@ -549,17 +551,7 @@ public class LoteService {
                 .producto(mapProducto(producto))
                 .fechaHoraInicio(loteQueso.getFechaHoraInicio())
                 .fechaVencimiento(loteQueso.getFechaVencimiento())
-                .grasa(loteQueso.getGrasa())
-                .solidosNoGrasos(loteQueso.getSolidosNoGrasos())
-                .proteina(loteQueso.getProteina())
-                .puntoCrioscopico(loteQueso.getPuntoCrioscopico())
-                .temperatura(loteQueso.getTemperatura())
-                .densidad(loteQueso.getDensidad())
-                .lactosa(loteQueso.getLactosa())
-                .solidosTotales(loteQueso.getSolidosTotales())
-                .aguaAnadida(loteQueso.getAguaAnadida())
-                .ph(loteQueso.getPh())
-                .sales(loteQueso.getSales())
+                .cantidadLitrosUsados(loteQueso.getCantidadLitrosUsados())
                 .estadoActual(loteQueso.getEstadoActual())
                 .siguienteEtapa(calcularSiguienteEtapa(loteQueso, producto))
                 .etapaActualInicio(resolverEtapaActualInicio(loteQueso))
@@ -696,12 +688,15 @@ public class LoteService {
         return (int) java.time.Duration.between(inicio, fin).toMinutes();
     }
 
-    private Double calcularRendimientoGeneral(Double pesoTotalKg, LoteLeche loteLeche) {
-        if (pesoTotalKg == null || loteLeche == null || loteLeche.getCantidadLitrosTotal() == null
-                || loteLeche.getCantidadLitrosTotal() == 0) {
+    private Double calcularRendimientoGeneral(Double pesoTotalKg, Double litrosUsados, LoteLeche loteLeche) {
+        Double litrosBase = litrosUsados;
+        if (litrosBase == null && loteLeche != null) {
+            litrosBase = loteLeche.getCantidadLitrosTotal();
+        }
+        if (pesoTotalKg == null || litrosBase == null || litrosBase == 0) {
             return null;
         }
-        return (pesoTotalKg / loteLeche.getCantidadLitrosTotal()) * 100;
+        return (pesoTotalKg / litrosBase) * 100;
     }
 
     private String generarCodigoLote(LocalDateTime fechaHoraInicio, int batchDelDia) {
