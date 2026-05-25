@@ -1,0 +1,5 @@
+$kind: http-request
+name: sincronizar
+url: "{{baseUrl}}/api/v1/exportacion/sincronizar-ahora"
+method: POST
+order: 2953454589837999

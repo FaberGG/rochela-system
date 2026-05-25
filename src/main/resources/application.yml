@@ -16,3 +16,14 @@ spring:
         dialect: org.hibernate.dialect.PostgreSQLDialect
     show-sql: true
 
+exportacion:
+  recepcion:
+    pendiente:
+      enabled: false
+  google:
+    spreadsheet-id: 1SzgPLmy6m59KiH7tVGuU9lZkgZGVYSPs3U41xMUjHzM
+    credentials-path: var/secrets/google-credentials.json
+    sheets:
+      rendimiento: "Materia Prima y rendimiento"
+      recepciones: "Recepciones y proveedores"
+      etapas: "Etapas lote"

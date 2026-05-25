@@ -13,6 +13,8 @@ import com.rochela.rochelasystem.modulos.recepcion.repository.RecepcionLecheRepo
 import com.rochela.rochelasystem.modulos.produccion.repository.DescargaRepository;
 import com.rochela.rochelasystem.modulos.proveedores.model.Proveedor;
 import com.rochela.rochelasystem.modulos.proveedores.repository.ProveedorRepository;
+import com.rochela.rochelasystem.shared.event.RecepcionCompletadaEvent;
+import com.rochela.rochelasystem.shared.event.RecepcionPendienteReductasaEvent;
 import com.rochela.rochelasystem.shared.enums.EstadoRecepcion;
 import com.rochela.rochelasystem.shared.enums.ResultadoValidacion;
 import com.rochela.rochelasystem.shared.exception.RecepcionNotFoundException;
@@ -27,6 +29,7 @@ import java.util.Map;
 import java.util.Objects;
 import java.util.Set;
 import java.util.stream.Collectors;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -52,15 +55,18 @@ public class RecepcionService {
     private final DescargaRepository descargaRepository;
     private final ProveedorRepository proveedorRepository;
     private final ProveedorService proveedorService;
+    private final ApplicationEventPublisher eventPublisher;
 
     public RecepcionService(RecepcionLecheRepository recepcionLecheRepository,
                             DescargaRepository descargaRepository,
                             ProveedorRepository proveedorRepository,
-                            ProveedorService proveedorService) {
+                            ProveedorService proveedorService,
+                            ApplicationEventPublisher eventPublisher) {
         this.recepcionLecheRepository = recepcionLecheRepository;
         this.descargaRepository = descargaRepository;
         this.proveedorRepository = proveedorRepository;
         this.proveedorService = proveedorService;
+        this.eventPublisher = eventPublisher;
     }
 
     @Transactional(readOnly = true)
@@ -139,6 +145,7 @@ public class RecepcionService {
         recepcion.setEstadoRecepcion(EstadoRecepcion.PENDIENTE_REDUCTASA);
 
         RecepcionLeche guardada = recepcionLecheRepository.save(recepcion);
+        eventPublisher.publishEvent(new RecepcionPendienteReductasaEvent(guardada.getId()));
 
         return RecepcionResponse.builder()
                 .id(guardada.getId())
@@ -161,6 +168,7 @@ public class RecepcionService {
         recepcion.setEstadoRecepcion(EstadoRecepcion.COMPLETA);
 
         RecepcionLeche guardada = recepcionLecheRepository.save(recepcion);
+        eventPublisher.publishEvent(new RecepcionCompletadaEvent(guardada.getId()));
 
         boolean cumple = minutos >= MIN_REDUCTASA_MINUTOS;
         return RecepcionReductasaResponse.builder()
@@ -236,6 +244,11 @@ public class RecepcionService {
                         .estadoRecepcion(recepcion.getEstadoRecepcion())
                         .build())
                 .toList();
+    }
+
+    @Transactional(readOnly = true)
+    public RecepcionLeche obtenerEntidadParaExportacion(Long id) {
+        return obtenerEntidad(id);
     }
 
     private RecepcionLeche obtenerEntidad(Long id) {

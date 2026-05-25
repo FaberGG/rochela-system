@@ -25,6 +25,7 @@ import com.rochela.rochelasystem.modulos.produccion.repository.LoteLecheReposito
 import com.rochela.rochelasystem.modulos.produccion.state.LoteState;
 import com.rochela.rochelasystem.modulos.produccion.state.LoteStateContext;
 import com.rochela.rochelasystem.modulos.produccion.state.StateResolver;
+import com.rochela.rochelasystem.shared.event.LoteQuesoCerradoEvent;
 import com.rochela.rochelasystem.shared.enums.EstadoLote;
 import com.rochela.rochelasystem.shared.enums.TipoEtapa;
 import com.rochela.rochelasystem.shared.exception.EstadoInvalidoException;
@@ -39,6 +40,7 @@ import java.util.Optional;
 import java.util.Set;
 import java.util.function.Function;
 import java.util.stream.Collectors;
+import org.springframework.context.ApplicationEventPublisher;
 import org.springframework.data.jpa.domain.Specification;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
@@ -55,6 +57,7 @@ public class LoteService {
     private final EtapaPrensadoRepository etapaPrensadoRepository;
     private final CorteRepository corteRepository;
     private final CierreLoteQuesoRepository cierreLoteQuesoRepository;
+    private final ApplicationEventPublisher eventPublisher;
     private final StateResolver stateResolver = new StateResolver();
 
     public LoteService(LoteQuesoRepository loteQuesoRepository,
@@ -63,7 +66,8 @@ public class LoteService {
                        EtapaRegistroRepository etapaRegistroRepository,
                        EtapaPrensadoRepository etapaPrensadoRepository,
                        CorteRepository corteRepository,
-                       CierreLoteQuesoRepository cierreLoteQuesoRepository) {
+                       CierreLoteQuesoRepository cierreLoteQuesoRepository,
+                       ApplicationEventPublisher eventPublisher) {
         this.loteQuesoRepository = loteQuesoRepository;
         this.productoRepository = productoRepository;
         this.loteLecheRepository = loteLecheRepository;
@@ -71,6 +75,7 @@ public class LoteService {
         this.etapaPrensadoRepository = etapaPrensadoRepository;
         this.corteRepository = corteRepository;
         this.cierreLoteQuesoRepository = cierreLoteQuesoRepository;
+        this.eventPublisher = eventPublisher;
     }
 
     // ─── Consultas ────────────────────────────────────────────────────────────
@@ -168,6 +173,12 @@ public class LoteService {
                 .cortes(cortes)
                 .cierre(cierre.map(item -> mapCierre(loteQueso, item)).orElse(null))
                 .build();
+    }
+
+    @Transactional(readOnly = true)
+    public Long obtenerLoteLecheId(Long loteId) {
+        LoteQueso loteQueso = obtenerLote(loteId);
+        return loteQueso.getLoteLeche() != null ? loteQueso.getLoteLeche().getId() : null;
     }
 
     // ─── Gestión del lote ─────────────────────────────────────────────────────
@@ -456,6 +467,7 @@ public class LoteService {
         }
         loteQueso.setEstadoActual(EstadoLote.FINALIZADO);
         loteQuesoRepository.save(loteQueso);
+        eventPublisher.publishEvent(new LoteQuesoCerradoEvent(loteQueso.getId()));
 
         return CierreLoteQuesoResponse.builder()
                 .codigoLote(loteQueso.getCodigoLote())

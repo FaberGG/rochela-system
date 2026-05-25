@@ -14,7 +14,7 @@ body:
       "jornada": "AM",
       "ubicacion": "TANQUE_1",
       "cantidadLitros": 150.0,
-      "realizadoPor": "Operario 1",
+      "realizadoPor": "Faber",
       "analisisOrganoleptico": "CUMPLE",
       "colorCumple": true,
       "olorCumple": true,
@@ -43,4 +43,3 @@ scripts:
       }
     language: text/javascript
 order: 2000
-
