@@ -1,5 +1,7 @@
 var/secrets/
 .env
+dev.env
+prod.env
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
