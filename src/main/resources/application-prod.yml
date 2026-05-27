@@ -43,3 +43,6 @@ exportacion:
       rendimiento: ${EXPORTACION_GOOGLE_SHEET_RENDIMIENTO}
       recepciones: ${EXPORTACION_GOOGLE_SHEET_RECEPCIONES}
       etapas: ${EXPORTACION_GOOGLE_SHEET_ETAPAS}
+springdoc:
+  api-docs:
+    enabled: false
