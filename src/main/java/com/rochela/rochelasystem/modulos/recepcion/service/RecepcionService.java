@@ -37,8 +37,8 @@ import org.springframework.transaction.annotation.Transactional;
 @Service
 public class RecepcionService {
 
-    private static final double DENSIDAD_MIN = 1.028;
-    private static final double DENSIDAD_MAX = 1.033;
+    private static final double DENSIDAD_MIN = 1028;
+    private static final double DENSIDAD_MAX = 1033;
     private static final double PH_MIN = 6.6;
     private static final double PH_MAX = 6.8;
     private static final double ACIDEZ_MIN = 0.16;
