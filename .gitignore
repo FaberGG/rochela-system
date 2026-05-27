@@ -1,6 +1,7 @@
 var/secrets/
 .env
-dev.env
+.dev.env
+.dev.env
 prod.env
 HELP.md
 target/

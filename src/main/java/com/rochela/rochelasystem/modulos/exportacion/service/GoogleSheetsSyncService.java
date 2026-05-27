@@ -2,6 +2,7 @@ package com.rochela.rochelasystem.modulos.exportacion.service;
 
 import com.google.api.services.sheets.v4.Sheets;
 import com.google.api.services.sheets.v4.model.ValueRange;
+import com.rochela.rochelasystem.modulos.exportacion.config.GoogleSheetsClientProvider;
 import com.rochela.rochelasystem.modulos.exportacion.model.VistaEtapasProcesoEntity;
 import com.rochela.rochelasystem.modulos.exportacion.model.VistaRecepcionEntity;
 import com.rochela.rochelasystem.modulos.exportacion.model.VistaRendimientoEntity;
@@ -12,6 +13,7 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.Optional;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.scheduling.annotation.Async;
 import org.springframework.scheduling.annotation.Scheduled;
@@ -83,7 +85,7 @@ public class GoogleSheetsSyncService {
             "Cantidad Cortes"
     );
 
-    private final Sheets sheets;
+    private final GoogleSheetsClientProvider sheetsProvider;
     private final VistaRendimientoRepository vistaRendimientoRepository;
     private final VistaRecepcionRepository vistaRecepcionRepository;
     private final VistaEtapasProcesoRepository vistaEtapasProcesoRepository;
@@ -100,11 +102,11 @@ public class GoogleSheetsSyncService {
     @Value("${exportacion.google.sheets.etapas}")
     private String sheetEtapas;
 
-    public GoogleSheetsSyncService(Sheets sheets,
+    public GoogleSheetsSyncService(GoogleSheetsClientProvider sheetsProvider,
                                    VistaRendimientoRepository vistaRendimientoRepository,
                                    VistaRecepcionRepository vistaRecepcionRepository,
                                    VistaEtapasProcesoRepository vistaEtapasProcesoRepository) {
-        this.sheets = sheets;
+        this.sheetsProvider = sheetsProvider;
         this.vistaRendimientoRepository = vistaRendimientoRepository;
         this.vistaRecepcionRepository = vistaRecepcionRepository;
         this.vistaEtapasProcesoRepository = vistaEtapasProcesoRepository;
@@ -113,12 +115,16 @@ public class GoogleSheetsSyncService {
     @Async
     @Scheduled(cron = "0 0 12,18 * * *")
     public void sincronizar() throws IOException {
-        sincronizarRendimiento();
-        sincronizarRecepciones();
-        sincronizarEtapas();
+        Optional<Sheets> sheets = sheetsProvider.getSheets();
+        if (sheets.isEmpty()) {
+            return;
+        }
+        sincronizarRendimiento(sheets.get());
+        sincronizarRecepciones(sheets.get());
+        sincronizarEtapas(sheets.get());
     }
 
-    private void sincronizarRendimiento() throws IOException {
+    private void sincronizarRendimiento(Sheets sheets) throws IOException {
         List<VistaRendimientoEntity> pendientes = vistaRendimientoRepository.findBySincronizadoSheetsFalse();
         if (pendientes.isEmpty()) {
             return;
@@ -150,13 +156,13 @@ public class GoogleSheetsSyncService {
             ));
         }
 
-        List<List<Object>> payload = withHeaderIfEmpty(sheetRendimiento, rows, HEADERS_RENDIMIENTO);
-        appendRows(sheetRendimiento, payload);
+        List<List<Object>> payload = withHeaderIfEmpty(sheets, sheetRendimiento, rows, HEADERS_RENDIMIENTO);
+        appendRows(sheets, sheetRendimiento, payload);
         pendientes.forEach(item -> item.setSincronizadoSheets(true));
         vistaRendimientoRepository.saveAll(pendientes);
     }
 
-    private void sincronizarRecepciones() throws IOException {
+    private void sincronizarRecepciones(Sheets sheets) throws IOException {
         List<VistaRecepcionEntity> pendientes = vistaRecepcionRepository.findBySincronizadoSheetsFalse();
         if (pendientes.isEmpty()) {
             return;
@@ -184,13 +190,13 @@ public class GoogleSheetsSyncService {
             ));
         }
 
-        List<List<Object>> payload = withHeaderIfEmpty(sheetRecepciones, rows, HEADERS_RECEPCIONES);
-        appendRows(sheetRecepciones, payload);
+        List<List<Object>> payload = withHeaderIfEmpty(sheets, sheetRecepciones, rows, HEADERS_RECEPCIONES);
+        appendRows(sheets, sheetRecepciones, payload);
         pendientes.forEach(item -> item.setSincronizadoSheets(true));
         vistaRecepcionRepository.saveAll(pendientes);
     }
 
-    private void sincronizarEtapas() throws IOException {
+    private void sincronizarEtapas(Sheets sheets) throws IOException {
         List<VistaEtapasProcesoEntity> pendientes = vistaEtapasProcesoRepository.findBySincronizadoSheetsFalse();
         if (pendientes.isEmpty()) {
             return;
@@ -220,13 +226,15 @@ public class GoogleSheetsSyncService {
             ));
         }
 
-        List<List<Object>> payload = withHeaderIfEmpty(sheetEtapas, rows, HEADERS_ETAPAS);
-        appendRows(sheetEtapas, payload);
+        List<List<Object>> payload = withHeaderIfEmpty(sheets, sheetEtapas, rows, HEADERS_ETAPAS);
+        appendRows(sheets, sheetEtapas, payload);
         pendientes.forEach(item -> item.setSincronizadoSheets(true));
         vistaEtapasProcesoRepository.saveAll(pendientes);
     }
 
-    private void appendRows(String sheetName, List<List<Object>> rows) throws IOException {
+    private void appendRows(Sheets sheets,
+                            String sheetName,
+                            List<List<Object>> rows) throws IOException {
         if (rows.isEmpty()) {
             return;
         }
@@ -247,13 +255,14 @@ public class GoogleSheetsSyncService {
         return Arrays.asList(values);
     }
 
-    private List<List<Object>> withHeaderIfEmpty(String sheetName,
+    private List<List<Object>> withHeaderIfEmpty(Sheets sheets,
+                                                 String sheetName,
                                                  List<List<Object>> rows,
                                                  List<Object> header) throws IOException {
         if (rows.isEmpty()) {
             return rows;
         }
-        if (!isSheetEmpty(sheetName)) {
+        if (!isSheetEmpty(sheets, sheetName)) {
             return rows;
         }
         List<List<Object>> payload = new ArrayList<>(rows.size() + 1);
@@ -262,7 +271,8 @@ public class GoogleSheetsSyncService {
         return payload;
     }
 
-    private boolean isSheetEmpty(String sheetName) throws IOException {
+    private boolean isSheetEmpty(Sheets sheets,
+                                 String sheetName) throws IOException {
         String range = "'" + sheetName + "'!A1:A1";
         ValueRange response = sheets.spreadsheets().values()
                 .get(spreadsheetId, range)

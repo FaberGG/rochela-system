@@ -17,7 +17,8 @@ spring:
     show-sql: false
   lifecycle:
     timeout-per-shutdown-phase: 20s
-
+  jackson:
+    time-zone: America/Bogota
 server:
   port: ${SERVER_PORT:8080}
   shutdown: graceful
