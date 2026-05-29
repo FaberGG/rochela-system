@@ -14,6 +14,24 @@ services:
       - postgres_rochela_data:/var/lib/postgresql/data
     restart: unless-stopped
 
+  pgadmin:
+    image: dpage/pgadmin4:latest
+    container_name: pgadmin_container
+    environment:
+      PGADMIN_DEFAULT_EMAIL: ${PGADMIN_DEFAULT_EMAIL:-admin@example.com}
+      PGADMIN_DEFAULT_PASSWORD: ${PGADMIN_DEFAULT_PASSWORD:-admin}
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+      PGADMIN_CONFIG_MASTER_PASSWORD_REQUIRED: "False"
+    ports:
+      - "5050:80"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin
+    depends_on:
+      - postgres-rochela
+    restart: unless-stopped
+    networks:
+      - default
+
   rochela-api:
     build:
       context: .
@@ -41,6 +59,10 @@ services:
       EXPORTACION_GOOGLE_SHEET_RENDIMIENTO: ${EXPORTACION_GOOGLE_SHEET_RENDIMIENTO}
       EXPORTACION_GOOGLE_SHEET_RECEPCIONES: ${EXPORTACION_GOOGLE_SHEET_RECEPCIONES}
       EXPORTACION_GOOGLE_SHEET_ETAPAS: ${EXPORTACION_GOOGLE_SHEET_ETAPAS}
+      EXPORTACION_GOOGLE_SHEET_CALIDAD_POR_PROVEEDOR: ${EXPORTACION_GOOGLE_SHEET_CALIDAD_POR_PROVEEDOR}
+      EXPORTACION_GOOGLE_SHEET_TRAZABILIDAD_LOTES: ${EXPORTACION_GOOGLE_SHEET_TRAZABILIDAD_LOTES}
+      EXPORTACION_GOOGLE_SHEET_PRODUCCION_ETAPAS_COMPLETAS: ${EXPORTACION_GOOGLE_SHEET_PRODUCCION_ETAPAS_COMPLETAS}
+      EXPORTACION_GOOGLE_SHEET_CORTES_POR_LOTE: ${EXPORTACION_GOOGLE_SHEET_CORTES_POR_LOTE}
       EXPORTACION_RECEPCION_PENDIENTE_ENABLED: ${EXPORTACION_RECEPCION_PENDIENTE_ENABLED:-false}
       TZ: ${TZ:-America/Bogota}
       JAVA_TOOL_OPTIONS: ${JAVA_TOOL_OPTIONS}
@@ -52,3 +74,4 @@ services:
 
 volumes:
   postgres_rochela_data:
+  pgadmin_data:

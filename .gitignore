@@ -2,7 +2,8 @@ var/secrets/
 .env
 .dev.env
 .dev.env
-prod.env
+.prod.env
+graphify-out/cache/
 HELP.md
 target/
 .mvn/wrapper/maven-wrapper.jar
