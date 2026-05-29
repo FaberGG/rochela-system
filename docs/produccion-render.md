@@ -29,6 +29,10 @@ Las siguientes variables se leen desde `application.yml`:
 | `EXPORTACION_GOOGLE_SHEET_RENDIMIENTO` | Si (si exportacion activa) | Nombre de hoja. | No |
 | `EXPORTACION_GOOGLE_SHEET_RECEPCIONES` | Si (si exportacion activa) | Nombre de hoja. | No |
 | `EXPORTACION_GOOGLE_SHEET_ETAPAS` | Si (si exportacion activa) | Nombre de hoja. | No |
+| `EXPORTACION_GOOGLE_SHEET_CALIDAD_POR_PROVEEDOR` | Si (si exportacion activa) | Nombre de hoja para la vista `v_calidad_por_proveedor`. | No |
+| `EXPORTACION_GOOGLE_SHEET_TRAZABILIDAD_LOTES` | Si (si exportacion activa) | Nombre de hoja para la vista `v_trazabilidad_lote_completa`. | No |
+| `EXPORTACION_GOOGLE_SHEET_PRODUCCION_ETAPAS_COMPLETAS` | Si (si exportacion activa) | Nombre de hoja para la vista `v_produccion_etapas_completas`. | No |
+| `EXPORTACION_GOOGLE_SHEET_CORTES_POR_LOTE` | Si (si exportacion activa) | Nombre de hoja para la vista `v_cortes_por_lote`. | No |
 | `EXPORTACION_RECEPCION_PENDIENTE_ENABLED` | No | `true` para habilitar exportacion automatica. | No |
 
 Notas:

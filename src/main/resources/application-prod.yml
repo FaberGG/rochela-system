@@ -42,8 +42,12 @@ exportacion:
     application-name: ${EXPORTACION_GOOGLE_APPLICATION_NAME:rochelasystem}
     sheets:
       rendimiento: ${EXPORTACION_GOOGLE_SHEET_RENDIMIENTO}
-      recepciones: ${EXPORTACION_GOOGLE_SHEET_RECEPCIONES}
       etapas: ${EXPORTACION_GOOGLE_SHEET_ETAPAS}
+      recepciones: ${EXPORTACION_GOOGLE_SHEET_RECEPCIONES}
+      calidad-por-proveedor: ${EXPORTACION_GOOGLE_SHEET_CALIDAD_POR_PROVEEDOR}
+      trazabilidad-lotes: ${EXPORTACION_GOOGLE_SHEET_TRAZABILIDAD_LOTES}
+      produccion-etapas-completas: ${EXPORTACION_GOOGLE_SHEET_PRODUCCION_ETAPAS_COMPLETAS}
+      cortes-por-lote: ${EXPORTACION_GOOGLE_SHEET_CORTES_POR_LOTE}
 springdoc:
   api-docs:
     enabled: false

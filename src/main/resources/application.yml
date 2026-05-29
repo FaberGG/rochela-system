@@ -26,5 +26,9 @@ exportacion:
     credentials-path: var/secrets/google-credentials.json
     sheets:
       rendimiento: "Materia Prima y rendimiento"
-      recepciones: "Recepciones y proveedores"
       etapas: "Etapas lote"
+      recepciones: "recepciones"
+      calidad-por-proveedor: ${EXPORTACION_GOOGLE_SHEET_CALIDAD_POR_PROVEEDOR:calidad_por_proveedor}
+      trazabilidad-lotes: ${EXPORTACION_GOOGLE_SHEET_TRAZABILIDAD_LOTES:trazabilidad_lotes}
+      produccion-etapas-completas: ${EXPORTACION_GOOGLE_SHEET_PRODUCCION_ETAPAS_COMPLETAS:produccion_etapas_completas}
+      cortes-por-lote: ${EXPORTACION_GOOGLE_SHEET_CORTES_POR_LOTE:cortes_por_lote}
