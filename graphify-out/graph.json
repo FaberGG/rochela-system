@@ -8,7 +8,7 @@
       "file_type": "code",
       "source_file": "docs/api/api-docs.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "api-docs.json",
       "id": "docs_api_api_docs_json"
     },
@@ -17,7 +17,7 @@
       "file_type": "code",
       "source_file": "docs/api/api-docs.json",
       "source_location": "L55",
-      "community": 0,
+      "community": 1,
       "norm_label": "*/*",
       "id": "api_api_docs_content"
     },
@@ -26,7 +26,7 @@
       "file_type": "code",
       "source_file": "docs/api/api-docs.json",
       "source_location": "L1249",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/recepciones/pendientes",
       "id": "api_api_docs_paths_api_v1_recepciones_pendientes"
     },
@@ -35,7 +35,7 @@
       "file_type": "code",
       "source_file": "docs/api/api-docs.json",
       "source_location": "L1272",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/productos",
       "id": "api_api_docs_paths_api_v1_productos"
     },
@@ -44,7 +44,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/RochelasystemApplication.java",
       "source_location": "L6",
-      "community": 1,
+      "community": 2,
       "norm_label": "rochelasystemapplication",
       "id": "rochelasystem_rochelasystemapplication_rochelasystemapplication"
     },
@@ -53,7 +53,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/RochelasystemApplication.java",
       "source_location": "L9",
-      "community": 1,
+      "community": 2,
       "norm_label": ".main()",
       "id": "rochelasystem_rochelasystemapplication_rochelasystemapplication_main"
     },
@@ -62,7 +62,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/DataInicializadorCatalogo.java",
       "source_location": "L12",
-      "community": 1,
+      "community": 2,
       "norm_label": "datainicializadorcatalogo",
       "id": "catalogo_datainicializadorcatalogo_datainicializadorcatalogo"
     },
@@ -71,7 +71,7 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "community": 1,
+      "community": 2,
       "norm_label": "applicationrunner",
       "id": "applicationrunner"
     },
@@ -80,7 +80,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/DataInicializadorCatalogo.java",
       "source_location": "L18",
-      "community": 1,
+      "community": 2,
       "norm_label": ".run()",
       "id": "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_run"
     },
@@ -89,7 +89,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/DataInicializadorCatalogo.java",
       "source_location": "L28",
-      "community": 1,
+      "community": 2,
       "norm_label": ".upsertproducto()",
       "id": "catalogo_datainicializadorcatalogo_datainicializadorcatalogo_upsertproducto"
     },
@@ -98,7 +98,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/controller/ProductoController.java",
       "source_location": "L20",
-      "community": 1,
+      "community": 2,
       "norm_label": "productocontroller",
       "id": "controller_productocontroller_productocontroller"
     },
@@ -107,7 +107,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/dto/ProductoResponseDto.java",
       "source_location": "L7",
-      "community": 30,
+      "community": 28,
       "norm_label": "productoresponsedto",
       "id": "dto_productoresponsedto_productoresponsedto"
     },
@@ -116,7 +116,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/model/Producto.java",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "producto.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_catalogo_model_producto_java"
     },
@@ -125,7 +125,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/model/Producto.java",
       "source_location": "L11",
-      "community": 2,
+      "community": 3,
       "norm_label": "producto",
       "id": "model_producto_producto"
     },
@@ -134,7 +134,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/repository/ProductoRepository.java",
       "source_location": "L8",
-      "community": 1,
+      "community": 2,
       "norm_label": "productorepository",
       "id": "repository_productorepository_productorepository"
     },
@@ -143,7 +143,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/repository/ProductoRepository.java",
       "source_location": "L10",
-      "community": 1,
+      "community": 2,
       "norm_label": ".findbycodigo()",
       "id": "repository_productorepository_productorepository_findbycodigo"
     },
@@ -152,7 +152,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/repository/ProductoRepository.java",
       "source_location": "L11",
-      "community": 1,
+      "community": 2,
       "norm_label": ".existsbycodigo()",
       "id": "repository_productorepository_productorepository_existsbycodigo"
     },
@@ -161,7 +161,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/service/ProductoService.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "productoservice.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_catalogo_service_productoservice_java"
     },
@@ -170,7 +170,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/service/ProductoService.java",
       "source_location": "L12",
-      "community": 1,
+      "community": 2,
       "norm_label": "productoservice",
       "id": "service_productoservice_productoservice"
     },
@@ -179,7 +179,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/service/ProductoService.java",
       "source_location": "L21",
-      "community": 1,
+      "community": 2,
       "norm_label": ".listarproductos()",
       "id": "service_productoservice_productoservice_listarproductos"
     },
@@ -188,7 +188,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/service/ProductoService.java",
       "source_location": "L29",
-      "community": 1,
+      "community": 2,
       "norm_label": ".obtenerporcodigo()",
       "id": "service_productoservice_productoservice_obtenerporcodigo"
     },
@@ -197,7 +197,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/catalogo/service/ProductoService.java",
       "source_location": "L37",
-      "community": 1,
+      "community": 2,
       "norm_label": ".maptoresponse()",
       "id": "service_productoservice_productoservice_maptoresponse"
     },
@@ -206,7 +206,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/controller/LoteController.java",
       "source_location": "L42",
-      "community": 2,
+      "community": 0,
       "norm_label": "lotecontroller",
       "id": "controller_lotecontroller_lotecontroller"
     },
@@ -224,7 +224,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CierreLoteRequest.java",
       "source_location": "L10",
-      "community": 18,
+      "community": 16,
       "norm_label": "cierreloterequest",
       "id": "dto_cierreloterequest_cierreloterequest"
     },
@@ -233,7 +233,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CierreLoteResponse.java",
       "source_location": "L9",
-      "community": 31,
+      "community": 29,
       "norm_label": "cierreloteresponse",
       "id": "dto_cierreloteresponse_cierreloteresponse"
     },
@@ -242,7 +242,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CloruroRequest.java",
       "source_location": "L1",
-      "community": 27,
+      "community": 17,
       "norm_label": "clorurorequest.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_clorurorequest_java"
     },
@@ -251,7 +251,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CloruroRequest.java",
       "source_location": "L11",
-      "community": 27,
+      "community": 17,
       "norm_label": "clorurorequest",
       "id": "dto_clorurorequest_clorurorequest"
     },
@@ -260,7 +260,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CorteCreateRequest.java",
       "source_location": "L1",
-      "community": 28,
+      "community": 26,
       "norm_label": "cortecreaterequest.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cortecreaterequest_java"
     },
@@ -269,7 +269,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CorteCreateRequest.java",
       "source_location": "L11",
-      "community": 28,
+      "community": 26,
       "norm_label": "cortecreaterequest",
       "id": "dto_cortecreaterequest_cortecreaterequest"
     },
@@ -278,7 +278,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CorteCreateResponse.java",
       "source_location": "L8",
-      "community": 32,
+      "community": 30,
       "norm_label": "cortecreateresponse",
       "id": "dto_cortecreateresponse_cortecreateresponse"
     },
@@ -287,7 +287,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CorteDetalleDto.java",
       "source_location": "L8",
-      "community": 33,
+      "community": 31,
       "norm_label": "cortedetalledto",
       "id": "dto_cortedetalledto_cortedetalledto"
     },
@@ -296,7 +296,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CuajoRequest.java",
       "source_location": "L1",
-      "community": 29,
+      "community": 18,
       "norm_label": "cuajorequest.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_dto_cuajorequest_java"
     },
@@ -305,7 +305,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CuajoRequest.java",
       "source_location": "L11",
-      "community": 29,
+      "community": 18,
       "norm_label": "cuajorequest",
       "id": "dto_cuajorequest_cuajorequest"
     },
@@ -314,7 +314,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/DesueradoRequest.java",
       "source_location": "L11",
-      "community": 34,
+      "community": 32,
       "norm_label": "desueradorequest",
       "id": "dto_desueradorequest_desueradorequest"
     },
@@ -341,7 +341,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/LavadoDesueradoRequest.java",
       "source_location": "L11",
-      "community": 4,
+      "community": 0,
       "norm_label": "lavadodesueradorequest",
       "id": "dto_lavadodesueradorequest_lavadodesueradorequest"
     },
@@ -359,7 +359,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/LoteDetalleResponse.java",
       "source_location": "L11",
-      "community": 35,
+      "community": 33,
       "norm_label": "lotedetalleresponse",
       "id": "dto_lotedetalleresponse_lotedetalleresponse"
     },
@@ -368,7 +368,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/LoteResumenResponse.java",
       "source_location": "L10",
-      "community": 36,
+      "community": 34,
       "norm_label": "loteresumenresponse",
       "id": "dto_loteresumenresponse_loteresumenresponse"
     },
@@ -377,7 +377,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/PasteurizacionRequest.java",
       "source_location": "L11",
-      "community": 4,
+      "community": 0,
       "norm_label": "pasteurizacionrequest",
       "id": "dto_pasteurizacionrequest_pasteurizacionrequest"
     },
@@ -386,7 +386,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/PrensadoRequest.java",
       "source_location": "L11",
-      "community": 37,
+      "community": 35,
       "norm_label": "prensadorequest",
       "id": "dto_prensadorequest_prensadorequest"
     },
@@ -395,7 +395,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/ProductoResumenDto.java",
       "source_location": "L7",
-      "community": 38,
+      "community": 36,
       "norm_label": "productoresumendto",
       "id": "dto_productoresumendto_productoresumendto"
     },
@@ -404,7 +404,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/SaladoRequest.java",
       "source_location": "L11",
-      "community": 39,
+      "community": 37,
       "norm_label": "saladorequest",
       "id": "dto_saladorequest_saladorequest"
     },
@@ -413,7 +413,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/CierreLote.java",
       "source_location": "L1",
-      "community": 23,
+      "community": 27,
       "norm_label": "cierrelote.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_cierrelote_java"
     },
@@ -422,7 +422,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/CierreLote.java",
       "source_location": "L15",
-      "community": 23,
+      "community": 27,
       "norm_label": "cierrelote",
       "id": "model_cierrelote_cierrelote"
     },
@@ -431,7 +431,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/Corte.java",
       "source_location": "L1",
-      "community": 4,
+      "community": 0,
       "norm_label": "corte.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_corte_java"
     },
@@ -440,7 +440,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/Corte.java",
       "source_location": "L17",
-      "community": 4,
+      "community": 0,
       "norm_label": "corte",
       "id": "model_corte_corte"
     },
@@ -449,7 +449,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/Lote.java",
       "source_location": "L1",
-      "community": 25,
+      "community": 21,
       "norm_label": "lote.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_lote_java"
     },
@@ -458,7 +458,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/Lote.java",
       "source_location": "L20",
-      "community": 25,
+      "community": 21,
       "norm_label": "lote",
       "id": "model_lote_lote"
     },
@@ -467,7 +467,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaCloruro.java",
       "source_location": "L1",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapacloruro.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacloruro_java"
     },
@@ -476,7 +476,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaCloruro.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapacloruro",
       "id": "etapa_etapacloruro_etapacloruro"
     },
@@ -485,7 +485,7 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "community": 5,
+      "community": 4,
       "norm_label": "etaparegistro",
       "id": "etaparegistro"
     },
@@ -494,7 +494,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaCuajo.java",
       "source_location": "L1",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapacuajo.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapacuajo_java"
     },
@@ -503,7 +503,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaCuajo.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapacuajo",
       "id": "etapa_etapacuajo_etapacuajo"
     },
@@ -512,7 +512,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaDesuerado.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapadesuerado",
       "id": "etapa_etapadesuerado_etapadesuerado"
     },
@@ -521,7 +521,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaLavadoDesuerado.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapalavadodesuerado",
       "id": "etapa_etapalavadodesuerado_etapalavadodesuerado"
     },
@@ -530,7 +530,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaPasteurizacion.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapapasteurizacion",
       "id": "etapa_etapapasteurizacion_etapapasteurizacion"
     },
@@ -539,7 +539,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaPrensado.java",
       "source_location": "L12",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapaprensado",
       "id": "etapa_etapaprensado_etapaprensado"
     },
@@ -548,7 +548,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaSalado.java",
       "source_location": "L1",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapasalado.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_model_etapa_etapasalado_java"
     },
@@ -557,7 +557,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/etapa/EtapaSalado.java",
       "source_location": "L11",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapasalado",
       "id": "etapa_etapasalado_etapasalado"
     },
@@ -566,7 +566,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CierreLoteRepository.java",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "cierreloterepository.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_cierreloterepository_java"
     },
@@ -575,7 +575,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CierreLoteRepository.java",
       "source_location": "L7",
-      "community": 2,
+      "community": 3,
       "norm_label": "cierreloterepository",
       "id": "repository_cierreloterepository_cierreloterepository"
     },
@@ -584,7 +584,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CierreLoteRepository.java",
       "source_location": "L9",
-      "community": 2,
+      "community": 3,
       "norm_label": ".findbyloteid()",
       "id": "repository_cierreloterepository_cierreloterepository_findbyloteid"
     },
@@ -593,7 +593,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CorteRepository.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "corterepository.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_corterepository_java"
     },
@@ -602,7 +602,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CorteRepository.java",
       "source_location": "L8",
-      "community": 1,
+      "community": 2,
       "norm_label": "corterepository",
       "id": "repository_corterepository_corterepository"
     },
@@ -611,7 +611,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CorteRepository.java",
       "source_location": "L10",
-      "community": 1,
+      "community": 2,
       "norm_label": ".findbyloteidorderbynumerocorteasc()",
       "id": "repository_corterepository_corterepository_findbyloteidorderbynumerocorteasc"
     },
@@ -620,7 +620,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CorteRepository.java",
       "source_location": "L12",
-      "community": 1,
+      "community": 2,
       "norm_label": ".findtopbyloteidorderbynumerocortedesc()",
       "id": "repository_corterepository_corterepository_findtopbyloteidorderbynumerocortedesc"
     },
@@ -629,7 +629,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CorteRepository.java",
       "source_location": "L14",
-      "community": 4,
+      "community": 0,
       "norm_label": ".countbyloteid()",
       "id": "repository_corterepository_corterepository_countbyloteid"
     },
@@ -638,7 +638,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/EtapaRegistroRepository.java",
       "source_location": "L7",
-      "community": 5,
+      "community": 4,
       "norm_label": "etaparegistrorepository",
       "id": "repository_etaparegistrorepository_etaparegistrorepository"
     },
@@ -647,7 +647,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/EtapaRegistroRepository.java",
       "source_location": "L9",
-      "community": 5,
+      "community": 4,
       "norm_label": ".findbyloteidorderbyfechahoraregistroasc()",
       "id": "repository_etaparegistrorepository_etaparegistrorepository_findbyloteidorderbyfechahoraregistroasc"
     },
@@ -656,7 +656,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteRepository.java",
       "source_location": "L1",
-      "community": 4,
+      "community": 13,
       "norm_label": "loterepository.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_loterepository_java"
     },
@@ -665,7 +665,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteRepository.java",
       "source_location": "L8",
-      "community": 4,
+      "community": 13,
       "norm_label": "loterepository",
       "id": "repository_loterepository_loterepository"
     },
@@ -674,7 +674,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteRepository.java",
       "source_location": "L10",
-      "community": 4,
+      "community": 13,
       "norm_label": ".countbyfechahorainiciobetween()",
       "id": "repository_loterepository_loterepository_countbyfechahorainiciobetween"
     },
@@ -683,7 +683,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L63",
-      "community": 2,
+      "community": 0,
       "norm_label": "loteservice",
       "id": "service_loteservice_loteservice"
     },
@@ -692,7 +692,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L90",
-      "community": 2,
+      "community": 0,
       "norm_label": ".listarlotes()",
       "id": "service_loteservice_loteservice_listarlotes"
     },
@@ -701,7 +701,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L130",
-      "community": 2,
+      "community": 3,
       "norm_label": ".obtenerdetalle()",
       "id": "service_loteservice_loteservice_obtenerdetalle"
     },
@@ -710,7 +710,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L167",
-      "community": 4,
+      "community": 0,
       "norm_label": ".crearlote()",
       "id": "service_loteservice_loteservice_crearlote"
     },
@@ -719,7 +719,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L199",
-      "community": 2,
+      "community": 0,
       "norm_label": ".cancelarlote()",
       "id": "service_loteservice_loteservice_cancelarlote"
     },
@@ -728,7 +728,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L218",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarpasteurizacion()",
       "id": "service_loteservice_loteservice_registrarpasteurizacion"
     },
@@ -737,7 +737,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L236",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarcloruro()",
       "id": "service_loteservice_loteservice_registrarcloruro"
     },
@@ -746,7 +746,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L260",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarcuajo()",
       "id": "service_loteservice_loteservice_registrarcuajo"
     },
@@ -755,7 +755,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L282",
-      "community": 2,
+      "community": 0,
       "norm_label": ".agregarcorte()",
       "id": "service_loteservice_loteservice_agregarcorte"
     },
@@ -764,7 +764,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L313",
-      "community": 2,
+      "community": 0,
       "norm_label": ".cerrarcortes()",
       "id": "service_loteservice_loteservice_cerrarcortes"
     },
@@ -773,7 +773,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L322",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarlavadodesuerado()",
       "id": "service_loteservice_loteservice_registrarlavadodesuerado"
     },
@@ -782,7 +782,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L340",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrardesuerado()",
       "id": "service_loteservice_loteservice_registrardesuerado"
     },
@@ -791,7 +791,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L355",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarsalado()",
       "id": "service_loteservice_loteservice_registrarsalado"
     },
@@ -800,7 +800,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L374",
-      "community": 2,
+      "community": 0,
       "norm_label": ".registrarprensado()",
       "id": "service_loteservice_loteservice_registrarprensado"
     },
@@ -809,7 +809,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L397",
-      "community": 2,
+      "community": 0,
       "norm_label": ".cerrarlote()",
       "id": "service_loteservice_loteservice_cerrarlote"
     },
@@ -818,7 +818,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L433",
-      "community": 2,
+      "community": 0,
       "norm_label": ".avanzarestado()",
       "id": "service_loteservice_loteservice_avanzarestado"
     },
@@ -827,7 +827,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L445",
-      "community": 2,
+      "community": 0,
       "norm_label": ".buildcontext()",
       "id": "service_loteservice_loteservice_buildcontext"
     },
@@ -836,7 +836,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L454",
-      "community": 2,
+      "community": 0,
       "norm_label": ".resolverestadosparacuajo()",
       "id": "service_loteservice_loteservice_resolverestadosparacuajo"
     },
@@ -845,7 +845,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L466",
-      "community": 2,
+      "community": 0,
       "norm_label": ".validarestado()",
       "id": "service_loteservice_loteservice_validarestado"
     },
@@ -854,7 +854,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L473",
-      "community": 2,
+      "community": 0,
       "norm_label": ".inicializaretapa()",
       "id": "service_loteservice_loteservice_inicializaretapa"
     },
@@ -863,7 +863,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L486",
-      "community": 2,
+      "community": 0,
       "norm_label": ".calcularsiguienteetapa()",
       "id": "service_loteservice_loteservice_calcularsiguienteetapa"
     },
@@ -872,7 +872,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L493",
-      "community": 2,
+      "community": 0,
       "norm_label": ".mapresumen()",
       "id": "service_loteservice_loteservice_mapresumen"
     },
@@ -881,7 +881,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L505",
-      "community": 2,
+      "community": 0,
       "norm_label": ".mapproducto()",
       "id": "service_loteservice_loteservice_mapproducto"
     },
@@ -890,7 +890,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L512",
-      "community": 2,
+      "community": 0,
       "norm_label": ".mapetapa()",
       "id": "service_loteservice_loteservice_mapetapa"
     },
@@ -899,7 +899,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L548",
-      "community": 2,
+      "community": 3,
       "norm_label": ".mapcierre()",
       "id": "service_loteservice_loteservice_mapcierre"
     },
@@ -908,7 +908,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L560",
-      "community": 2,
+      "community": 0,
       "norm_label": ".obtenerlote()",
       "id": "service_loteservice_loteservice_obtenerlote"
     },
@@ -917,7 +917,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L565",
-      "community": 2,
+      "community": 0,
       "norm_label": ".obtenerproducto()",
       "id": "service_loteservice_loteservice_obtenerproducto"
     },
@@ -935,7 +935,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L579",
-      "community": 2,
+      "community": 0,
       "norm_label": ".calcularduracionminutos()",
       "id": "service_loteservice_loteservice_calcularduracionminutos"
     },
@@ -944,7 +944,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L586",
-      "community": 2,
+      "community": 0,
       "norm_label": ".calcularrendimientogeneral()",
       "id": "service_loteservice_loteservice_calcularrendimientogeneral"
     },
@@ -953,7 +953,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L598",
-      "community": 4,
+      "community": 0,
       "norm_label": ".generarcodigolote()",
       "id": "service_loteservice_loteservice_generarcodigolote"
     },
@@ -962,7 +962,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCancelado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocancelado",
       "id": "state_estadocancelado_estadocancelado"
     },
@@ -971,7 +971,7 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "community": 7,
+      "community": 6,
       "norm_label": "lotestate",
       "id": "lotestate"
     },
@@ -980,7 +980,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCloruro.java",
       "source_location": "L1",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocloruro.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadocloruro_java"
     },
@@ -989,7 +989,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCloruro.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocloruro",
       "id": "state_estadocloruro_estadocloruro"
     },
@@ -998,7 +998,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCortes.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocortes",
       "id": "state_estadocortes_estadocortes"
     },
@@ -1007,7 +1007,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCuajo.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocuajo",
       "id": "state_estadocuajo_estadocuajo"
     },
@@ -1016,7 +1016,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoDesuerado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadodesuerado",
       "id": "state_estadodesuerado_estadodesuerado"
     },
@@ -1025,7 +1025,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoFinalizado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadofinalizado",
       "id": "state_estadofinalizado_estadofinalizado"
     },
@@ -1034,7 +1034,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoIniciado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadoiniciado",
       "id": "state_estadoiniciado_estadoiniciado"
     },
@@ -1043,7 +1043,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoLavadoDesuerado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadolavadodesuerado",
       "id": "state_estadolavadodesuerado_estadolavadodesuerado"
     },
@@ -1052,7 +1052,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoPasteurizacion.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadopasteurizacion",
       "id": "state_estadopasteurizacion_estadopasteurizacion"
     },
@@ -1061,7 +1061,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoPrensado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadoprensado",
       "id": "state_estadoprensado_estadoprensado"
     },
@@ -1070,7 +1070,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoSalado.java",
       "source_location": "L1",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadosalado.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_estadosalado_java"
     },
@@ -1079,7 +1079,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoSalado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadosalado",
       "id": "state_estadosalado_estadosalado"
     },
@@ -1088,7 +1088,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteState.java",
       "source_location": "L1",
-      "community": 7,
+      "community": 6,
       "norm_label": "lotestate.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_lotestate_java"
     },
@@ -1097,7 +1097,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteState.java",
       "source_location": "L7",
-      "community": 7,
+      "community": 6,
       "norm_label": ".getestado()",
       "id": "state_lotestate_lotestate_getestado"
     },
@@ -1106,7 +1106,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteState.java",
       "source_location": "L13",
-      "community": 7,
+      "community": 6,
       "norm_label": ".avanzar()",
       "id": "state_lotestate_lotestate_avanzar"
     },
@@ -1115,7 +1115,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteState.java",
       "source_location": "L20",
-      "community": 7,
+      "community": 6,
       "norm_label": ".siguiente()",
       "id": "state_lotestate_lotestate_siguiente"
     },
@@ -1124,7 +1124,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteState.java",
       "source_location": "L24",
-      "community": 7,
+      "community": 6,
       "norm_label": ".cancelar()",
       "id": "state_lotestate_lotestate_cancelar"
     },
@@ -1133,7 +1133,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateContext.java",
       "source_location": "L3",
-      "community": 1,
+      "community": 2,
       "norm_label": "lotestatecontext",
       "id": "state_lotestatecontext_lotestatecontext"
     },
@@ -1142,7 +1142,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateContext.java",
       "source_location": "L20",
-      "community": 1,
+      "community": 2,
       "norm_label": ".requierepasteurizacion()",
       "id": "state_lotestatecontext_lotestatecontext_requierepasteurizacion"
     },
@@ -1151,7 +1151,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateContext.java",
       "source_location": "L24",
-      "community": 1,
+      "community": 2,
       "norm_label": ".requierecloruro()",
       "id": "state_lotestatecontext_lotestatecontext_requierecloruro"
     },
@@ -1160,7 +1160,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateContext.java",
       "source_location": "L28",
-      "community": 1,
+      "community": 2,
       "norm_label": ".requierelavadodesuerado()",
       "id": "state_lotestatecontext_lotestatecontext_requierelavadodesuerado"
     },
@@ -1169,7 +1169,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateContext.java",
       "source_location": "L32",
-      "community": 1,
+      "community": 2,
       "norm_label": ".getresolver()",
       "id": "state_lotestatecontext_lotestatecontext_getresolver"
     },
@@ -1178,7 +1178,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/StateResolver.java",
       "source_location": "L1",
-      "community": 10,
+      "community": 9,
       "norm_label": "stateresolver.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_state_stateresolver_java"
     },
@@ -1187,7 +1187,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/StateResolver.java",
       "source_location": "L7",
-      "community": 10,
+      "community": 9,
       "norm_label": "stateresolver",
       "id": "state_stateresolver_stateresolver"
     },
@@ -1196,7 +1196,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/StateResolver.java",
       "source_location": "L25",
-      "community": 10,
+      "community": 9,
       "norm_label": ".resolve()",
       "id": "state_stateresolver_stateresolver_resolve"
     },
@@ -1205,7 +1205,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/controller/ProveedorController.java",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "proveedorcontroller.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_proveedores_controller_proveedorcontroller_java"
     },
@@ -1214,7 +1214,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/controller/ProveedorController.java",
       "source_location": "L27",
-      "community": 1,
+      "community": 2,
       "norm_label": "proveedorcontroller",
       "id": "controller_proveedorcontroller_proveedorcontroller"
     },
@@ -1223,7 +1223,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/dto/ProveedorRequestDto.java",
       "source_location": "L9",
-      "community": 40,
+      "community": 38,
       "norm_label": "proveedorrequestdto",
       "id": "dto_proveedorrequestdto_proveedorrequestdto"
     },
@@ -1232,7 +1232,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/dto/ProveedorResponseDto.java",
       "source_location": "L7",
-      "community": 41,
+      "community": 39,
       "norm_label": "proveedorresponsedto",
       "id": "dto_proveedorresponsedto_proveedorresponsedto"
     },
@@ -1259,7 +1259,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/repository/ProveedorRepository.java",
       "source_location": "L8",
-      "community": 1,
+      "community": 2,
       "norm_label": "proveedorrepository",
       "id": "repository_proveedorrepository_proveedorrepository"
     },
@@ -1268,7 +1268,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/repository/ProveedorRepository.java",
       "source_location": "L10",
-      "community": 1,
+      "community": 2,
       "norm_label": ".findbyactivotrue()",
       "id": "repository_proveedorrepository_proveedorrepository_findbyactivotrue"
     },
@@ -1277,7 +1277,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/service/ProveedorService.java",
       "source_location": "L13",
-      "community": 1,
+      "community": 2,
       "norm_label": "proveedorservice",
       "id": "service_proveedorservice_proveedorservice"
     },
@@ -1286,7 +1286,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/service/ProveedorService.java",
       "source_location": "L22",
-      "community": 1,
+      "community": 2,
       "norm_label": ".listaractivos()",
       "id": "service_proveedorservice_proveedorservice_listaractivos"
     },
@@ -1295,7 +1295,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/service/ProveedorService.java",
       "source_location": "L30",
-      "community": 1,
+      "community": 2,
       "norm_label": ".obtenerporid()",
       "id": "service_proveedorservice_proveedorservice_obtenerporid"
     },
@@ -1304,7 +1304,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/service/ProveedorService.java",
       "source_location": "L55",
-      "community": 1,
+      "community": 2,
       "norm_label": ".actualizar()",
       "id": "service_proveedorservice_proveedorservice_actualizar"
     },
@@ -1313,7 +1313,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/service/ProveedorService.java",
       "source_location": "L72",
-      "community": 1,
+      "community": 2,
       "norm_label": ".eliminar()",
       "id": "service_proveedorservice_proveedorservice_eliminar"
     },
@@ -1331,7 +1331,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionCreateRequest.java",
       "source_location": "L17",
-      "community": 42,
+      "community": 40,
       "norm_label": "recepcioncreaterequest",
       "id": "dto_recepcioncreaterequest_recepcioncreaterequest"
     },
@@ -1340,7 +1340,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionPendienteDto.java",
       "source_location": "L11",
-      "community": 43,
+      "community": 41,
       "norm_label": "recepcionpendientedto",
       "id": "dto_recepcionpendientedto_recepcionpendientedto"
     },
@@ -1349,7 +1349,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionReductasaRequest.java",
       "source_location": "L11",
-      "community": 44,
+      "community": 42,
       "norm_label": "recepcionreductasarequest",
       "id": "dto_recepcionreductasarequest_recepcionreductasarequest"
     },
@@ -1358,7 +1358,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionReductasaResponse.java",
       "source_location": "L11",
-      "community": 45,
+      "community": 43,
       "norm_label": "recepcionreductasaresponse",
       "id": "dto_recepcionreductasaresponse_recepcionreductasaresponse"
     },
@@ -1367,7 +1367,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionResponse.java",
       "source_location": "L11",
-      "community": 46,
+      "community": 44,
       "norm_label": "recepcionresponse",
       "id": "dto_recepcionresponse_recepcionresponse"
     },
@@ -1376,7 +1376,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/recepcion/dto/ValidacionDetalleDto.java",
       "source_location": "L8",
-      "community": 47,
+      "community": 45,
       "norm_label": "validaciondetalledto",
       "id": "dto_validaciondetalledto_validaciondetalledto"
     },
@@ -1475,7 +1475,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/package-info.java",
       "source_location": "L1",
-      "community": 48,
+      "community": 46,
       "norm_label": "package-info.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_package_info_java"
     },
@@ -1484,7 +1484,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/AnalisisOrganoleptico.java",
       "source_location": "L1",
-      "community": 49,
+      "community": 47,
       "norm_label": "analisisorganoleptico.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_analisisorganoleptico_java"
     },
@@ -1493,7 +1493,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/EstadoLote.java",
       "source_location": "L1",
-      "community": 50,
+      "community": 48,
       "norm_label": "estadolote.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_estadolote_java"
     },
@@ -1502,7 +1502,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/EstadoRecepcion.java",
       "source_location": "L1",
-      "community": 51,
+      "community": 49,
       "norm_label": "estadorecepcion.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_estadorecepcion_java"
     },
@@ -1511,7 +1511,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/Jornada.java",
       "source_location": "L1",
-      "community": 52,
+      "community": 50,
       "norm_label": "jornada.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_jornada_java"
     },
@@ -1520,7 +1520,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/ResultadoAlcohol.java",
       "source_location": "L1",
-      "community": 53,
+      "community": 51,
       "norm_label": "resultadoalcohol.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_resultadoalcohol_java"
     },
@@ -1529,7 +1529,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/ResultadoValidacion.java",
       "source_location": "L1",
-      "community": 54,
+      "community": 52,
       "norm_label": "resultadovalidacion.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_resultadovalidacion_java"
     },
@@ -1538,7 +1538,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/TipoEtapa.java",
       "source_location": "L1",
-      "community": 55,
+      "community": 53,
       "norm_label": "tipoetapa.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_tipoetapa_java"
     },
@@ -1547,7 +1547,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/enums/UbicacionTanque.java",
       "source_location": "L1",
-      "community": 56,
+      "community": 54,
       "norm_label": "ubicaciontanque.java",
       "id": "src_main_java_com_rochela_rochelasystem_shared_enums_ubicaciontanque_java"
     },
@@ -1556,7 +1556,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L6",
-      "community": 6,
+      "community": 5,
       "norm_label": "errorresponsedto",
       "id": "exception_errorresponsedto_errorresponsedto"
     },
@@ -1565,7 +1565,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L41",
-      "community": 6,
+      "community": 5,
       "norm_label": ".gettimestamp()",
       "id": "exception_errorresponsedto_errorresponsedto_gettimestamp"
     },
@@ -1574,7 +1574,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L49",
-      "community": 6,
+      "community": 5,
       "norm_label": ".geterror()",
       "id": "exception_errorresponsedto_errorresponsedto_geterror"
     },
@@ -1583,7 +1583,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L53",
-      "community": 6,
+      "community": 5,
       "norm_label": ".getmessage()",
       "id": "exception_errorresponsedto_errorresponsedto_getmessage"
     },
@@ -1592,7 +1592,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L57",
-      "community": 6,
+      "community": 5,
       "norm_label": ".getpath()",
       "id": "exception_errorresponsedto_errorresponsedto_getpath"
     },
@@ -1601,7 +1601,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/ErrorResponseDto.java",
       "source_location": "L61",
-      "community": 6,
+      "community": 5,
       "norm_label": ".getcode()",
       "id": "exception_errorresponsedto_errorresponsedto_getcode"
     },
@@ -1610,7 +1610,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/EstadoInvalidoException.java",
       "source_location": "L5",
-      "community": 6,
+      "community": 5,
       "norm_label": "estadoinvalidoexception",
       "id": "exception_estadoinvalidoexception_estadoinvalidoexception"
     },
@@ -1619,7 +1619,7 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "community": 6,
+      "community": 5,
       "norm_label": "lacteaexception",
       "id": "lacteaexception"
     },
@@ -1628,7 +1628,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/EtapaNoAplicaException.java",
       "source_location": "L5",
-      "community": 6,
+      "community": 5,
       "norm_label": "etapanoaplicaexception",
       "id": "exception_etapanoaplicaexception_etapanoaplicaexception"
     },
@@ -1637,7 +1637,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L14",
-      "community": 6,
+      "community": 5,
       "norm_label": "globalexceptionhandler",
       "id": "exception_globalexceptionhandler_globalexceptionhandler"
     },
@@ -1646,7 +1646,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L17",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handlelacteaexception()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handlelacteaexception"
     },
@@ -1655,7 +1655,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L32",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handleresponsestatusexception()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handleresponsestatusexception"
     },
@@ -1664,7 +1664,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L48",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handlevalidationexception()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handlevalidationexception"
     },
@@ -1673,7 +1673,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L63",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handleconstraintviolation()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handleconstraintviolation"
     },
@@ -1682,7 +1682,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L78",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handleunreadablemessage()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handleunreadablemessage"
     },
@@ -1691,7 +1691,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/GlobalExceptionHandler.java",
       "source_location": "L93",
-      "community": 6,
+      "community": 5,
       "norm_label": ".handleunexpectedexception()",
       "id": "exception_globalexceptionhandler_globalexceptionhandler_handleunexpectedexception"
     },
@@ -1700,7 +1700,7 @@
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "community": 6,
+      "community": 5,
       "norm_label": "runtimeexception",
       "id": "runtimeexception"
     },
@@ -1709,7 +1709,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/LacteaException.java",
       "source_location": "L16",
-      "community": 6,
+      "community": 5,
       "norm_label": ".getstatus()",
       "id": "exception_lacteaexception_lacteaexception_getstatus"
     },
@@ -1718,7 +1718,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/LacteaException.java",
       "source_location": "L20",
-      "community": 6,
+      "community": 5,
       "norm_label": ".geterrorcode()",
       "id": "exception_lacteaexception_lacteaexception_geterrorcode"
     },
@@ -1727,7 +1727,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/LoteNotFoundException.java",
       "source_location": "L5",
-      "community": 6,
+      "community": 5,
       "norm_label": "lotenotfoundexception",
       "id": "exception_lotenotfoundexception_lotenotfoundexception"
     },
@@ -1736,7 +1736,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/shared/exception/RecepcionNotFoundException.java",
       "source_location": "L5",
-      "community": 6,
+      "community": 5,
       "norm_label": "recepcionnotfoundexception",
       "id": "exception_recepcionnotfoundexception_recepcionnotfoundexception"
     },
@@ -1745,7 +1745,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/RochelasystemApplicationTests.java",
       "source_location": "L9",
-      "community": 1,
+      "community": 2,
       "norm_label": ".contextloads()",
       "id": "rochelasystem_rochelasystemapplicationtests_rochelasystemapplicationtests_contextloads"
     },
@@ -1754,7 +1754,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateTest.java",
       "source_location": "L1",
-      "community": 10,
+      "community": 9,
       "norm_label": "lotestatetest.java",
       "id": "src_test_java_com_rochela_rochelasystem_modulos_produccion_state_lotestatetest_java"
     },
@@ -1763,7 +1763,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateTest.java",
       "source_location": "L10",
-      "community": 10,
+      "community": 9,
       "norm_label": "lotestatetest",
       "id": "state_lotestatetest_lotestatetest"
     },
@@ -1772,7 +1772,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateTest.java",
       "source_location": "L12",
-      "community": 10,
+      "community": 9,
       "norm_label": ".iniciado_avanza_segun_flags()",
       "id": "state_lotestatetest_lotestatetest_iniciado_avanza_segun_flags"
     },
@@ -1781,7 +1781,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateTest.java",
       "source_location": "L27",
-      "community": 10,
+      "community": 9,
       "norm_label": ".cortes_avanza_a_lavado_o_desuerado()",
       "id": "state_lotestatetest_lotestatetest_cortes_avanza_a_lavado_o_desuerado"
     },
@@ -1790,7 +1790,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteStateTest.java",
       "source_location": "L40",
-      "community": 10,
+      "community": 9,
       "norm_label": ".estados_terminales_no_avanzan()",
       "id": "state_lotestatetest_lotestatetest_estados_terminales_no_avanzan"
     },
@@ -1799,7 +1799,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "openapi.json",
       "id": "docs_api_openapi_json"
     },
@@ -1808,7 +1808,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "openapi",
       "id": "api_openapi_openapi"
     },
@@ -1817,7 +1817,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "info",
       "id": "api_openapi_info"
     },
@@ -1826,7 +1826,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "title",
       "id": "api_openapi_info_title"
     },
@@ -1835,7 +1835,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 1,
+      "community": 2,
       "norm_label": "version",
       "id": "api_openapi_info_version"
     },
@@ -1844,7 +1844,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "servers",
       "id": "api_openapi_servers"
     },
@@ -1853,7 +1853,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "tags",
       "id": "api_openapi_tags"
     },
@@ -1862,7 +1862,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "paths",
       "id": "api_openapi_paths"
     },
@@ -1871,7 +1871,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "summary",
       "id": "api_openapi_get_summary"
     },
@@ -1880,7 +1880,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "description",
       "id": "api_openapi_get_description"
     },
@@ -1889,7 +1889,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "operationid",
       "id": "api_openapi_get_operationid"
     },
@@ -1898,7 +1898,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "parameters",
       "id": "api_openapi_get_parameters"
     },
@@ -1907,7 +1907,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "responses",
       "id": "api_openapi_get_responses"
     },
@@ -1916,7 +1916,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "200",
       "id": "api_openapi_responses_200"
     },
@@ -1925,7 +1925,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "content",
       "id": "api_openapi_200_content"
     },
@@ -1934,7 +1934,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "*/*",
       "id": "api_openapi_content"
     },
@@ -1943,7 +1943,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "404",
       "id": "api_openapi_responses_404"
     },
@@ -1952,7 +1952,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "put",
       "id": "api_openapi_api_v1_proveedores_id_put"
     },
@@ -1961,7 +1961,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "requestbody",
       "id": "api_openapi_put_requestbody"
     },
@@ -1970,7 +1970,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "application/json",
       "id": "api_openapi_content_application_json"
     },
@@ -1979,7 +1979,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "schema",
       "id": "api_openapi_application_json_schema"
     },
@@ -1988,7 +1988,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "required",
       "id": "api_openapi_requestbody_required"
     },
@@ -1997,7 +1997,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "delete",
       "id": "api_openapi_api_v1_proveedores_id_delete"
     },
@@ -2006,7 +2006,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "204",
       "id": "api_openapi_responses_204"
     },
@@ -2015,7 +2015,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/recepciones",
       "id": "api_openapi_paths_api_v1_recepciones"
     },
@@ -2024,7 +2024,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "201",
       "id": "api_openapi_responses_201"
     },
@@ -2033,7 +2033,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "400",
       "id": "api_openapi_responses_400"
     },
@@ -2042,7 +2042,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/proveedores",
       "id": "api_openapi_paths_api_v1_proveedores"
     },
@@ -2051,7 +2051,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes",
       "id": "api_openapi_paths_api_v1_lotes"
     },
@@ -2060,7 +2060,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "get",
       "id": "api_openapi_api_v1_lotes_get"
     },
@@ -2069,7 +2069,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "post",
       "id": "api_openapi_api_v1_lotes_post"
     },
@@ -2078,7 +2078,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/salado",
       "id": "api_openapi_paths_api_v1_lotes_id_salado"
     },
@@ -2087,7 +2087,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "409",
       "id": "api_openapi_responses_409"
     },
@@ -2096,7 +2096,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/prensado",
       "id": "api_openapi_paths_api_v1_lotes_id_prensado"
     },
@@ -2105,7 +2105,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/pasteurizacion",
       "id": "api_openapi_paths_api_v1_lotes_id_pasteurizacion"
     },
@@ -2114,7 +2114,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/lavado-desuerado",
       "id": "api_openapi_paths_api_v1_lotes_id_lavado_desuerado"
     },
@@ -2123,7 +2123,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/desuerado",
       "id": "api_openapi_paths_api_v1_lotes_id_desuerado"
     },
@@ -2132,7 +2132,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/cuajo",
       "id": "api_openapi_paths_api_v1_lotes_id_cuajo"
     },
@@ -2141,7 +2141,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/cortes",
       "id": "api_openapi_paths_api_v1_lotes_id_cortes"
     },
@@ -2150,7 +2150,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/cloruro",
       "id": "api_openapi_paths_api_v1_lotes_id_cloruro"
     },
@@ -2159,7 +2159,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/cierre",
       "id": "api_openapi_paths_api_v1_lotes_id_cierre"
     },
@@ -2168,7 +2168,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/recepciones/{id}/reductasa",
       "id": "api_openapi_paths_api_v1_recepciones_id_reductasa"
     },
@@ -2177,7 +2177,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "/api/v1/lotes/{id}/cancelar",
       "id": "api_openapi_paths_api_v1_lotes_id_cancelar"
     },
@@ -2186,7 +2186,7 @@
       "file_type": "code",
       "source_file": "docs/api/openapi.json",
       "source_location": "L1",
-      "community": 0,
+      "community": 1,
       "norm_label": "patch",
       "id": "api_openapi_api_v1_lotes_id_cancelar_patch"
     },
@@ -2195,7 +2195,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/operario/controller/OperarioController.java",
       "source_location": "L15",
-      "community": 16,
+      "community": 3,
       "norm_label": "operariocontroller",
       "id": "controller_operariocontroller_operariocontroller"
     },
@@ -2204,7 +2204,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/operario/dto/OperarioFeedResponse.java",
       "source_location": "L10",
-      "community": 57,
+      "community": 55,
       "norm_label": "operariofeedresponse",
       "id": "dto_operariofeedresponse_operariofeedresponse"
     },
@@ -2213,7 +2213,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/operario/service/OperarioFeedService.java",
       "source_location": "L12",
-      "community": 16,
+      "community": 3,
       "norm_label": "operariofeedservice",
       "id": "service_operariofeedservice_operariofeedservice"
     },
@@ -2222,7 +2222,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/operario/service/OperarioFeedService.java",
       "source_location": "L23",
-      "community": 16,
+      "community": 3,
       "norm_label": ".obtenerfeed()",
       "id": "service_operariofeedservice_operariofeedservice_obtenerfeed"
     },
@@ -2240,7 +2240,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CierreLoteQuesoRequest.java",
       "source_location": "L10",
-      "community": 18,
+      "community": 16,
       "norm_label": "cierrelotequesorequest",
       "id": "dto_cierrelotequesorequest_cierrelotequesorequest"
     },
@@ -2249,7 +2249,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/CierreLoteQuesoResponse.java",
       "source_location": "L9",
-      "community": 58,
+      "community": 56,
       "norm_label": "cierrelotequesoresponse",
       "id": "dto_cierrelotequesoresponse_cierrelotequesoresponse"
     },
@@ -2267,7 +2267,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/LoteLecheResponse.java",
       "source_location": "L12",
-      "community": 59,
+      "community": 57,
       "norm_label": "lotelecheresponse",
       "id": "dto_lotelecheresponse_lotelecheresponse"
     },
@@ -2276,7 +2276,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/dto/PrensadoCierreRequest.java",
       "source_location": "L11",
-      "community": 60,
+      "community": 58,
       "norm_label": "prensadocierrerequest",
       "id": "dto_prensadocierrerequest_prensadocierrerequest"
     },
@@ -2285,7 +2285,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/CierreLoteQueso.java",
       "source_location": "L15",
-      "community": 61,
+      "community": 59,
       "norm_label": "cierrelotequeso",
       "id": "model_cierrelotequeso_cierrelotequeso"
     },
@@ -2294,7 +2294,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/Descarga.java",
       "source_location": "L9",
-      "community": 24,
+      "community": 20,
       "norm_label": "descarga",
       "id": "model_descarga_descarga"
     },
@@ -2303,7 +2303,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/LoteLeche.java",
       "source_location": "L10",
-      "community": 21,
+      "community": 22,
       "norm_label": "loteleche",
       "id": "model_loteleche_loteleche"
     },
@@ -2312,7 +2312,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/model/LoteQueso.java",
       "source_location": "L13",
-      "community": 22,
+      "community": 23,
       "norm_label": "lotequeso",
       "id": "model_lotequeso_lotequeso"
     },
@@ -2321,7 +2321,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CierreLoteQuesoRepository.java",
       "source_location": "L1",
-      "community": 2,
+      "community": 3,
       "norm_label": "cierrelotequesorepository.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_cierrelotequesorepository_java"
     },
@@ -2330,7 +2330,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/CierreLoteQuesoRepository.java",
       "source_location": "L7",
-      "community": 2,
+      "community": 3,
       "norm_label": "cierrelotequesorepository",
       "id": "repository_cierrelotequesorepository_cierrelotequesorepository"
     },
@@ -2357,7 +2357,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/EtapaPrensadoRepository.java",
       "source_location": "L7",
-      "community": 5,
+      "community": 4,
       "norm_label": "etapaprensadorepository",
       "id": "repository_etapaprensadorepository_etapaprensadorepository"
     },
@@ -2366,7 +2366,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/EtapaPrensadoRepository.java",
       "source_location": "L9",
-      "community": 5,
+      "community": 4,
       "norm_label": ".findtopbyloteidorderbyfechahoraregistrodesc()",
       "id": "repository_etapaprensadorepository_etapaprensadorepository_findtopbyloteidorderbyfechahoraregistrodesc"
     },
@@ -2375,7 +2375,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteLecheRepository.java",
       "source_location": "L6",
-      "community": 62,
+      "community": 60,
       "norm_label": "lotelecherepository",
       "id": "repository_lotelecherepository_lotelecherepository"
     },
@@ -2384,7 +2384,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteQuesoRepository.java",
       "source_location": "L1",
-      "community": 4,
+      "community": 13,
       "norm_label": "lotequesorepository.java",
       "id": "src_main_java_com_rochela_rochelasystem_modulos_produccion_repository_lotequesorepository_java"
     },
@@ -2393,7 +2393,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/repository/LoteQuesoRepository.java",
       "source_location": "L9",
-      "community": 4,
+      "community": 13,
       "norm_label": "lotequesorepository",
       "id": "repository_lotequesorepository_lotequesorepository"
     },
@@ -2447,7 +2447,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L416",
-      "community": 2,
+      "community": 0,
       "norm_label": ".cerrarprensado()",
       "id": "service_loteservice_loteservice_cerrarprensado"
     },
@@ -2456,7 +2456,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L558",
-      "community": 2,
+      "community": 0,
       "norm_label": ".resolveretapaactualinicio()",
       "id": "service_loteservice_loteservice_resolveretapaactualinicio"
     },
@@ -2465,7 +2465,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L571",
-      "community": 2,
+      "community": 0,
       "norm_label": ".calcularporcentajecompletado()",
       "id": "service_loteservice_loteservice_calcularporcentajecompletado"
     },
@@ -2474,7 +2474,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L583",
-      "community": 2,
+      "community": 0,
       "norm_label": ".construirflujo()",
       "id": "service_loteservice_loteservice_construirflujo"
     },
@@ -2483,7 +2483,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoCortesCerrados.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadocortescerrados",
       "id": "state_estadocortescerrados_estadocortescerrados"
     },
@@ -2492,7 +2492,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/produccion/state/EstadoPrensadoIniciado.java",
       "source_location": "L5",
-      "community": 7,
+      "community": 6,
       "norm_label": "estadoprensadoiniciado",
       "id": "state_estadoprensadoiniciado_estadoprensadoiniciado"
     },
@@ -2501,7 +2501,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/DataInicializadorProveedores.java",
       "source_location": "L12",
-      "community": 1,
+      "community": 2,
       "norm_label": "datainicializadorproveedores",
       "id": "proveedores_datainicializadorproveedores_datainicializadorproveedores"
     },
@@ -2510,7 +2510,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/DataInicializadorProveedores.java",
       "source_location": "L34",
-      "community": 1,
+      "community": 2,
       "norm_label": ".upsertproveedor()",
       "id": "proveedores_datainicializadorproveedores_datainicializadorproveedores_upsertproveedor"
     },
@@ -2519,7 +2519,7 @@
       "file_type": "code",
       "source_file": "src/main/java/com/rochela/rochelasystem/modulos/proveedores/repository/ProveedorRepository.java",
       "source_location": "L11",
-      "community": 1,
+      "community": 2,
       "norm_label": ".existsbynombreempresa()",
       "id": "repository_proveedorrepository_proveedorrepository_existsbynombreempresa"
     },
@@ -2528,7 +2528,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L22",
-      "community": 4,
+      "community": 0,
       "norm_label": "lotequesoserviceflowintegrationtest",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest"
     },
@@ -2537,7 +2537,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L41",
-      "community": 4,
+      "community": 0,
       "norm_label": ".flujocompleto_sin_pasteurizacion_ni_cloruro()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_sin_pasteurizacion_ni_cloruro"
     },
@@ -2546,7 +2546,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L82",
-      "community": 4,
+      "community": 0,
       "norm_label": ".flujocompleto_con_pasteurizacion_y_cloruro()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_con_pasteurizacion_y_cloruro"
     },
@@ -2555,7 +2555,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L124",
-      "community": 4,
+      "community": 0,
       "norm_label": ".flujocompleto_con_lavado_desuerado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_flujocompleto_con_lavado_desuerado"
     },
@@ -2564,7 +2564,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L208",
-      "community": 4,
+      "community": 0,
       "norm_label": ".assertestado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_assertestado"
     },
@@ -2573,7 +2573,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L219",
-      "community": 4,
+      "community": 0,
       "norm_label": ".cloruro()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cloruro"
     },
@@ -2582,7 +2582,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L228",
-      "community": 4,
+      "community": 0,
       "norm_label": ".cuajo()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cuajo"
     },
@@ -2591,7 +2591,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L251",
-      "community": 4,
+      "community": 0,
       "norm_label": ".desuerado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_desuerado"
     },
@@ -2600,7 +2600,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L258",
-      "community": 4,
+      "community": 0,
       "norm_label": ".salado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_salado"
     },
@@ -2609,7 +2609,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L269",
-      "community": 4,
+      "community": 0,
       "norm_label": ".prensado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_prensado"
     },
@@ -2618,7 +2618,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L276",
-      "community": 4,
+      "community": 0,
       "norm_label": ".cierreprensado()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cierreprensado"
     },
@@ -2627,7 +2627,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceFlowIntegrationTest.java",
       "source_location": "L283",
-      "community": 4,
+      "community": 0,
       "norm_label": ".cierre()",
       "id": "service_lotequesoserviceflowintegrationtest_lotequesoserviceflowintegrationtest_cierre"
     },
@@ -2636,7 +2636,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceTest.java",
       "source_location": "L33",
-      "community": 1,
+      "community": 2,
       "norm_label": "lotequesoservicetest",
       "id": "service_lotequesoservicetest_lotequesoservicetest"
     },
@@ -2645,7 +2645,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceTest.java",
       "source_location": "L60",
-      "community": 1,
+      "community": 2,
       "norm_label": ".agregarcorte_avanza_de_cuajo_a_cortes()",
       "id": "service_lotequesoservicetest_lotequesoservicetest_agregarcorte_avanza_de_cuajo_a_cortes"
     },
@@ -2654,7 +2654,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteQuesoServiceTest.java",
       "source_location": "L98",
-      "community": 1,
+      "community": 2,
       "norm_label": ".registrarprensado_avanza_a_prensado_iniciado_y_bloquea_repeticion()",
       "id": "service_lotequesoservicetest_lotequesoservicetest_registrarprensado_avanza_a_prensado_iniciado_y_bloquea_repeticion"
     },
@@ -2663,7 +2663,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteQuesoStateTest.java",
       "source_location": "L10",
-      "community": 10,
+      "community": 9,
       "norm_label": "lotequesostatetest",
       "id": "state_lotequesostatetest_lotequesostatetest"
     },
@@ -2672,7 +2672,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteQuesoStateTest.java",
       "source_location": "L27",
-      "community": 10,
+      "community": 9,
       "norm_label": ".cortes_avanza_a_cortes_cerrados()",
       "id": "state_lotequesostatetest_lotequesostatetest_cortes_avanza_a_cortes_cerrados"
     },
@@ -2681,7 +2681,7 @@
       "file_type": "code",
       "source_file": "src/test/java/com/rochela/rochelasystem/modulos/produccion/state/LoteQuesoStateTest.java",
       "source_location": "L36",
-      "community": 10,
+      "community": 9,
       "norm_label": ".cortes_cerrados_avanza_segun_lavado()",
       "id": "state_lotequesostatetest_lotequesostatetest_cortes_cerrados_avanza_segun_lavado"
     },
@@ -2694,7 +2694,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 10,
       "norm_label": "postgresql service",
       "id": "docker_compose_postgres_rochela"
     },
@@ -2707,7 +2707,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 17,
+      "community": 10,
       "norm_label": "spring datasource configuration",
       "id": "application_yml_datasource"
     },
@@ -2720,7 +2720,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 63,
+      "community": 61,
       "norm_label": "shared module",
       "id": "estructura_proyecto_shared"
     },
@@ -2733,7 +2733,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 64,
+      "community": 62,
       "norm_label": "proveedores module",
       "id": "estructura_proyecto_proveedores"
     },
@@ -2746,7 +2746,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 65,
+      "community": 63,
       "norm_label": "catalogo module",
       "id": "estructura_proyecto_catalogo"
     },
@@ -2759,7 +2759,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "recepcion module",
       "id": "estructura_proyecto_recepcion"
     },
@@ -2772,7 +2772,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "produccion module",
       "id": "estructura_proyecto_produccion"
     },
@@ -2785,7 +2785,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 10,
       "norm_label": "exportacion module",
       "id": "estructura_proyecto_exportacion"
     },
@@ -2798,7 +2798,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "producto entity",
       "id": "modelo_entidades_producto"
     },
@@ -2811,7 +2811,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "proveedor entity",
       "id": "modelo_entidades_proveedor"
     },
@@ -2824,7 +2824,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "recepcionleche entity",
       "id": "modelo_entidades_recepcion_leche"
     },
@@ -2837,7 +2837,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "lote entity",
       "id": "modelo_entidades_lote"
     },
@@ -2850,7 +2850,7 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 5,
+      "community": 4,
       "norm_label": "lote state pattern",
       "id": "estados_lote_state_pattern"
     },
@@ -2863,613 +2863,714 @@
       "captured_at": null,
       "author": null,
       "contributor": null,
-      "community": 20,
+      "community": 10,
       "norm_label": "google sheets integration",
       "id": "google_sheets_integration"
-    },
-    {
-      "label": "GoogleSheetsConfig.java",
-      "file_type": "code",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/config/GoogleSheetsConfig.java",
-      "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_config_googlesheetsconfig_java",
-      "community": 14,
-      "norm_label": "googlesheetsconfig.java"
     },
     {
       "label": "GoogleSheetsConfig",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/config/GoogleSheetsConfig.java",
       "source_location": "L20",
-      "id": "config_googlesheetsconfig_googlesheetsconfig",
-      "community": 14,
-      "norm_label": "googlesheetsconfig"
+      "community": 7,
+      "norm_label": "googlesheetsconfig",
+      "id": "config_googlesheetsconfig_googlesheetsconfig"
     },
     {
       "label": ".resolveCredentialsStream()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/config/GoogleSheetsConfig.java",
       "source_location": "L50",
-      "id": "config_googlesheetsconfig_googlesheetsconfig_resolvecredentialsstream",
-      "community": 14,
-      "norm_label": ".resolvecredentialsstream()"
+      "community": 7,
+      "norm_label": ".resolvecredentialsstream()",
+      "id": "config_googlesheetsconfig_googlesheetsconfig_resolvecredentialsstream"
     },
     {
       "label": "ExportacionController",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/controller/ExportacionController.java",
       "source_location": "L9",
-      "id": "controller_exportacioncontroller_exportacioncontroller",
-      "community": 9,
-      "norm_label": "exportacioncontroller"
+      "community": 7,
+      "norm_label": "exportacioncontroller",
+      "id": "controller_exportacioncontroller_exportacioncontroller"
     },
     {
       "label": ".sincronizarManual()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/controller/ExportacionController.java",
       "source_location": "L20",
-      "id": "controller_exportacioncontroller_exportacioncontroller_sincronizarmanual",
-      "community": 9,
-      "norm_label": ".sincronizarmanual()"
+      "community": 7,
+      "norm_label": ".sincronizarmanual()",
+      "id": "controller_exportacioncontroller_exportacioncontroller_sincronizarmanual"
     },
     {
       "label": "EtapasProcesoDto.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/dto/EtapasProcesoDto.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_etapasprocesodto_java",
-      "community": 66,
-      "norm_label": "etapasprocesodto.java"
+      "community": 64,
+      "norm_label": "etapasprocesodto.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_etapasprocesodto_java"
     },
     {
       "label": "RecepcionProveedorDto.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/dto/RecepcionProveedorDto.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_recepcionproveedordto_java",
-      "community": 67,
-      "norm_label": "recepcionproveedordto.java"
+      "community": 65,
+      "norm_label": "recepcionproveedordto.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_recepcionproveedordto_java"
     },
     {
       "label": "TrazabilidadRendimientoDto.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/dto/TrazabilidadRendimientoDto.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_trazabilidadrendimientodto_java",
-      "community": 68,
-      "norm_label": "trazabilidadrendimientodto.java"
+      "community": 66,
+      "norm_label": "trazabilidadrendimientodto.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_exportacion_dto_trazabilidadrendimientodto_java"
     },
     {
       "label": "LoteQuesoCerradoExportListener",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/LoteQuesoCerradoExportListener.java",
       "source_location": "L11",
-      "id": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener",
       "community": 8,
-      "norm_label": "lotequesocerradoexportlistener"
+      "norm_label": "lotequesocerradoexportlistener",
+      "id": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener"
     },
     {
       "label": ".onLoteQuesoCerrado()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/LoteQuesoCerradoExportListener.java",
       "source_location": "L22",
-      "id": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener_onlotequesocerrado",
       "community": 8,
-      "norm_label": ".onlotequesocerrado()"
+      "norm_label": ".onlotequesocerrado()",
+      "id": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener_onlotequesocerrado"
     },
     {
       "label": "RecepcionCompletadaExportListener",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/RecepcionCompletadaExportListener.java",
       "source_location": "L13",
-      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener",
       "community": 8,
-      "norm_label": "recepcioncompletadaexportlistener"
+      "norm_label": "recepcioncompletadaexportlistener",
+      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener"
     },
     {
       "label": ".onRecepcionCompletada()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/RecepcionCompletadaExportListener.java",
       "source_location": "L28",
-      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcioncompletada",
       "community": 8,
-      "norm_label": ".onrecepcioncompletada()"
+      "norm_label": ".onrecepcioncompletada()",
+      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcioncompletada"
     },
     {
       "label": ".onRecepcionPendiente()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/RecepcionCompletadaExportListener.java",
       "source_location": "L34",
-      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcionpendiente",
       "community": 8,
-      "norm_label": ".onrecepcionpendiente()"
+      "norm_label": ".onrecepcionpendiente()",
+      "id": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcionpendiente"
     },
     {
       "label": "VistaEtapasProcesoEntity",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/model/VistaEtapasProcesoEntity.java",
       "source_location": "L14",
-      "id": "model_vistaetapasprocesoentity_vistaetapasprocesoentity",
-      "community": 69,
-      "norm_label": "vistaetapasprocesoentity"
+      "community": 67,
+      "norm_label": "vistaetapasprocesoentity",
+      "id": "model_vistaetapasprocesoentity_vistaetapasprocesoentity"
     },
     {
       "label": "VistaRecepcionEntity",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/model/VistaRecepcionEntity.java",
       "source_location": "L15",
-      "id": "model_vistarecepcionentity_vistarecepcionentity",
-      "community": 70,
-      "norm_label": "vistarecepcionentity"
+      "community": 68,
+      "norm_label": "vistarecepcionentity",
+      "id": "model_vistarecepcionentity_vistarecepcionentity"
     },
     {
       "label": "VistaRendimientoEntity",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/model/VistaRendimientoEntity.java",
       "source_location": "L15",
-      "id": "model_vistarendimientoentity_vistarendimientoentity",
-      "community": 71,
-      "norm_label": "vistarendimientoentity"
+      "community": 69,
+      "norm_label": "vistarendimientoentity",
+      "id": "model_vistarendimientoentity_vistarendimientoentity"
     },
     {
       "label": "VistaEtapasProcesoRepository",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaEtapasProcesoRepository.java",
       "source_location": "L7",
-      "id": "repository_vistaetapasprocesorepository_vistaetapasprocesorepository",
       "community": 8,
-      "norm_label": "vistaetapasprocesorepository"
+      "norm_label": "vistaetapasprocesorepository",
+      "id": "repository_vistaetapasprocesorepository_vistaetapasprocesorepository"
     },
     {
       "label": "VistaRecepcionRepository",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRecepcionRepository.java",
       "source_location": "L8",
-      "id": "repository_vistarecepcionrepository_vistarecepcionrepository",
       "community": 8,
-      "norm_label": "vistarecepcionrepository"
+      "norm_label": "vistarecepcionrepository",
+      "id": "repository_vistarecepcionrepository_vistarecepcionrepository"
     },
     {
       "label": ".findBySincronizadoSheetsFalse()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRecepcionRepository.java",
       "source_location": "L10",
-      "id": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse",
       "community": 8,
-      "norm_label": ".findbysincronizadosheetsfalse()"
+      "norm_label": ".findbysincronizadosheetsfalse()",
+      "id": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse"
     },
     {
       "label": ".findTopByRecepcionIdOrderByIdDesc()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRecepcionRepository.java",
       "source_location": "L12",
-      "id": "repository_vistarecepcionrepository_vistarecepcionrepository_findtopbyrecepcionidorderbyiddesc",
       "community": 8,
-      "norm_label": ".findtopbyrecepcionidorderbyiddesc()"
+      "norm_label": ".findtopbyrecepcionidorderbyiddesc()",
+      "id": "repository_vistarecepcionrepository_vistarecepcionrepository_findtopbyrecepcionidorderbyiddesc"
     },
     {
       "label": "VistaRendimientoRepository",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRendimientoRepository.java",
       "source_location": "L7",
-      "id": "repository_vistarendimientorepository_vistarendimientorepository",
       "community": 8,
-      "norm_label": "vistarendimientorepository"
+      "norm_label": "vistarendimientorepository",
+      "id": "repository_vistarendimientorepository_vistarendimientorepository"
     },
     {
       "label": "ExportacionVistaService",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L24",
-      "id": "service_exportacionvistaservice_exportacionvistaservice",
       "community": 8,
-      "norm_label": "exportacionvistaservice"
+      "norm_label": "exportacionvistaservice",
+      "id": "service_exportacionvistaservice_exportacionvistaservice"
     },
     {
       "label": ".registrarRecepcion()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L50",
-      "id": "service_exportacionvistaservice_exportacionvistaservice_registrarrecepcion",
       "community": 8,
-      "norm_label": ".registrarrecepcion()"
+      "norm_label": ".registrarrecepcion()",
+      "id": "service_exportacionvistaservice_exportacionvistaservice_registrarrecepcion"
     },
     {
       "label": ".registrarLoteQuesoCerrado()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L82",
-      "id": "service_exportacionvistaservice_exportacionvistaservice_registrarlotequesocerrado",
       "community": 8,
-      "norm_label": ".registrarlotequesocerrado()"
+      "norm_label": ".registrarlotequesocerrado()",
+      "id": "service_exportacionvistaservice_exportacionvistaservice_registrarlotequesocerrado"
     },
     {
       "label": ".construirVistaEtapas()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L124",
-      "id": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas",
       "community": 8,
-      "norm_label": ".construirvistaetapas()"
+      "norm_label": ".construirvistaetapas()",
+      "id": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas"
     },
     {
       "label": "GoogleSheetsSyncService",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L20",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "community": 9,
-      "norm_label": "googlesheetssyncservice"
+      "community": 7,
+      "norm_label": "googlesheetssyncservice",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice"
     },
     {
       "label": ".sincronizar()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L113",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
-      "community": 9,
-      "norm_label": ".sincronizar()"
+      "community": 7,
+      "norm_label": ".sincronizar()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar"
     },
     {
       "label": ".sincronizarRendimiento()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L121",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "community": 9,
-      "norm_label": ".sincronizarrendimiento()"
+      "community": 7,
+      "norm_label": ".sincronizarrendimiento()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento"
     },
     {
       "label": ".sincronizarRecepciones()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L159",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "community": 9,
-      "norm_label": ".sincronizarrecepciones()"
+      "community": 7,
+      "norm_label": ".sincronizarrecepciones()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones"
     },
     {
       "label": ".sincronizarEtapas()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L193",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "community": 9,
-      "norm_label": ".sincronizaretapas()"
+      "community": 7,
+      "norm_label": ".sincronizaretapas()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas"
     },
     {
       "label": ".appendRows()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L229",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows",
-      "community": 9,
-      "norm_label": ".appendrows()"
+      "community": 7,
+      "norm_label": ".appendrows()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows"
     },
     {
       "label": ".toText()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L242",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_totext",
-      "community": 9,
-      "norm_label": ".totext()"
+      "community": 7,
+      "norm_label": ".totext()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_totext"
     },
     {
       "label": ".rowOf()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L246",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_rowof",
-      "community": 9,
-      "norm_label": ".rowof()"
+      "community": 7,
+      "norm_label": ".rowof()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_rowof"
     },
     {
       "label": ".withHeaderIfEmpty()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L250",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "community": 9,
-      "norm_label": ".withheaderifempty()"
+      "community": 7,
+      "norm_label": ".withheaderifempty()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty"
     },
     {
       "label": ".isSheetEmpty()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L265",
-      "id": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty",
-      "community": 9,
-      "norm_label": ".issheetempty()"
+      "community": 7,
+      "norm_label": ".issheetempty()",
+      "id": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty"
     },
     {
       "label": "LoteCreateRequest.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/dto/LoteCreateRequest.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_dto_lotecreaterequest_java",
       "community": 15,
-      "norm_label": "lotecreaterequest.java"
+      "norm_label": "lotecreaterequest.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_dto_lotecreaterequest_java"
     },
     {
       "label": "Descarga.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/model/Descarga.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_descarga_java",
-      "community": 24,
-      "norm_label": "descarga.java"
+      "community": 20,
+      "norm_label": "descarga.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_descarga_java"
     },
     {
       "label": "LoteLeche.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/model/LoteLeche.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_loteleche_java",
-      "community": 21,
-      "norm_label": "loteleche.java"
+      "community": 22,
+      "norm_label": "loteleche.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_loteleche_java"
     },
     {
       "label": "LoteQueso.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/model/LoteQueso.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_lotequeso_java",
-      "community": 22,
-      "norm_label": "lotequeso.java"
+      "community": 23,
+      "norm_label": "lotequeso.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_model_lotequeso_java"
     },
     {
       "label": ".findByRecepcionLecheIdIn()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/repository/DescargaRepository.java",
       "source_location": "L12",
-      "id": "repository_descargarepository_descargarepository_findbyrecepcionlecheidin",
       "community": 3,
-      "norm_label": ".findbyrecepcionlecheidin()"
+      "norm_label": ".findbyrecepcionlecheidin()",
+      "id": "repository_descargarepository_descargarepository_findbyrecepcionlecheidin"
     },
     {
       "label": "LoteService.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_service_loteservice_java",
-      "community": 5,
-      "norm_label": "loteservice.java"
+      "community": 4,
+      "norm_label": "loteservice.java",
+      "id": "main_java_com_rochela_rochelasystem_modulos_produccion_service_loteservice_java"
     },
     {
       "label": ".obtenerLoteLecheId()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L168",
-      "id": "service_loteservice_loteservice_obtenerlotelecheid",
-      "community": 2,
-      "norm_label": ".obtenerlotelecheid()"
+      "community": 0,
+      "norm_label": ".obtenerlotelecheid()",
+      "id": "service_loteservice_loteservice_obtenerlotelecheid"
     },
     {
       "label": "RecepcionDisponibleParaLoteDto",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/dto/RecepcionDisponibleParaLoteDto.java",
       "source_location": "L13",
-      "id": "dto_recepciondisponibleparalotedto_recepciondisponibleparalotedto",
-      "community": 72,
-      "norm_label": "recepciondisponibleparalotedto"
+      "community": 70,
+      "norm_label": "recepciondisponibleparalotedto",
+      "id": "dto_recepciondisponibleparalotedto_recepciondisponibleparalotedto"
     },
     {
       "label": ".listarDisponiblesParaLoteLeche()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
       "source_location": "L210",
-      "id": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche",
       "community": 3,
-      "norm_label": ".listardisponiblesparaloteleche()"
+      "norm_label": ".listardisponiblesparaloteleche()",
+      "id": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche"
     },
     {
       "label": ".obtenerEntidadParaExportacion()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
       "source_location": "L249",
-      "id": "service_recepcionservice_recepcionservice_obtenerentidadparaexportacion",
       "community": 3,
-      "norm_label": ".obtenerentidadparaexportacion()"
+      "norm_label": ".obtenerentidadparaexportacion()",
+      "id": "service_recepcionservice_recepcionservice_obtenerentidadparaexportacion"
     },
     {
       "label": "CorsConfig.java",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L1",
-      "id": "main_java_com_rochela_rochelasystem_shared_config_corsconfig_java",
-      "community": 13,
-      "norm_label": "corsconfig.java"
+      "community": 14,
+      "norm_label": "corsconfig.java",
+      "id": "main_java_com_rochela_rochelasystem_shared_config_corsconfig_java"
     },
     {
       "label": "CorsConfig",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L9",
-      "id": "config_corsconfig_corsconfig",
-      "community": 13,
-      "norm_label": "corsconfig"
+      "community": 14,
+      "norm_label": "corsconfig",
+      "id": "config_corsconfig_corsconfig"
     },
     {
       "label": "WebMvcConfigurer",
       "file_type": "code",
       "source_file": "",
       "source_location": "",
-      "id": "webmvcconfigurer",
-      "community": 13,
-      "norm_label": "webmvcconfigurer"
+      "community": 14,
+      "norm_label": "webmvcconfigurer",
+      "id": "webmvcconfigurer"
     },
     {
       "label": ".addCorsMappings()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L30",
-      "id": "config_corsconfig_corsconfig_addcorsmappings",
-      "community": 13,
-      "norm_label": ".addcorsmappings()"
+      "community": 14,
+      "norm_label": ".addcorsmappings()",
+      "id": "config_corsconfig_corsconfig_addcorsmappings"
     },
     {
       "label": ".parseCsv()",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L44",
-      "id": "config_corsconfig_corsconfig_parsecsv",
-      "community": 13,
-      "norm_label": ".parsecsv()"
+      "community": 14,
+      "norm_label": ".parsecsv()",
+      "id": "config_corsconfig_corsconfig_parsecsv"
     },
     {
       "label": "LoteQuesoCerradoEvent",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/event/LoteQuesoCerradoEvent.java",
       "source_location": "L5",
-      "id": "event_lotequesocerradoevent_lotequesocerradoevent",
-      "community": 73,
-      "norm_label": "lotequesocerradoevent"
+      "community": 71,
+      "norm_label": "lotequesocerradoevent",
+      "id": "event_lotequesocerradoevent_lotequesocerradoevent"
     },
     {
       "label": "RecepcionCompletadaEvent",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/event/RecepcionCompletadaEvent.java",
       "source_location": "L5",
-      "id": "event_recepcioncompletadaevent_recepcioncompletadaevent",
-      "community": 74,
-      "norm_label": "recepcioncompletadaevent"
+      "community": 72,
+      "norm_label": "recepcioncompletadaevent",
+      "id": "event_recepcioncompletadaevent_recepcioncompletadaevent"
     },
     {
       "label": "RecepcionPendienteReductasaEvent",
       "file_type": "code",
       "source_file": "main/java/com/rochela/rochelasystem/shared/event/RecepcionPendienteReductasaEvent.java",
       "source_location": "L5",
-      "id": "event_recepcionpendientereductasaevent_recepcionpendientereductasaevent",
-      "community": 75,
-      "norm_label": "recepcionpendientereductasaevent"
+      "community": 73,
+      "norm_label": "recepcionpendientereductasaevent",
+      "id": "event_recepcionpendientereductasaevent_recepcionpendientereductasaevent"
     },
     {
       "label": "LoteLecheServiceAvailabilityIntegrationTest",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L35",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
       "community": 11,
-      "norm_label": "lotelecheserviceavailabilityintegrationtest"
+      "norm_label": "lotelecheserviceavailabilityintegrationtest",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest"
     },
     {
       "label": ".listarDisponiblesParaLoteLeche_incluye_todas_las_completadas_no_asociadas()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L57",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas",
       "community": 11,
-      "norm_label": ".listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas()"
+      "norm_label": ".listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas"
     },
     {
       "label": ".crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L77",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote",
       "community": 11,
-      "norm_label": ".crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote()"
+      "norm_label": ".crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote"
     },
     {
       "label": ".crear_lote_permite_recepcion_no_apta_completada()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L93",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada",
       "community": 11,
-      "norm_label": ".crear_lote_permite_recepcion_no_apta_completada()"
+      "norm_label": ".crear_lote_permite_recepcion_no_apta_completada()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada"
     },
     {
       "label": ".crearProveedor()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L104",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor",
       "community": 11,
-      "norm_label": ".crearproveedor()"
+      "norm_label": ".crearproveedor()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor"
     },
     {
       "label": ".crearRecepcion()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L111",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion",
       "community": 11,
-      "norm_label": ".crearrecepcion()"
+      "norm_label": ".crearrecepcion()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion"
     },
     {
       "label": ".loteRequest()",
       "file_type": "code",
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L141",
-      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest",
       "community": 11,
-      "norm_label": ".loterequest()"
+      "norm_label": ".loterequest()",
+      "id": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest"
     },
     {
       "label": "Lotes de Leche API",
       "file_type": "document",
       "source_file": "docs/api/produccion.md",
-      "id": "produccion_lotes_leche",
       "community": 12,
-      "norm_label": "lotes de leche api"
+      "norm_label": "lotes de leche api",
+      "id": "produccion_lotes_leche"
     },
     {
       "label": "Lotes de Producci\u00f3n API",
       "file_type": "document",
       "source_file": "docs/api/produccion.md",
-      "id": "produccion_lotes",
       "community": 12,
-      "norm_label": "lotes de produccion api"
+      "norm_label": "lotes de produccion api",
+      "id": "produccion_lotes"
     },
     {
       "label": "Recepcion API",
       "file_type": "document",
       "source_file": "docs/api/recepcion.md",
-      "id": "recepcion_api",
       "community": 12,
-      "norm_label": "recepcion api"
+      "norm_label": "recepcion api",
+      "id": "recepcion_api"
     },
     {
       "label": "Application Configuration",
       "file_type": "code",
       "source_file": "src/main/resources/application.yml",
-      "id": "application_yml",
-      "community": 26,
-      "norm_label": "application configuration"
+      "community": 25,
+      "norm_label": "application configuration",
+      "id": "application_yml"
     },
     {
       "label": "Sincronizar Exportaci\u00f3n",
       "file_type": "code",
       "source_file": "postman/collections/Catalogo/sincronizar.request.yaml",
-      "id": "sincronizar_request",
-      "community": 26,
-      "norm_label": "sincronizar exportacion"
+      "community": 25,
+      "norm_label": "sincronizar exportacion",
+      "id": "sincronizar_request"
     },
     {
       "label": "POST /lotes-leche",
       "file_type": "code",
       "source_file": "postman/collections/Produccion/Crear Lote Leche.request.yaml",
-      "id": "crear_lote_leche_request",
       "community": 12,
-      "norm_label": "post /lotes-leche"
+      "norm_label": "post /lotes-leche",
+      "id": "crear_lote_leche_request"
     },
     {
       "label": "POST /lotes",
       "file_type": "code",
       "source_file": "postman/collections/Produccion/Crear lote.request.yaml",
-      "id": "crear_lote_request",
       "community": 12,
-      "norm_label": "post /lotes"
+      "norm_label": "post /lotes",
+      "id": "crear_lote_request"
     },
     {
       "label": "POST /recepciones",
       "file_type": "code",
       "source_file": "postman/collections/Recepcion/Crear recepcion.request.yaml",
-      "id": "crear_recepcion_request",
       "community": 12,
-      "norm_label": "post /recepciones"
+      "norm_label": "post /recepciones",
+      "id": "crear_recepcion_request"
+    },
+    {
+      "label": "GoogleSheetsClientProvider.java",
+      "file_type": "code",
+      "source_file": "modulos/exportacion/config/GoogleSheetsClientProvider.java",
+      "source_location": "L1",
+      "id": "modulos_exportacion_config_googlesheetsclientprovider_java",
+      "community": 7,
+      "norm_label": "googlesheetsclientprovider.java"
+    },
+    {
+      "label": ".getSheets()",
+      "file_type": "code",
+      "source_file": "modulos/exportacion/config/GoogleSheetsClientProvider.java",
+      "source_location": "L37",
+      "id": "config_googlesheetsclientprovider_googlesheetsclientprovider_getsheets",
+      "community": 7,
+      "norm_label": ".getsheets()"
+    },
+    {
+      "label": "GoogleSheetsConfig.java",
+      "file_type": "code",
+      "source_file": "modulos/exportacion/config/GoogleSheetsConfig.java",
+      "source_location": "L1",
+      "id": "modulos_exportacion_config_googlesheetsconfig_java",
+      "community": 7,
+      "norm_label": "googlesheetsconfig.java"
+    },
+    {
+      "label": "HealthController.java",
+      "file_type": "code",
+      "source_file": "shared/controller/HealthController.java",
+      "source_location": "L1",
+      "id": "shared_controller_healthcontroller_java",
+      "community": 24,
+      "norm_label": "healthcontroller.java"
+    },
+    {
+      "label": ".health()",
+      "file_type": "code",
+      "source_file": "shared/controller/HealthController.java",
+      "source_location": "L10",
+      "id": "controller_healthcontroller_healthcontroller_health",
+      "community": 24,
+      "norm_label": ".health()"
+    },
+    {
+      "label": "Rochela API Service",
+      "file_type": "code",
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "docker_compose_rochela_api",
+      "community": 10,
+      "norm_label": "rochela api service"
+    },
+    {
+      "label": "Render Cloud Platform",
+      "file_type": "concept",
+      "source_file": "docs/produccion-render.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "produccion_render_render_platform",
+      "community": 10,
+      "norm_label": "render cloud platform"
+    },
+    {
+      "label": "Production Configuration",
+      "file_type": "code",
+      "source_file": "src/main/resources/application-prod.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "application_prod_config",
+      "community": 10,
+      "norm_label": "production configuration"
+    },
+    {
+      "label": "Base Application Configuration",
+      "file_type": "code",
+      "source_file": "src/main/resources/application.yml",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "application_base_config",
+      "community": 10,
+      "norm_label": "base application configuration"
+    },
+    {
+      "label": "Documentation Index",
+      "file_type": "document",
+      "source_file": "docs/README.md",
+      "source_location": null,
+      "source_url": null,
+      "captured_at": null,
+      "author": null,
+      "contributor": null,
+      "id": "readme_documentation_index",
+      "community": 10,
+      "norm_label": "documentation index"
     }
   ],
   "links": [
@@ -4148,7 +4249,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L111",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4159,7 +4260,7 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L141",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4170,7 +4271,7 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L142",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -4317,9 +4418,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/dto/LoteCreateRequest.java",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_java_com_rochela_rochelasystem_modulos_produccion_dto_lotecreaterequest_java",
-      "target": "dto_lotecreaterequest_lotecreaterequest",
-      "confidence_score": 1.0
+      "target": "dto_lotecreaterequest_lotecreaterequest"
     },
     {
       "relation": "method",
@@ -5166,9 +5267,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L168",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_loteservice_loteservice",
-      "target": "service_loteservice_loteservice_obtenerlotelecheid",
-      "confidence_score": 1.0
+      "target": "service_loteservice_loteservice_obtenerlotelecheid"
     },
     {
       "relation": "calls",
@@ -5260,7 +5361,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L99",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5271,7 +5372,7 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L101",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -5282,7 +5383,7 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L102",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -6558,9 +6659,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/service/LoteService.java",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_loteservice_loteservice_obtenerlotelecheid",
-      "target": "service_loteservice_loteservice_obtenerlote",
-      "confidence_score": 1.0
+      "target": "service_loteservice_loteservice_obtenerlote"
     },
     {
       "relation": "calls",
@@ -7727,9 +7828,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/controller/RecepcionController.java",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controller_recepcioncontroller_recepcioncontroller",
-      "target": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche",
-      "confidence_score": 1.0
+      "target": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche"
     },
     {
       "relation": "method",
@@ -7755,7 +7856,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L72",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7765,7 +7866,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L158",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7775,7 +7876,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L185",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7785,7 +7886,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L254",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7795,7 +7896,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L259",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7805,7 +7906,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L272",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7815,7 +7916,7 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L300",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -7825,33 +7926,44 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L210",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_recepcionservice_recepcionservice",
-      "target": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche",
-      "confidence_score": 1.0
+      "target": "service_recepcionservice_recepcionservice_listardisponiblesparaloteleche"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L249",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_recepcionservice_recepcionservice",
-      "target": "service_recepcionservice_recepcionservice_obtenerentidadparaexportacion",
-      "confidence_score": 1.0
+      "target": "service_recepcionservice_recepcionservice_obtenerentidadparaexportacion"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L160",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "service_recepcionservice_recepcionservice_cerrarreductasa",
       "target": "service_recepcionservice_recepcionservice_obtenerentidad"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "modulos/operario/service/OperarioFeedService.java",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "service_operariofeedservice_operariofeedservice_obtenerfeed",
+      "target": "service_recepcionservice_recepcionservice_listarpendientes"
     },
     {
       "relation": "method",
@@ -7867,18 +7979,18 @@
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L251",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_recepcionservice_recepcionservice_obtenerentidadparaexportacion",
-      "target": "service_recepcionservice_recepcionservice_obtenerentidad",
-      "confidence_score": 1.0
+      "target": "service_recepcionservice_recepcionservice_obtenerentidad"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/recepcion/service/RecepcionService.java",
+      "source_file": "modulos/recepcion/service/RecepcionService.java",
       "source_location": "L261",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -9152,8 +9264,8 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "src/main/java/com/rochela/rochelasystem/modulos/operario/service/OperarioFeedService.java",
-      "source_location": "L23",
+      "source_file": "modulos/operario/service/OperarioFeedService.java",
+      "source_location": "L27",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "service_operariofeedservice_operariofeedservice",
@@ -9225,9 +9337,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/produccion/repository/DescargaRepository.java",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repository_descargarepository_descargarepository",
-      "target": "repository_descargarepository_descargarepository_findbyrecepcionlecheidin",
-      "confidence_score": 1.0
+      "target": "repository_descargarepository_descargarepository_findbyrecepcionlecheidin"
     },
     {
       "relation": "calls",
@@ -9812,6 +9924,16 @@
       "target": "docker_compose_postgres_rochela"
     },
     {
+      "relation": "calls",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_rochela_api",
+      "target": "docker_compose_postgres_rochela"
+    },
+    {
       "relation": "references",
       "confidence": "INFERRED",
       "confidence_score": 0.9,
@@ -9882,14 +10004,24 @@
       "target": "modelo_entidades_recepcion_leche"
     },
     {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.9,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_rochela_api",
+      "target": "google_sheets_integration"
+    },
+    {
       "relation": "contains",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/config/GoogleSheetsConfig.java",
-      "source_location": "L20",
+      "source_file": "modulos/exportacion/config/GoogleSheetsConfig.java",
+      "source_location": "L7",
       "weight": 1.0,
-      "source": "main_java_com_rochela_rochelasystem_modulos_exportacion_config_googlesheetsconfig_java",
-      "target": "config_googlesheetsconfig_googlesheetsconfig",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "modulos_exportacion_config_googlesheetsconfig_java",
+      "target": "config_googlesheetsconfig_googlesheetsconfig"
     },
     {
       "relation": "calls",
@@ -9898,7 +10030,38 @@
       "source_location": "L37",
       "weight": 1.0,
       "context": "call",
+      "confidence_score": 1.0,
       "source": "config_googlesheetsconfig_googlesheetsconfig",
+      "target": "config_googlesheetsconfig_googlesheetsconfig_resolvecredentialsstream"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/config/GoogleSheetsConfig.java",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "config_googlesheetsconfig_googlesheetsconfig",
+      "target": "modulos_exportacion_config_googlesheetsclientprovider_java",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/config/GoogleSheetsClientProvider.java",
+      "source_location": "L58",
+      "weight": 1.0,
+      "source": "modulos_exportacion_config_googlesheetsclientprovider_java",
+      "target": "config_googlesheetsconfig_googlesheetsconfig_resolvecredentialsstream",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/config/GoogleSheetsClientProvider.java",
+      "source_location": "L38",
+      "weight": 1.0,
+      "source": "config_googlesheetsclientprovider_googlesheetsclientprovider_getsheets",
       "target": "config_googlesheetsconfig_googlesheetsconfig_resolvecredentialsstream",
       "confidence_score": 1.0
     },
@@ -9908,9 +10071,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/controller/ExportacionController.java",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "controller_exportacioncontroller_exportacioncontroller",
-      "target": "controller_exportacioncontroller_exportacioncontroller_sincronizarmanual",
-      "confidence_score": 1.0
+      "target": "controller_exportacioncontroller_exportacioncontroller_sincronizarmanual"
     },
     {
       "relation": "calls",
@@ -9929,9 +10092,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/LoteQuesoCerradoExportListener.java",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener",
-      "target": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener_onlotequesocerrado",
-      "confidence_score": 1.0
+      "target": "listener_lotequesocerradoexportlistener_lotequesocerradoexportlistener_onlotequesocerrado"
     },
     {
       "relation": "calls",
@@ -9950,9 +10113,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/RecepcionCompletadaExportListener.java",
       "source_location": "L28",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener",
-      "target": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcioncompletada",
-      "confidence_score": 1.0
+      "target": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcioncompletada"
     },
     {
       "relation": "method",
@@ -9960,9 +10123,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/listener/RecepcionCompletadaExportListener.java",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener",
-      "target": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcionpendiente",
-      "confidence_score": 1.0
+      "target": "listener_recepcioncompletadaexportlistener_recepcioncompletadaexportlistener_onrecepcionpendiente"
     },
     {
       "relation": "calls",
@@ -9992,9 +10155,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaEtapasProcesoRepository.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repository_vistaetapasprocesorepository_vistaetapasprocesorepository",
-      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse",
-      "confidence_score": 1.0
+      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse"
     },
     {
       "relation": "method",
@@ -10002,9 +10165,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRecepcionRepository.java",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repository_vistarecepcionrepository_vistarecepcionrepository",
-      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse",
-      "confidence_score": 1.0
+      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse"
     },
     {
       "relation": "method",
@@ -10012,9 +10175,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRecepcionRepository.java",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repository_vistarecepcionrepository_vistarecepcionrepository",
-      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findtopbyrecepcionidorderbyiddesc",
-      "confidence_score": 1.0
+      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findtopbyrecepcionidorderbyiddesc"
     },
     {
       "relation": "method",
@@ -10022,9 +10185,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/repository/VistaRendimientoRepository.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "repository_vistarendimientorepository_vistarendimientorepository",
-      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse",
-      "confidence_score": 1.0
+      "target": "repository_vistarecepcionrepository_vistarecepcionrepository_findbysincronizadosheetsfalse"
     },
     {
       "relation": "calls",
@@ -10043,9 +10206,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_exportacionvistaservice_exportacionvistaservice",
-      "target": "service_exportacionvistaservice_exportacionvistaservice_registrarrecepcion",
-      "confidence_score": 1.0
+      "target": "service_exportacionvistaservice_exportacionvistaservice_registrarrecepcion"
     },
     {
       "relation": "method",
@@ -10053,9 +10216,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L82",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_exportacionvistaservice_exportacionvistaservice",
-      "target": "service_exportacionvistaservice_exportacionvistaservice_registrarlotequesocerrado",
-      "confidence_score": 1.0
+      "target": "service_exportacionvistaservice_exportacionvistaservice_registrarlotequesocerrado"
     },
     {
       "relation": "method",
@@ -10063,9 +10226,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_exportacionvistaservice_exportacionvistaservice",
-      "target": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas",
-      "confidence_score": 1.0
+      "target": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas"
     },
     {
       "relation": "calls",
@@ -10085,9 +10248,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/ExportacionVistaService.java",
       "source_location": "L116",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_exportacionvistaservice_exportacionvistaservice_registrarlotequesocerrado",
-      "target": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas",
-      "confidence_score": 1.0
+      "target": "service_exportacionvistaservice_exportacionvistaservice_construirvistaetapas"
     },
     {
       "relation": "calls",
@@ -10103,257 +10266,268 @@
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L113",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L121",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L127",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L159",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L165",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L193",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L199",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L229",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L235",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L242",
-      "weight": 1.0,
-      "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L246",
-      "weight": 1.0,
-      "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof",
-      "confidence_score": 1.0
-    },
-    {
-      "relation": "method",
-      "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L250",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext"
     },
     {
       "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L265",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L254",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L116",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L258",
       "weight": 1.0,
-      "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "service_googlesheetssyncservice_googlesheetssyncservice",
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty"
     },
     {
-      "relation": "calls",
-      "context": "call",
+      "relation": "method",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L117",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L274",
       "weight": 1.0,
-      "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "confidence_score": 1.0
+      "confidence_score": 1.0,
+      "source": "service_googlesheetssyncservice_googlesheetssyncservice",
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L122",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L123",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L124",
+      "weight": 1.0,
+      "confidence_score": 1.0,
+      "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
       "source_location": "L118",
       "weight": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizar",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "confidence_score": 1.0
+      "target": "config_googlesheetsclientprovider_googlesheetsclientprovider_getsheets"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L129",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L135",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L133",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L139",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L153",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L159",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L154",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrendimiento",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L167",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L169",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L175",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_totext"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L187",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L193",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L188",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L194",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizarrecepciones",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L201",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L207",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_rowof"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L223",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L229",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L224",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L230",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_sincronizaretapas",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_appendrows"
     },
     {
       "relation": "calls",
       "context": "call",
       "confidence": "EXTRACTED",
-      "source_file": "main/java/com/rochela/rochelasystem/modulos/exportacion/service/GoogleSheetsSyncService.java",
-      "source_location": "L256",
+      "source_file": "modulos/exportacion/service/GoogleSheetsSyncService.java",
+      "source_location": "L265",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_googlesheetssyncservice_googlesheetssyncservice_withheaderifempty",
-      "target": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty",
-      "confidence_score": 1.0
+      "target": "service_googlesheetssyncservice_googlesheetssyncservice_issheetempty"
     },
     {
       "relation": "calls",
@@ -10373,9 +10547,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L7",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_java_com_rochela_rochelasystem_shared_config_corsconfig_java",
-      "target": "webmvcconfigurer",
-      "confidence_score": 1.0
+      "target": "webmvcconfigurer"
     },
     {
       "relation": "contains",
@@ -10383,9 +10557,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "main_java_com_rochela_rochelasystem_shared_config_corsconfig_java",
-      "target": "config_corsconfig_corsconfig",
-      "confidence_score": 1.0
+      "target": "config_corsconfig_corsconfig"
     },
     {
       "relation": "implements",
@@ -10393,9 +10567,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_corsconfig_corsconfig",
-      "target": "webmvcconfigurer",
-      "confidence_score": 1.0
+      "target": "webmvcconfigurer"
     },
     {
       "relation": "method",
@@ -10403,9 +10577,9 @@
       "source_file": "main/java/com/rochela/rochelasystem/shared/config/CorsConfig.java",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "config_corsconfig_corsconfig",
-      "target": "config_corsconfig_corsconfig_addcorsmappings",
-      "confidence_score": 1.0
+      "target": "config_corsconfig_corsconfig_addcorsmappings"
     },
     {
       "relation": "calls",
@@ -10414,9 +10588,9 @@
       "source_location": "L23",
       "weight": 1.0,
       "context": "call",
+      "confidence_score": 1.0,
       "source": "config_corsconfig_corsconfig",
-      "target": "config_corsconfig_corsconfig_parsecsv",
-      "confidence_score": 1.0
+      "target": "config_corsconfig_corsconfig_parsecsv"
     },
     {
       "relation": "method",
@@ -10424,9 +10598,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L57",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas"
     },
     {
       "relation": "method",
@@ -10434,9 +10608,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L77",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote"
     },
     {
       "relation": "method",
@@ -10444,9 +10618,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L93",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada"
     },
     {
       "relation": "method",
@@ -10454,9 +10628,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L104",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor"
     },
     {
       "relation": "method",
@@ -10464,9 +10638,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion"
     },
     {
       "relation": "method",
@@ -10474,9 +10648,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest"
     },
     {
       "relation": "calls",
@@ -10485,9 +10659,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L59",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor"
     },
     {
       "relation": "calls",
@@ -10496,9 +10670,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L60",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion"
     },
     {
       "relation": "calls",
@@ -10507,9 +10681,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L65",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_listardisponiblesparaloteleche_incluye_todas_las_completadas_no_asociadas",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest"
     },
     {
       "relation": "calls",
@@ -10518,9 +10692,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor"
     },
     {
       "relation": "calls",
@@ -10529,9 +10703,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L80",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion"
     },
     {
       "relation": "calls",
@@ -10540,9 +10714,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_rechaza_recepcion_ya_asociada_a_otro_lote",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest"
     },
     {
       "relation": "calls",
@@ -10551,9 +10725,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L95",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearproveedor"
     },
     {
       "relation": "calls",
@@ -10562,9 +10736,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crearrecepcion"
     },
     {
       "relation": "calls",
@@ -10573,9 +10747,9 @@
       "source_file": "test/java/com/rochela/rochelasystem/modulos/produccion/service/LoteLecheServiceAvailabilityIntegrationTest.java",
       "source_location": "L99",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_crear_lote_permite_recepcion_no_apta_completada",
-      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest",
-      "confidence_score": 1.0
+      "target": "service_lotelecheserviceavailabilityintegrationtest_lotelecheserviceavailabilityintegrationtest_loterequest"
     },
     {
       "relation": "references",
@@ -10632,8 +10806,68 @@
       "source_file": "postman/collections/Produccion/Crear lote.request.yaml",
       "source": "crear_lote_request",
       "target": "crear_lote_leche_request"
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "modulos/exportacion/config/GoogleSheetsClientProvider.java",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "modulos_exportacion_config_googlesheetsclientprovider_java",
+      "target": "config_googlesheetsclientprovider_googlesheetsclientprovider_getsheets",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "shared/controller/HealthController.java",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "shared_controller_healthcontroller_java",
+      "target": "controller_healthcontroller_healthcontroller_health",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "shares_data_with",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docker-compose.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "docker_compose_rochela_api",
+      "target": "application_base_config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/produccion-render.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "produccion_render_render_platform",
+      "target": "application_prod_config"
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "docs/README.md",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "readme_documentation_index",
+      "target": "produccion_render_render_platform"
+    },
+    {
+      "relation": "references",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/main/resources/application-prod.yml",
+      "source_location": null,
+      "weight": 1.0,
+      "source": "application_prod_config",
+      "target": "application_base_config"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "9bd8267cdcff93b7dc0edc4ebfecf2dc26d90184"
+  "built_at_commit": "6883acea790155a771064af3b3ced110f274e18f"
 }
